@@ -8,7 +8,7 @@
                 @csrf
                 <div class="mb-3">
                   <label for="image" class="form-label">Carousel Image</label>
-                  <input type="file" class="form-control" id="image" aria-describedby="emailHelp">
+                  <input name="image" type="file" class="form-control" id="image" aria-describedby="emailHelp">
                 </div>
 
                 <button type="submit" class="btn btn-primary">Submit</button>
