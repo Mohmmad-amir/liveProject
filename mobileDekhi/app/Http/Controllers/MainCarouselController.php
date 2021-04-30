@@ -43,9 +43,9 @@ class MainCarouselController extends Controller
         if ($request->file('image')) {
             $file = $request->file('image');
             $extension = $file->getClientOriginalExtension();
-            $image = "product_" . time() . "." . $extension;
+            $image = "mainCarousel_" . time() . "." . $extension;
 
-            Image::make($file)->save(public_path() . '/asset/image/' . $image);
+            Image::make($file)->save(public_path() . '/assets/img/' . $image);
         }
 
         $product = new mainCarousel();
