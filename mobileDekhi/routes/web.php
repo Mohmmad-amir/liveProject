@@ -21,6 +21,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::middleware('auth')->group(function () {
+    // main carousel start
     Route::get('mainCarousel/add', 'MainCarouselController@create')->name('mainCarousel.add');
     Route::post('mainCarousel/add', 'MainCarouselController@store')->name('mainCarousel.store');
+    Route::get('/mainCarousel/{id}edit', 'MainCarouselController@edit')->name('mainCarousel.edit');
+    Route::put('/mainCarousel/{id}', 'MainCarouselController@update')->name('mainCarousel.update');
+    Route::delete('/mainCarousel/{id}', 'MainCarouselController@destroy')->name('mainCarousel.destroy');
+    // main carousel end
 });
