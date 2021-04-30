@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <form method="POST" action="">
+            <form method="POST" action="/mainCarousel/add" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
                   <label for="image" class="form-label">Carousel Image</label>

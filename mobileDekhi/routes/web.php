@@ -22,4 +22,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::middleware('auth')->group(function () {
     Route::get('mainCarousel/add', 'MainCarouselController@create')->name('mainCarousel.add');
+    Route::post('mainCarousel/add', 'MainCarouselController@store')->name('mainCarousel.store');
 });
