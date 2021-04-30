@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\mainCarousel;
 use Illuminate\Http\Request;
+use Image;
 
 class MainCarouselController extends Controller
 {
@@ -35,7 +36,23 @@ class MainCarouselController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'image' => 'required|image'
+        ]);
+
+        if ($request->file('image')) {
+            $file = $request->file('image');
+            $extension = $file->getClientOriginalExtension();
+            $image = "product_" . time() . "." . $extension;
+
+            Image::make($file)->save(public_path() . '/asset/image/' . $image);
+        }
+
+        $product = new mainCarousel();
+        $product->image = $image;
+
+        $product->save();
+        return redirect()->back();
     }
 
     /**
