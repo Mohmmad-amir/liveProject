@@ -24,7 +24,7 @@ class MainCarouselController extends Controller
      */
     public function create()
     {
-        //
+        return view('mainCarousel');
     }
 
     /**

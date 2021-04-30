@@ -15,6 +15,7 @@ class CreateMainCarouselsTable extends Migration
     {
         Schema::create('main_carousels', function (Blueprint $table) {
             $table->id();
+            $table->string('image');
             $table->timestamps();
         });
     }
