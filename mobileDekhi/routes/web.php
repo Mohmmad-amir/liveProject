@@ -28,4 +28,5 @@ Route::middleware('auth')->group(function () {
     Route::put('/mainCarousel/{id}', 'MainCarouselController@update')->name('mainCarousel.update');
     Route::delete('/mainCarousel/{id}', 'MainCarouselController@destroy')->name('mainCarousel.destroy');
     // main carousel end
+    //
 });
