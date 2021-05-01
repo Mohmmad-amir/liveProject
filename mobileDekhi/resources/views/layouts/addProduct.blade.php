@@ -7,23 +7,28 @@
 
         <div class="container">
             <div class="row">
+
+                <div class="col-md-12 mt-4 mb-4">
+                    <h4 class="text-center">Add Product</h4>
+                </div>
         
                 <div class="col-md-12">
                     <form method="post" action="" enctype="multipart/form-data">
+                        @csrf
                         <div class="row">
         
-        
+                            
                             <div class="col-4 col-sm-4 col-md-4">
-                                @csrf
+                                <h4>Mobile Specifications</h4>
                                 <div class="form-group">
                                     <label for="exampleInputtext1">Brand</label>
                                     <select class="form-control" name="brand">
                                         <option hidden selected>Select Type</option>
-                                        <option value="Travel">Travel</option>
-                                        <option value="Movie">Movie</option>
-                                        <option value="Business">Business</option>
-                                        <option value="Sports">Sports</option>
-                                        <option value="Science">Science</option>
+                                        <option value="2G,3G,4G,5G">Samsang</option>
+                                        <option value="Nokia">Nokia</option>
+                                        <option value="Xiaomi">Xiaomi</option>
+                                        <option value="Huawei">Huawei</option>
+                                        <option value="Iphone">Iphone</option>
         
                                     </select>
                                 </div>
@@ -44,11 +49,14 @@
                                     <label for="exampleInputtext1">Price Range</label>
                                     <select class="form-control" name="Price_range">
                                         <option hidden selected>Select Price Range</option>
-                                        <option value="Travel">Travel</option>
-                                        <option value="Movie">Movie</option>
-                                        <option value="Business">Business</option>
-                                        <option value="Sports">Sports</option>
-                                        <option value="Science">Science</option>
+                                        <option value="0-5,000">0-5,000</option>
+                                        <option value="5,000-10,000">5,000-10,000</option>
+                                        <option value="10,000-15,000">10,000-20,000</option>
+                                        <option value="20,000-30,000">20,000-30,000</option>
+                                        <option value="30,000-40,000">30,000-40,000</option>
+                                        <option value="40,000-50,000">40,000-50,000</option>
+                                        <option value="50,000-1,00,000">50,000-1,00,000</option>
+                                        <option value="1,00,000-1,50,000">1,00,000-1,50,000</option>
         
                                     </select>
                                 </div>
@@ -57,14 +65,15 @@
                                     <input name="image" type="file" class="form-control" aria-describedby="textHelp">
                                 </div>
         
+                                <h4 class="mt-4 mb-2">Network</h4>
                                 <div class="form-group">
                                     <label for="exampleInputtext1">Network Type</label>
                                     <select class="form-control" name="networkType">
                                         <option hidden selected>Select Network</option>
-                                        <option value="Travel">2G</option>
-                                        <option value="Business">2G,3G</option>
-                                        <option value="Sports">2G,3G,5G</option>
-                                        <option value="Science">2G,3G,5G,6G</option>
+                                        <option value="2G">2G</option>
+                                        <option value="2G,3G">2G,3G</option>
+                                        <option value="2G,3G,4G">2G,3G,4G</option>
+                                        <option value="2G,3G,4G,5G">2G,3G,4G,5G</option>
         
                                     </select>
                                 </div>
@@ -85,7 +94,7 @@
                                 </div>
         
         
-        
+                                <h4 class="mt-4 mb-2">Body</h4>
                                 <div class="form-group">
                                     <label for="exampleInputtext1">Body Dimensions</label>
                                     <input name="BodyDimensions" type="text" class="form-control" aria-describedby="textHelp">
@@ -104,6 +113,9 @@
                                     <label for="exampleInputtext1">Network Sim</label>
                                     <input name="NetworkSim" type="text" class="form-control" aria-describedby="textHelp">
                                 </div>
+
+                                <h4 class="mt-4 mb-2">Display</h4>
+                                
                                 <div class="form-group">
                                     <label for="exampleInputtext1">Display Type</label>
                                     <input name="DisplayType" type="text" class="form-control" aria-describedby="textHelp">
@@ -139,8 +151,8 @@
                                     <input name="DisplayDensity" type="text" class="form-control" aria-describedby="textHelp">
                                 </div>
         
-        
-        
+                                <h4 class="mt-4 mb-2">Platfrom</h4>
+
                                 <div class="form-group">
                                     <label for="exampleInputtext1">Operating System</label>
                                     <input name="OperatingSystem" type="text" class="form-control" aria-describedby="textHelp">
@@ -158,7 +170,8 @@
                                     <input name="DisplayDensity" type="text" class="form-control" aria-describedby="textHelp">
                                 </div>
         
-        
+                                <h4 class="mt-4 mb-2">Memory</h4>
+
                                 <div class="form-group">
                                     <label for="exampleInputtext1">Memory Internal</label>
                                     <input name="MemoryInternal" type="text" class="form-control" aria-describedby="textHelp">
@@ -172,7 +185,7 @@
                                     <input name="Ram" type="text" class="form-control" aria-describedby="textHelp">
                                 </div>
         
-        
+                                <h4 class="mt-4 mb-2">Camera</h4>
                                 <div class="form-group">
                                     <label for="exampleInputtext1">Primary Camera</label>
                                     <input type="PrimaryCamera" class="form-control" aria-describedby="textHelp">
@@ -195,7 +208,7 @@
         
         
         
-        
+                                <h4 class="mt-4 mb-2">Sound</h4>
                                 <div class="form-group">
                                     <label for="exampleInputtext1">Audio</label>
                                     <input type="Audio" class="form-control" aria-describedby="textHelp">
@@ -205,17 +218,16 @@
                                     <label for="exampleInputtext1">Loudspeaker</label>
                                     <input type="Loudspeaker" class="form-control" aria-describedby="textHelp">
                                 </div>
-        
-        
                             </div>
-        
-        
                             <div class="col-4 col-sm-4 col-md-4">
         
                                 <div class="form-group">
                                     <label for="exampleInputtext1">3.5mm Jack</label>
                                     <input type="Jack" class="form-control" aria-describedby="textHelp">
                                 </div>
+
+                                <h4 class="mt-4 mb-2">Connectivity</h4>
+
                                 <div class="form-group">
                                     <label for="exampleInputtext1">WiFi</label>
                                     <input type="WiFi" class="form-control" aria-describedby="textHelp">
@@ -243,6 +255,8 @@
                                     <input type="GPS" class="form-control" aria-describedby="textHelp">
                                 </div>
         
+                                <h4 class="mt-4 mb-2">Features</h4>
+
                                 <div class="form-group">
                                     <label for="exampleInputtext1">Sensors</label>
                                     <input type="Sensors" class="form-control" aria-describedby="textHelp">
@@ -255,7 +269,9 @@
                                     <label for="exampleInputtext1">Java</label>
                                     <input type="Java" class="form-control" aria-describedby="textHelp">
                                 </div>
-        
+
+                                <h4 class="mt-4 mb-2">Battery</h4>
+                                
                                 <div class="form-group">
                                     <label for="exampleInputtext1">Battery Type</label>
                                     <input type="BatteryType" class="form-control" aria-describedby="textHelp">
@@ -268,10 +284,16 @@
                                     <label for="exampleInputtext1">Charging</label>
                                     <input type="Charging" class="form-control" aria-describedby="textHelp">
                                 </div>
+
+                                <h4 class="mt-4 mb-2">Launch</h4>
+
                                 <div class="form-group">
                                     <label for="exampleInputtext1">Launch Date</label>
                                     <input type="LaunchDate" class="form-control" aria-describedby="textHelp">
                                 </div>
+
+                                <h4 class="mt-4 mb-2">More</h4>
+
                                 <div class="form-group">
                                     <label for="exampleInputtext1">Made By</label>
                                     <input type="MadeBy" class="form-control" aria-describedby="textHelp">
