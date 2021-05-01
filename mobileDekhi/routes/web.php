@@ -20,6 +20,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 Auth::routes();
+Route::get('/addProduct', function () {
+    return view('layouts.addProduct');
+});
+
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::middleware('auth')->group(function () {
