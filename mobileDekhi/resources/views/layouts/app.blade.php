@@ -24,7 +24,6 @@
 </head>
 <body>
     <div id="app">
-<<<<<<< HEAD
         <div class="warapper">
 
             <!-- Main Sidebar Container -->
@@ -154,9 +153,8 @@
 
         </div>
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm main-header">
-=======
+
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
->>>>>>> 8cc990c7c5faa3d6aa64e40bcd9408b89aa9f4ba
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -218,8 +216,7 @@
     {{-- bootstrap js --}}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 
-<<<<<<< HEAD
-    
+
 {{-- for main carousel --}}
 <script>
     $(document).ready(function(){
@@ -228,10 +225,8 @@
       });
     });
     </script>
-=======
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
 
->>>>>>> 8cc990c7c5faa3d6aa64e40bcd9408b89aa9f4ba
 </body>
 </html>
