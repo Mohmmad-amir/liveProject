@@ -5,6 +5,9 @@
     <div class="row justify-content-center">
         <div class="offset-md-2 col-md-10">
           <div class="container  py-5">
+            <h2 class="text-center">
+              Add Main Carousel
+            </h2>
             @if (session('message'))
                 <div class="alert alert-success">
                     <p>{{ session('message') }}</p>

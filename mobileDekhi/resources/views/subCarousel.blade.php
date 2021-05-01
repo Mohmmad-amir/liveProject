@@ -5,6 +5,9 @@
     <div class="row justify-content-center">
         <div class="offset-md-2 col-md-10">
           <div class="container  py-5">
+            <h2 class="text-center">
+              Add Sub Carousel
+            </h2>
             @if (session('message'))
                 <div class="alert alert-success">
                     <p>{{ session('message') }}</p>
@@ -12,7 +15,7 @@
             @endif
           <button class="btn btn-success float-right my-2" id="addMainCarousel">Add <i class="fas fa-plus"></i></button>
           <div id="showMainCarousel" style="display: none">
-            <form method="POST" action="{{route('mainCarousel.add')}}" enctype="multipart/form-data">
+            <form method="POST" action="{{route('subCarousel.add')}}" enctype="multipart/form-data">
               @csrf
               <div class="mb-3">
                 <label for="image" class="form-label">Carousel Image</label>

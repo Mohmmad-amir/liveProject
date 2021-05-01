@@ -37,7 +37,23 @@ class SubCarouselController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'image' => 'required|image'
+        ]);
+
+        if ($request->file('image')) {
+            $file = $request->file('image');
+            $extension = $file->getClientOriginalExtension();
+            $image = "subCarousel_" . time() . "." . $extension;
+
+            Image::make($file)->save(public_path() . '/assets/img/' . $image);
+        }
+
+        $product = new SubCarousel();
+        $product->image = $image;
+
+        $product->save();
+        return redirect()->back()->with("message", "added Successful");
     }
 
     /**
@@ -57,9 +73,10 @@ class SubCarouselController extends Controller
      * @param  \App\Models\SubCarousel  $subCarousel
      * @return \Illuminate\Http\Response
      */
-    public function edit(SubCarousel $subCarousel)
+    public function edit(SubCarousel $subCarousel, $id)
     {
-        //
+        $Carousel = SubCarousel::findOrFail($id);
+        return view('subCarouselEdit', compact('Carousel'));
     }
 
     /**
@@ -69,9 +86,23 @@ class SubCarouselController extends Controller
      * @param  \App\Models\SubCarousel  $subCarousel
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, SubCarousel $subCarousel)
+    public function update(Request $request, SubCarousel $subCarousel, $id)
     {
-        //
+        $product = SubCarousel::findOrFail($id);
+
+        if ($request->file('image')) {
+            @unlink(public_path() . '/assets/img/' . $product->image);
+            $file = $request->file('image');
+            $extension = $file->getClientOriginalExtension();
+            $image = "subCarousel_" . time() . "." . $extension;
+
+            Image::make($file)->save(public_path() . '/assets/img/' . $image);
+            $product->image = $image;
+        }
+
+
+        $product->save();
+        return redirect()->action('SubCarouselController@create')->with("message", "updated Successful");
     }
 
     /**
@@ -80,8 +111,11 @@ class SubCarouselController extends Controller
      * @param  \App\Models\SubCarousel  $subCarousel
      * @return \Illuminate\Http\Response
      */
-    public function destroy(SubCarousel $subCarousel)
+    public function destroy(SubCarousel $subCarousel, $id)
     {
-        //
+        $Carousel = SubCarousel::findOrFail($id);
+        @unlink(public_path() . '/assets/img/' . $Carousel->image);
+        $Carousel->delete();
+        return redirect()->back()->with("message", "Deleted Successful");
     }
 }

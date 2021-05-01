@@ -30,7 +30,7 @@ Route::middleware('auth')->group(function () {
     // main carousel start
     Route::get('mainCarousel/add', 'MainCarouselController@create')->name('mainCarousel.add');
     Route::post('mainCarousel/add', 'MainCarouselController@store')->name('mainCarousel.store');
-    Route::get('/mainCarousel/{id}edit', 'MainCarouselController@edit')->name('mainCarousel.edit');
+    Route::get('/mainCarousel/{id}/edit', 'MainCarouselController@edit')->name('mainCarousel.edit');
     Route::put('/mainCarousel/{id}', 'MainCarouselController@update')->name('mainCarousel.update');
     Route::delete('/mainCarousel/{id}', 'MainCarouselController@destroy')->name('mainCarousel.destroy');
     // main carousel end
@@ -38,7 +38,7 @@ Route::middleware('auth')->group(function () {
     // sub carousel start
     Route::get('subCarousel/add', 'SubCarouselController@create')->name('subCarousel.add');
     Route::post('subCarousel/add', 'SubCarouselController@store')->name('subCarousel.store');
-    Route::get('/subCarousel/{id}edit', 'SubCarouselController@edit')->name('subCarousel.edit');
+    Route::get('/subCarousel/{id}/edit', 'SubCarouselController@edit')->name('subCarousel.edit');
     Route::put('/subCarousel/{id}', 'SubCarouselController@update')->name('subCarousel.update');
     Route::delete('/subCarousel/{id}', 'SubCarouselController@destroy')->name('subCarousel.destroy');
     // sub carousel end
