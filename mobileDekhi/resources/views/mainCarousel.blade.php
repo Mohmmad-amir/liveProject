@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="offset-md-2 col-md-10">
           <div class="container  py-5">
             @if (session('message'))
                 <div class="alert alert-success">

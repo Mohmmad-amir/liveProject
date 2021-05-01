@@ -287,7 +287,13 @@
 <script src="{{asset('assets/js/adminlte.js')}}"></script>
 
 
-    
+<script>
+    $(document).ready(function(){
+      $("#addMainCarousel").click(function(){
+        $("#showMainCarousel").fadeToggle();
+      });
+    });
+    </script>
 
 </body>
 </html>
