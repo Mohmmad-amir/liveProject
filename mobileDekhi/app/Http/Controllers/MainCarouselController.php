@@ -25,7 +25,8 @@ class MainCarouselController extends Controller
      */
     public function create()
     {
-        return view('mainCarousel');
+        $carousels = mainCarousel::all();
+        return view('mainCarousel', compact('carousels'));
     }
 
     /**
@@ -52,7 +53,7 @@ class MainCarouselController extends Controller
         $product->image = $image;
 
         $product->save();
-        return redirect()->back();
+        return redirect()->back()->with("message", "added Successful");
     }
 
     /**
@@ -72,9 +73,10 @@ class MainCarouselController extends Controller
      * @param  \App\Models\mainCarousel  $mainCarousel
      * @return \Illuminate\Http\Response
      */
-    public function edit(mainCarousel $mainCarousel)
+    public function edit(mainCarousel $mainCarousel, $id)
     {
-        //
+        $mainCarousel = mainCarousel::findOrFail($id);
+        return view('mainCarouselEdit', compact('mainCarousel'));
     }
 
     /**
@@ -84,9 +86,23 @@ class MainCarouselController extends Controller
      * @param  \App\Models\mainCarousel  $mainCarousel
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, mainCarousel $mainCarousel)
+    public function update(Request $request, mainCarousel $mainCarousel, $id)
     {
-        //
+        $product = mainCarousel::findOrFail($id);
+
+        if ($request->file('image')) {
+            @unlink(public_path() . '/assets/img/' . $product->image);
+            $file = $request->file('image');
+            $extension = $file->getClientOriginalExtension();
+            $image = "product_" . time() . "." . $extension;
+
+            Image::make($file)->save(public_path() . '/assets/img/' . $image);
+            $product->image = $image;
+        }
+
+
+        $product->save();
+        return redirect()->action('MainCarouselController@create')->with("message", "updated Successful");
     }
 
     /**
@@ -95,8 +111,11 @@ class MainCarouselController extends Controller
      * @param  \App\Models\mainCarousel  $mainCarousel
      * @return \Illuminate\Http\Response
      */
-    public function destroy(mainCarousel $mainCarousel)
+    public function destroy(mainCarousel $mainCarousel, $id)
     {
-        //
+        $mainCarousel = mainCarousel::findOrFail($id);
+        @unlink(public_path() . '/assets/img/' . $mainCarousel->image);
+        $mainCarousel->delete();
+        return redirect()->back()->with("message", "Deleted Successful");
     }
 }
