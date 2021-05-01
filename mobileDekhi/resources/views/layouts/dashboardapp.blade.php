@@ -87,7 +87,7 @@
                             </li>
                         </ul>
                     </li>
-                   
+
                     <li class="nav-header">Nav Header</li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">
