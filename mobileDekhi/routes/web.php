@@ -31,4 +31,12 @@ Route::middleware('auth')->group(function () {
     Route::delete('/mainCarousel/{id}', 'MainCarouselController@destroy')->name('mainCarousel.destroy');
     // main carousel end
     //
+    // sub carousel start
+    Route::get('subCarousel/add', 'SubCarouselController@create')->name('subCarousel.add');
+    Route::post('subCarousel/add', 'SubCarouselController@store')->name('subCarousel.store');
+    Route::get('/subCarousel/{id}edit', 'SubCarouselController@edit')->name('subCarousel.edit');
+    Route::put('/subCarousel/{id}', 'SubCarouselController@update')->name('subCarousel.update');
+    Route::delete('/subCarousel/{id}', 'SubCarouselController@destroy')->name('subCarousel.destroy');
+    // sub carousel end
+
 });
