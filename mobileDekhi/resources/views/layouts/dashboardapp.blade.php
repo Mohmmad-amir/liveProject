@@ -17,6 +17,8 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
+    <link rel="stylesheet" href="{{asset('assets/css/adminPanaleApp.css')}}">
+
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
@@ -24,7 +26,6 @@
 </head>
 <body>
     <div id="app">
-<<<<<<< HEAD
         <div class="warapper">
 
             <!-- Main Sidebar Container -->
@@ -43,7 +44,7 @@
                     <img src="assets/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
                 </div>
                 <div class="info">
-                    {{-- <a href="#" class="d-block">{{ Auth::user()->name }}</a> --}}
+                    <a href="#" class="d-block">{{ Auth::user()->name }}</a>
                 </div>
             </div>
 
@@ -154,13 +155,22 @@
 
         </div>
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm main-header">
-=======
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
->>>>>>> 8cc990c7c5faa3d6aa64e40bcd9408b89aa9f4ba
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                {{-- <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
-                </a>
+                </a> --}}
+
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                    </li>
+                    <li class="nav-item d-none d-sm-inline-block">
+                        <a href="#" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item d-none d-sm-inline-block">
+                        <a href="#" class="nav-link">Contact</a>
+                    </li>
+                </ul>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -184,6 +194,50 @@
                                 </li>
                             @endif
                         @else
+
+                        <!-- Right navbar links -->
+                        <ul class="navbar-nav ml-auto">
+                            <!-- Messages Dropdown Menu -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" data-toggle="dropdown" href="#">
+                                    <i class="far fa-comments"></i>
+                                    <span class="badge badge-danger navbar-badge">3</span>
+                                </a>
+                            </li>
+                            <!-- Notifications Dropdown Menu -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" data-toggle="dropdown" href="#">
+                                    <i class="far fa-bell"></i>
+                                    <span class="badge badge-warning navbar-badge">15</span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                                    <span class="dropdown-item dropdown-header">15 Notifications</span>
+                                    <div class="dropdown-divider"></div>
+                                    <a href="#" class="dropdown-item">
+                                        <i class="fas fa-envelope mr-2"></i> 4 new messages
+                                        <span class="float-right text-muted text-sm">3 mins</span>
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a href="#" class="dropdown-item">
+                                        <i class="fas fa-users mr-2"></i> 8 friend requests
+                                        <span class="float-right text-muted text-sm">12 hours</span>
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a href="#" class="dropdown-item">
+                                        <i class="fas fa-file mr-2"></i> 3 new reports
+                                        <span class="float-right text-muted text-sm">2 days</span>
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                                    <i class="fas fa-expand-arrows-alt"></i>
+                                </a>
+                            </li>
+                        </ul>
+
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
@@ -215,23 +269,16 @@
 
 
 
-    {{-- bootstrap js --}}
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script src="{{asset('assets/js/jquery-3.5.1.min.js')}}"></script>
+<!-- Bootstrap -->
+<script src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>
+<!-- overlayScrollbars -->
+<script src="{{asset('assets/js/jquery.overlayScrollbars.min.js')}}"></script>
+<!-- AdminLTE App -->
+<script src="{{asset('assets/js/adminlte.js')}}"></script>
 
-<<<<<<< HEAD
+
     
-{{-- for main carousel --}}
-<script>
-    $(document).ready(function(){
-      $("#addMainCarousel").click(function(){
-        $("#showMainCarousel").fadeToggle();
-      });
-    });
-    </script>
-=======
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
 
->>>>>>> 8cc990c7c5faa3d6aa64e40bcd9408b89aa9f4ba
 </body>
 </html>
