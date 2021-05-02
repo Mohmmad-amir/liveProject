@@ -63,6 +63,24 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Dashboard</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-image"></i>
+                            <p>
+                                Carousel
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
                                 <a href="{{route('mainCarousel.add')}}" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Main Carousel</p>
@@ -77,6 +95,16 @@
                                 </a>
                             </li>
                         </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-pager"></i>
+                            <p>
+                                Card
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
                                 <a href="/addProduct" class="nav-link">
@@ -86,7 +114,7 @@
                             </li>
                         </ul>
                     </li>
-
+                    
                     <li class="nav-header">Nav Header</li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">
@@ -104,9 +132,6 @@
         </div>
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm main-header">
             <div class="container">
-                {{-- <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a> --}}
 
                 <ul class="navbar-nav">
                     <li class="nav-item">
@@ -150,14 +175,11 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item"
-                                        {{-- href="{{ route('profile.show', ['id' => Auth::user()->id]) }}"> --}}
-                                        Profile
-                                    </a>
+                                
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
                                                                                                                                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                        <i style="margin-right: 5px; margin-left:25px;" class="left fas fa-power-off"></i>{{ __('Logout') }}
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
