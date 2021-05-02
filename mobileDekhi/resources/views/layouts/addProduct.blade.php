@@ -13,13 +13,14 @@
                 </div>
         
                 <div class="col-md-12">
+                    <h4>Mobile Specifications</h4>
                     <form method="post" action="" enctype="multipart/form-data">
                         @csrf
                         <div class="row">
         
                             
                             <div class="col-4 col-sm-4 col-md-4">
-                                <h4>Mobile Specifications</h4>
+
                                 <div class="form-group">
                                     <label for="exampleInputtext1">Brand</label>
                                     <select class="form-control" name="brand">
