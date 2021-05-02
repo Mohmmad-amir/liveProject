@@ -1,9 +1,11 @@
 @extends('layouts.dashboardapp')
 
 @section('content')
+<div class="warapper">
+  <div class="content-wrapper">
 <div class="container">
     <div class="row justify-content-center">
-        <div class="offset-md-2 col-md-10">
+        <div class=" col-md-10">
           <div class="container  py-5">
             <h2 class="text-center">
               Add Sub Carousel
@@ -56,6 +58,6 @@
         </div>
     </div>
 </div>
-
+</div>
 @endsection
 
