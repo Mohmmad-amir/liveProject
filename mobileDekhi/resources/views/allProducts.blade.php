@@ -39,7 +39,7 @@
                   <td>{{$product->model}}</td>
                   <td>{{$product->price}}</td>
           </td>
-                <td><a class="btn btn-info" href=""> <i class="fas fa-edit"></i> Edit </a></td>
+                <td><a class="btn btn-info" href="{{route("products.edit",['id'=>$product->id])}}"> <i class="fas fa-edit"></i> Edit </a></td>
                 <td>
                   <form action="" method="POST" >
                     @csrf
