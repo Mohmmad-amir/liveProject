@@ -16,7 +16,7 @@
                     <h4>Mobile Specifications</h4>
                     <form method="post" action="{{route('products.update',['id'=>$products->id])}}" enctype="multipart/form-data">
                         @csrf
-                        $@method('PUT');
+                        @method('PUT')
                         <div class="row">
                             <div class="col-4 col-sm-4 col-md-4">
                                 <div class="form-group">

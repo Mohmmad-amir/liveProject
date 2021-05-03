@@ -141,17 +141,19 @@ class ProductController extends Controller
         $request->validate([
             'image' => 'required|image'
         ]);
+        $product= Product::findorFail($id);
 
         if ($request->file('image')) {
+            @unlink(public_path() . '/assets/img/' . $product->image);
             $file = $request->file('image');
             $extension = $file->getClientOriginalExtension();
             $image = "products_" . time() . "." . $extension;
-
             Image::make($file)->save(public_path() . '/assets/img/' . $image);
+            $product->image = $image;
         }
-        $product= Product::findorFail($id);
 
-        $product->image = $image;
+
+
         $product->name = $request->product_name;
         $product->brand = $request->brand;
         $product->model = $request->product_model;
@@ -213,6 +215,6 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        //
+
     }
 }
