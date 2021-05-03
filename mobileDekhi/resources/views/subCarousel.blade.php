@@ -7,7 +7,7 @@
     <div class="row justify-content-center">
         <div class=" col-md-10">
           <div class="container  py-5">
-            <h2 class="text-center">
+            <h2 class="text-center mt-5">
               Add Sub Carousel
             </h2>
             @if (session('message'))

@@ -7,7 +7,7 @@
     <div class="row justify-content-center">
         <div class="col-md-10">
           <div class="container  py-5">
-            <h2 class="text-center">
+            <h2 class="text-center mt-5">
               Update Main Carousel
             </h2>
             <form method="POST" action="{{route('mainCarousel.update',['id'=>$mainCarousel->id])}}" enctype="multipart/form-data">
