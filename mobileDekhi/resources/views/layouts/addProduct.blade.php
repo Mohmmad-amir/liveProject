@@ -24,7 +24,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="ProductName"> Name</label>
-                                    <input name="product_name" type="text" class="form-control" aria-describedby="textHelp">
+                                    <input name="product_name" type="text" id="ProductName" class="form-control" aria-describedby="textHelp">
                                 </div>
                                 <div class="form-group">
                                     <label for="brand">Brand</label>
@@ -84,8 +84,8 @@
                                 </div>
         
                                 <div class="form-group">
-                                    <label for="exampleInputtext1">GPRS</label>
-                                    <input name="GPRS" type="text" class="form-control" aria-describedby="textHelp">
+                                    <label for="GPRS">GPRS</label>
+                                    <input name="GPRS" id="GPRS" type="text" class="form-control" aria-describedby="textHelp">
                                 </div>
                                 <div class="form-group">
                                     <label for="edge">EDGE</label>
@@ -180,125 +180,123 @@
                                 <h4 class="mt-4 mb-2">Camera</h4>
                                 <div class="form-group">
                                     <label for="PrimaryCamera">Primary Camera</label>
-                                    <input type="PrimaryCamera" id="PrimaryCamera" class="form-control" aria-describedby="textHelp">
+                                    <input type="text" id="PrimaryCamera" name="PrimaryCamera" class="form-control" aria-describedby="textHelp">
                                 </div>
                                 <div class="form-group">
                                     <label for="SecondaryCamera">Secondary Camera</label>
-                                    <input type="SecondaryCamera" id="SecondaryCamera" class="form-control" aria-describedby="textHelp">
+                                    <input type="text" name="SecondaryCamera" id="SecondaryCamera" class="form-control" aria-describedby="textHelp">
                                 </div>
         
         
                                 <div class="form-group">
-                                    <label for="exampleInputtext1">Camera Features</label>
-                                    <input type="CameraFeatures" class="form-control" aria-describedby="textHelp">
+                                    <label for="CameraFeatures">Camera Features</label>
+                                    <input type="text" name="CameraFeatures" id="CameraFeatures" class="form-control" aria-describedby="textHelp">
                                 </div>
         
                                 <div class="form-group">
-                                    <label for="exampleInputtext1">Video</label>
-                                    <input type="Video" class="form-control" aria-describedby="textHelp">
+                                    <label for="Video">Video</label>
+                                    <input type="text" name="Video" id="Video" class="form-control" aria-describedby="textHelp">
                                 </div>
         
         
         
                                 <h4 class="mt-4 mb-2">Sound</h4>
                                 <div class="form-group">
-                                    <label for="exampleInputtext1">Audio</label>
-                                    <input type="Audio" class="form-control" aria-describedby="textHelp">
+                                    <label for="Audio">Audio</label>
+                                    <input type="text" name="Audio" id="Audio" class="form-control" aria-describedby="textHelp">
                                 </div>
         
                                 <div class="form-group">
-                                    <label for="exampleInputtext1">Loudspeaker</label>
-                                    <input type="Loudspeaker" class="form-control" aria-describedby="textHelp">
+                                    <label for="Loudspeaker">Loudspeaker</label>
+                                    <input type="text" name="Loudspeaker" id="Loudspeaker" class="form-control" aria-describedby="textHelp">
                                 </div>
                             </div>
                             <div class="col-4 col-sm-4 col-md-4">
         
                                 <div class="form-group">
-                                    <label for="exampleInputtext1">3.5mm Jack</label>
-                                    <input type="Jack" class="form-control" aria-describedby="textHelp">
+                                    <label for="Jack">3.5mm Jack</label>
+                                    <input type="text" name="Jack" id="Jack" class="form-control" aria-describedby="textHelp">
                                 </div>
 
                                 <h4 class="mt-4 mb-2">Connectivity</h4>
 
                                 <div class="form-group">
-                                    <label for="exampleInputtext1">WiFi</label>
-                                    <input type="WiFi" class="form-control" aria-describedby="textHelp">
+                                    <label for="WiFi">WiFi</label>
+                                    <input type="text" name="WiFi" id="WiFi" class="form-control" aria-describedby="textHelp">
                                 </div>
         
                                 <div class="form-group">
-                                    <label for="exampleInputtext1">Bluetooth</label>
-                                    <input type="Bluetooth" class="form-control" aria-describedby="textHelp">
+                                    <label for="Bluetooth">Bluetooth</label>
+                                    <input type="text" name="Bluetooth" id="Bluetooth" class="form-control" aria-describedby="textHelp">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputtext1">NFC</label>
-                                    <input type="NFC" class="form-control" aria-describedby="textHelp">
+                                    <label for="NFC">NFC</label>
+                                    <input type="text" name="NFC" id="NFC" class="form-control" aria-describedby="textHelp">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputtext1">USB</label>
-                                    <input type="NFC" class="form-control" aria-describedby="textHelp">
+                                    <label for="usb">USB</label>
+                                    <input type="text" name="usb" id="usb" class="form-control" aria-describedby="textHelp">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputtext1">Fm Radio</label>
-                                    <input type="FmRadio" class="form-control" aria-describedby="textHelp">
+                                    <label for="FmRadio">Fm Radio</label>
+                                    <input type="text" name="FmRadio" id="FmRadio" class="form-control" aria-describedby="textHelp">
                                 </div>
         
                                 <div class="form-group">
-                                    <label for="exampleInputtext1">GPS</label>
-                                    <input type="GPS" class="form-control" aria-describedby="textHelp">
+                                    <label for="GPS">GPS</label>
+                                    <input type="text" name="GPS" id="GPS" class="form-control" aria-describedby="textHelp">
                                 </div>
         
                                 <h4 class="mt-4 mb-2">Features</h4>
 
                                 <div class="form-group">
-                                    <label for="exampleInputtext1">Sensors</label>
-                                    <input type="Sensors" class="form-control" aria-describedby="textHelp">
+                                    <label for="Sensors">Sensors</label>
+                                    <input type="text" name="Sensors" id="Sensors" class="form-control" aria-describedby="textHelp">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputtext1">Browser</label>
-                                    <input type="Browser" class="form-control" aria-describedby="textHelp">
+                                    <label for="Browser">Browser</label>
+                                    <input type="text" name="Browser" id="Browser" class="form-control" aria-describedby="textHelp">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputtext1">Java</label>
-                                    <input type="Java" class="form-control" aria-describedby="textHelp">
+                                    <label for="Java">Java</label>
+                                    <input type="text" name="Java" id="Java" class="form-control" aria-describedby="textHelp">
                                 </div>
 
                                 <h4 class="mt-4 mb-2">Battery</h4>
                                 
                                 <div class="form-group">
-                                    <label for="exampleInputtext1">Battery Type</label>
-                                    <input type="BatteryType" class="form-control" aria-describedby="textHelp">
+                                    <label for="BatteryType">Battery Type</label>
+                                    <input type="text" name="BatteryType" id="BatteryType" class="form-control" aria-describedby="textHelp">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputtext1">Battery Capacity</label>
-                                    <input type="BatteryCapacity" class="form-control" aria-describedby="textHelp">
+                                    <label for="BatteryCapacity">Battery Capacity</label>
+                                    <input type="text" name="BatteryCapacity" id="BatteryCapacity" class="form-control" aria-describedby="textHelp">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputtext1">Charging</label>
-                                    <input type="Charging" class="form-control" aria-describedby="textHelp">
+                                    <label for="Charging">Charging</label>
+                                    <input type="text" name="Charging" id="Charging" class="form-control" aria-describedby="textHelp">
                                 </div>
 
                                 <h4 class="mt-4 mb-2">Launch</h4>
-
                                 <div class="form-group">
-                                    <label for="exampleInputtext1">Launch Date</label>
-                                    <input type="LaunchDate" class="form-control" aria-describedby="textHelp">
+                                    <label for="LaunchDate">Launch Date</label>
+                                    <input type="text" name="LaunchDate" id="LaunchDate" class="form-control" aria-describedby="textHelp">
                                 </div>
 
                                 <h4 class="mt-4 mb-2">More</h4>
 
                                 <div class="form-group">
-                                    <label for="exampleInputtext1">Made By</label>
-                                    <input type="MadeBy" class="form-control" aria-describedby="textHelp">
+                                    <label for="MadeBy">Made By</label>
+                                    <input type="text" name="MadeBy" id="MadeBy" class="form-control" aria-describedby="textHelp">
                                 </div>
         
                                 <div class="form-group">
-                                    <label for="exampleInputtext1">Body Color</label>
-                                    <input type="BodyColor" class="form-control" aria-describedby="textHelp">
+                                    <label for="BodyColor">Body Color</label>
+                                    <input type="text" name="BodyColor" id="BodyColor" class="form-control" aria-describedby="textHelp">
                                 </div>
         
                             </div>
                         </div>
-        
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
                 </div>
