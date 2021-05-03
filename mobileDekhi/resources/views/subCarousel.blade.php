@@ -27,7 +27,7 @@
               <button type="submit" class="btn btn-primary">Submit</button>
             </form>
           </div>
-          <table class="table">
+          <table class="table table-striped">
             <thead>
               <tr>
                 <th scope="col">Id</th>

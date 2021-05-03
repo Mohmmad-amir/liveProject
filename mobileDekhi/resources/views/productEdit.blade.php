@@ -211,7 +211,7 @@
         
                                 <div class="form-group">
                                     <label for="Loudspeaker">Loudspeaker</label>
-                                    <input type="text" value="{{$products->loadspeaker}}" name="Loudspeaker" id="Loudspeaker" class="form-control" aria-describedby="textHelp">
+                                    <input type="text" value="{{$products->loudspeaker}}" name="Loudspeaker" id="Loudspeaker" class="form-control" aria-describedby="textHelp">
                                 </div>
                             </div>
                             <div class="col-4 col-sm-4 col-md-4">
