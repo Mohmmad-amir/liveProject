@@ -17,13 +17,18 @@
                     <form method="post" action="" enctype="multipart/form-data">
                         @csrf
                         <div class="row">
-        
-                            
                             <div class="col-4 col-sm-4 col-md-4">
-
                                 <div class="form-group">
-                                    <label for="exampleInputtext1">Brand</label>
-                                    <select class="form-control" name="brand">
+                                    <label for="image">Image</label>
+                                    <input id="image" name="image" type="file" class="form-control" aria-describedby="textHelp">
+                                </div>
+                                <div class="form-group">
+                                    <label for="ProductName"> Name</label>
+                                    <input name="product_name" type="text" class="form-control" aria-describedby="textHelp">
+                                </div>
+                                <div class="form-group">
+                                    <label for="brand">Brand</label>
+                                    <select class="form-control" id="brand" name="brand">
                                         <option hidden selected>Select Type</option>
                                         <option value="2G,3G,4G,5G">Samsang</option>
                                         <option value="Nokia">Nokia</option>
@@ -34,21 +39,18 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="ProductName"> Model</label>
-                                    <input name="Product_name" type="text" class="form-control" aria-describedby="textHelp">
+                                    <label for="ProductModel"> Model</label>
+                                    <input id="ProductModel" name="product_model" type="text" class="form-control" aria-describedby="textHelp">
                                 </div>
         
+
                                 <div class="form-group">
-                                    <label for="ProductName"> Name</label>
-                                    <input name="Product_name" type="text" class="form-control" aria-describedby="textHelp">
+                                    <label for="price"> Price</label>
+                                    <input id="price" type="text" name="product_price" class="form-control" aria-describedby="textHelp">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputtext1"> Price</label>
-                                    <input type="Product_price" class="form-control" aria-describedby="textHelp">
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputtext1">Price Range</label>
-                                    <select class="form-control" name="Price_range">
+                                    <label for="price_range">Price Range</label>
+                                    <select class="form-control" id="price_range" name="price_range">
                                         <option hidden selected>Select Price Range</option>
                                         <option value="0-5,000">0-5,000</option>
                                         <option value="5,000-10,000">5,000-10,000</option>
@@ -61,15 +63,11 @@
         
                                     </select>
                                 </div>
-                                <div class="form-group">
-                                    <label for="exampleInputtext1">Image</label>
-                                    <input name="image" type="file" class="form-control" aria-describedby="textHelp">
-                                </div>
         
                                 <h4 class="mt-4 mb-2">Network</h4>
                                 <div class="form-group">
-                                    <label for="exampleInputtext1">Network Type</label>
-                                    <select class="form-control" name="networkType">
+                                    <label for="networkType">Network Type</label>
+                                    <select class="form-control" id="networkType" name="networkType">
                                         <option hidden selected>Select Network</option>
                                         <option value="2G">2G</option>
                                         <option value="2G,3G">2G,3G</option>
@@ -81,8 +79,8 @@
         
         
                                 <div class="form-group">
-                                    <label for="exampleInputtext1">Speed</label>
-                                    <input name="speed" type="text" class="form-control" aria-describedby="textHelp">
+                                    <label for="speed">Speed</label>
+                                    <input name="speed" type="text" id="speed" class="form-control" aria-describedby="textHelp">
                                 </div>
         
                                 <div class="form-group">
@@ -90,40 +88,40 @@
                                     <input name="GPRS" type="text" class="form-control" aria-describedby="textHelp">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputtext1">EDGE</label>
-                                    <input name="EDGE" type="text" class="form-control" aria-describedby="textHelp">
+                                    <label for="edge">EDGE</label>
+                                    <input name="edge" id="edge" type="text" class="form-control" aria-describedby="textHelp">
                                 </div>
         
         
                                 <h4 class="mt-4 mb-2">Body</h4>
                                 <div class="form-group">
-                                    <label for="exampleInputtext1">Body Dimensions</label>
-                                    <input name="BodyDimensions" type="text" class="form-control" aria-describedby="textHelp">
+                                    <label for="bodyDimensions">Body Dimensions</label>
+                                    <input name="bodyDimensions" id="bodyDimensions" type="text" class="form-control" aria-describedby="textHelp">
                                 </div>
         
                                 <div class="form-group">
-                                    <label for="exampleInputtext1">Body Weight</label>
-                                    <input name="BodyWeight" type="text" class="form-control" aria-describedby="textHelp">
+                                    <label for="bodyWeight">Body Weight</label>
+                                    <input name="bodyWeight" id="bodyWeight" type="text" class="form-control" aria-describedby="textHelp">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputtext1">Build</label>
-                                    <input name="Build" type="text" class="form-control" aria-describedby="textHelp">
+                                    <label for="build">Build</label>
+                                    <input name="build" id="build" type="text" class="form-control" aria-describedby="textHelp">
                                 </div>
         
                                 <div class="form-group">
-                                    <label for="exampleInputtext1">Network Sim</label>
-                                    <input name="NetworkSim" type="text" class="form-control" aria-describedby="textHelp">
+                                    <label for="networkSim">Network Sim</label>
+                                    <input name="networkSim" id="networkSim" type="text" class="form-control" aria-describedby="textHelp">
                                 </div>
 
                                 <h4 class="mt-4 mb-2">Display</h4>
                                 
                                 <div class="form-group">
-                                    <label for="exampleInputtext1">Display Type</label>
-                                    <input name="DisplayType" type="text" class="form-control" aria-describedby="textHelp">
+                                    <label for="displayType">Display Type</label>
+                                    <input name="displayType" id="displayType" type="text" class="form-control" aria-describedby="textHelp">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputtext1">Display Size</label>
-                                    <input name="DisplaySize" type="text" class="form-control" aria-describedby="textHelp">
+                                    <label for="displaySize">Display Size</label>
+                                    <input name="displaySize" id="displaySize" type="text" class="form-control" aria-describedby="textHelp">
                                 </div>
         
         

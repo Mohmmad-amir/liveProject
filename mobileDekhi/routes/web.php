@@ -20,9 +20,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 Auth::routes();
-Route::get('/addProduct', function () {
-    return view('layouts.addProduct');
-});
+// Route::get('/addProduct', function () {
+//     return view('layouts.addProduct');
+// });
 
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -42,5 +42,13 @@ Route::middleware('auth')->group(function () {
     Route::put('/subCarousel/{id}', 'SubCarouselController@update')->name('subCarousel.update');
     Route::delete('/subCarousel/{id}', 'SubCarouselController@destroy')->name('subCarousel.destroy');
     // sub carousel end
+    // add product start
+    Route::get('products/', 'ProductController@index')->name('products.add');
+    Route::get('products/add', 'ProductController@create')->name('products.add');
+    Route::post('products/add', 'ProductController@store')->name('products.store');
+    Route::get('/products/{id}/edit', 'ProductController@edit')->name('products.edit');
+    Route::put('/products/{id}', 'ProductController@update')->name('products.update');
+    Route::delete('/products/{id}', 'ProductController@destroy')->name('products.destroy');
+    // add product end
 
 });

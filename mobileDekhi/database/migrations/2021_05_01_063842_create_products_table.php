@@ -46,7 +46,7 @@ class CreateProductsTable extends Migration
             $table->string('video');
             $table->string('audio');
             $table->string('loudspeaker');
-            $table->string('35mm_jack');
+            $table->string('mm_jack');
             $table->string('wifi');
             $table->string('bluetooth');
             $table->string('nfc');
