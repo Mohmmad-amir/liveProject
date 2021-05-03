@@ -30,12 +30,11 @@
                                     <label for="brand">Brand</label>
                                     <select class="form-control" id="brand" name="brand">
                                         <option hidden selected>Select Type</option>
-                                        <option value="2G,3G,4G,5G">Samsang</option>
+                                        <option value="Samsang">Samsang</option>
                                         <option value="Nokia">Nokia</option>
                                         <option value="Xiaomi">Xiaomi</option>
                                         <option value="Huawei">Huawei</option>
                                         <option value="Iphone">Iphone</option>
-        
                                     </select>
                                 </div>
                                 <div class="form-group">
