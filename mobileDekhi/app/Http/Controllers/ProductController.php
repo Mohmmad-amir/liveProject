@@ -14,7 +14,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        $product = Product::all();
+        return view('allProducts', compact('products'));
     }
 
     /**
@@ -63,18 +64,18 @@ class ProductController extends Controller
         $product->build = $request->build;
         $product->network_sim = $request->networkSim;
         $product->display_type = $request->displayType;
-        $product->display_size = $request->Product_name;
-        $product->display_resolution = $request->Product_name;
-        $product->display_multi_touch = $request->Product_name;
-        $product->display_density = $request->Product_name;
-        $product->operating_system = $request->Product_name;
-        $product->os_version = $request->Product_name;
-        $product->cpu = $request->Product_name;
-        $product->chip_set = $request->Product_name;
-        $product->memory_internal = $request->Product_name;
-        $product->memory_external = $request->Product_name;
-        $product->ram = $request->Product_name;
-        $product->primary_camera = $request->Product_name;
+        $product->display_size = $request->displaySize;
+        $product->display_resolution = $request->displayResolution;
+        $product->display_multi_touch = $request->displayMultitouch;
+        $product->display_density = $request->DisplayDensity;
+        $product->operating_system = $request->OperatingSystem;
+        $product->os_version = $request->os_version;
+        $product->cpu = $request->cpu;
+        $product->chip_set = $request->chipSet;
+        $product->memory_internal = $request->MemoryInternal;
+        $product->memory_external = $request->MemoryExternal;
+        $product->ram = $request->Ram;
+        $product->primary_camera = $request->PrimaryCamera;
         $product->secondary_camera = $request->Product_name;
         $product->camera_features = $request->Product_name;
         $product->video = $request->Product_name;

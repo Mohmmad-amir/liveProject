@@ -123,75 +123,68 @@
                                     <label for="displaySize">Display Size</label>
                                     <input name="displaySize" id="displaySize" type="text" class="form-control" aria-describedby="textHelp">
                                 </div>
-        
-        
-        
                             </div>
-        
-        
-        
-        
-        
+    
                             <div class="col-4 col-sm-4 col-md-4">
         
                                 <div class="form-group">
-                                    <label for="exampleInputtext1">Display Resolution</label>
-                                    <input name="DisplayResolution" type="text" class="form-control"
+                                    <label for="displayResolution">Display Resolution</label>
+                                    <input name="displayResolution" id="displayResolution" type="text" class="form-control"
                                         aria-describedby="textHelp">
                                 </div>
         
                                 <div class="form-group">
-                                    <label for="exampleInputtext1">Display Multitouch</label>
-                                    <input name="DisplayMultitouch" type="text" class="form-control"
+                                    <label for="displayMultitouch">Display Multitouch</label>
+                                    <input name="displayMultitouch" id="displayMultitouch" type="text" class="form-control"
                                         aria-describedby="textHelp">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputtext1">Display Density</label>
-                                    <input name="DisplayDensity" type="text" class="form-control" aria-describedby="textHelp">
+                                    <label for="DisplayDensity">Display Density</label>
+                                    <input name="DisplayDensity" id="DisplayDensity" type="text" class="form-control" aria-describedby="textHelp">
                                 </div>
         
                                 <h4 class="mt-4 mb-2">Platfrom</h4>
 
                                 <div class="form-group">
-                                    <label for="exampleInputtext1">Operating System</label>
-                                    <input name="OperatingSystem" type="text" class="form-control" aria-describedby="textHelp">
+                                    <label for="OperatingSystem">Operating System</label>
+                                    <input name="OperatingSystem" id="OperatingSystem" type="text" class="form-control" aria-describedby="textHelp">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputtext1">OS Version</label>
-                                    <input name="DisplayDensity" type="text" class="form-control" aria-describedby="textHelp">
+                                    <label for="os-version">OS Version</label>
+                                    <input name="os_version" id="os-version" type="text" class="form-control" aria-describedby="textHelp">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputtext1">CPU</label>
-                                    <input name="DisplayDensity" type="text" class="form-control" aria-describedby="textHelp">
+                                    <label for="cpu">CPU</label>
+                                    <input name="cpu" id="cpu" type="text" class="form-control" aria-describedby="textHelp">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputtext1">Chipset</label>
-                                    <input name="DisplayDensity" type="text" class="form-control" aria-describedby="textHelp">
+                                    <label for="chipSet">Chipset</label>
+                                    <input name="chipSet" id="chipSet" type="text" class="form-control" aria-describedby="textHelp">
                                 </div>
         
                                 <h4 class="mt-4 mb-2">Memory</h4>
 
                                 <div class="form-group">
-                                    <label for="exampleInputtext1">Memory Internal</label>
-                                    <input name="MemoryInternal" type="text" class="form-control" aria-describedby="textHelp">
+                                    <label for="MemoryInternal">Memory Internal</label>
+                                    <input name="MemoryInternal" id="MemoryInternal" type="text" class="form-control" aria-describedby="textHelp">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputtext1">Memory External</label>
-                                    <input name="MemoryExternal" type="text" class="form-control" aria-describedby="textHelp">
+                                    <label for="MemoryExternal">Memory External</label>
+                                    <input name="MemoryExternal" id="MemoryExternal" type="text" class="form-control" aria-describedby="textHelp">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputtext1">Ram</label>
-                                    <input name="Ram" type="text" class="form-control" aria-describedby="textHelp">
+                                    <label for="Ram">Ram</label>
+                                    <input name="Ram" id="Ram" type="text" class="form-control" aria-describedby="textHelp">
                                 </div>
         
                                 <h4 class="mt-4 mb-2">Camera</h4>
                                 <div class="form-group">
-                                    <label for="exampleInputtext1">Primary Camera</label>
-                                    <input type="PrimaryCamera" class="form-control" aria-describedby="textHelp">
+                                    <label for="PrimaryCamera">Primary Camera</label>
+                                    <input type="PrimaryCamera" id="PrimaryCamera" class="form-control" aria-describedby="textHelp">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputtext1">Secondary Camera</label>
-                                    <input type="SecondaryCamera" class="form-control" aria-describedby="textHelp">
+                                    <label for="SecondaryCamera">Secondary Camera</label>
+                                    <input type="SecondaryCamera" id="SecondaryCamera" class="form-control" aria-describedby="textHelp">
                                 </div>
         
         
