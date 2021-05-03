@@ -10,6 +10,11 @@
             <h2 class="text-center mt-5">
               All Product
             </h2>
+
+            <div class="col-md-12 mt-4 mb-4">
+                <h4 class="text-center mt-5">Edit Product</h4>
+            </div>
+
             @if (session('message'))
                 <div class="alert alert-success">
                     <p>{{ session('message') }}</p>
