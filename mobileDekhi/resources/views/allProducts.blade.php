@@ -24,21 +24,20 @@
                 <th scope="col">Name</th>
                 <th scope="col">Brand</th>
                 <th scope="col">Model</th>
-                <th colspan="2">Price</th>
+                <th scope="col">Price</th>
                 <th colspan="2">Action</th>
               </tr>
             </thead>
             <tbody>
-              {{-- @foreach ($subCarousels as $subCarousel) --}}
+              @foreach ($products as $product)
               <tr>
-                <th scope="row"></th>
+                <td scope="row">{{$product->id}}</td>
                 <td><img class="" style="width: 80px"
-                  src="" alt="">
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                  src="{{ asset('assets/img/' . $product->image) }}" alt="">
+                  <td>{{$product->name}}</td>
+                  <td>{{$product->brand}}</td>
+                  <td>{{$product->model}}</td>
+                  <td>{{$product->price}}</td>
           </td>
                 <td><a class="btn btn-info" href=""> <i class="fas fa-edit"></i> Edit </a></td>
                 <td>
@@ -49,7 +48,7 @@
                   </form>
                 </td>
               </tr>
-              {{-- @endforeach --}}
+              @endforeach
 
             </tbody>
           </table>
