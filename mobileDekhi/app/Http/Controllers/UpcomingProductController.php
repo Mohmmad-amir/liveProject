@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\upcomingProductController as ControllersUpcomingProductController;
 use App\Models\UpcomingProduct;
 use Illuminate\Http\Request;
 use Image;
@@ -89,7 +90,24 @@ class upcomingProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $upcomingProduct = UpcomingProduct::findorFail($id);
+        $request->validate([
+            'image' => 'required|image'
+        ]);
+
+        if ($request->file('image')) {
+            $file = $request->file('image');
+            $extension = $file->getClientOriginalExtension();
+            $image = "upcomingProduct_" . time() . "." . $extension;
+
+            Image::make($file)->save(public_path() . '/assets/img/' . $image);
+        }
+
+        $upcomingProduct->image = $image;
+        $upcomingProduct->name = $request->name;
+
+        $upcomingProduct->save();
+        return redirect("upcomingProducts/add")->with("message", "updated Successful"); 
     }
 
     /**
@@ -100,6 +118,9 @@ class upcomingProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $upcomingProduct = UpcomingProduct::findOrFail($id);
+        @unlink(public_path() . '/assets/img/' . $upcomingProduct->image);
+        $upcomingProduct->delete();
+        return redirect()->back()->with("message", "Deleted Successful");
     }
 }
