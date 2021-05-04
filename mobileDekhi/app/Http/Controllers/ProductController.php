@@ -42,13 +42,12 @@ class ProductController extends Controller
             'image' => 'required|image'
         ]);
 
-        if ($request->file('image')) {
-            $file = $request->file('image');
-            $extension = $file->getClientOriginalExtension();
-            $image = "products_" . time() . "." . $extension;
+        $file = $request->file('image');
+        $extension = $file->getClientOriginalExtension();
+        $image = "products_" . time() . "." . $extension;
+        Image::make($file)->save(public_path() . '/assets/img/' . $image);
 
-            Image::make($file)->save(public_path() . '/assets/img/' . $image);
-        }
+
 
         $product = new Product();
         $product->image = $image;

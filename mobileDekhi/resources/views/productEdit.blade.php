@@ -19,6 +19,15 @@
                         @method('PUT')
                         <div class="row">
                             <div class="col-4 col-sm-4 col-md-4">
+                                @if ($errors->any())
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
                                 <div class="form-group">
                                     <label for="image">Image</label>
                                     <input id="image" name="image" type="file" value="{{$products->name}}" class="form-control" aria-describedby="textHelp">
