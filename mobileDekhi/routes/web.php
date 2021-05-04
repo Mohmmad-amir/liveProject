@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 /*
@@ -50,5 +51,9 @@ Route::middleware('auth')->group(function () {
     Route::put('/products/{id}', 'ProductController@update')->name('products.update');
     Route::delete('/products/{id}', 'ProductController@destroy')->name('products.destroy');
     // add product end
+    // add upcoming product start
+    Route::get('upcomingProducts/add','UpcomingproductController@create')->name('upcomingProduct.add');
+    Route::post('upcomingProducts/add','UpcomingproductController@store')->name('upcomingProduct.store');
+    // add upcoming product start
 
 });
