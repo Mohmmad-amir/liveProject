@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\upcomingProduct;
+use App\Models\UpcomingProduct;
 use Illuminate\Http\Request;
 use Image;
 
@@ -25,8 +25,8 @@ class upcomingProductController extends Controller
      */
     public function create()
     {
-        $product = upcomingProduct::all();
-        return view('upcomingProduct',compact('product'));
+        $upcomingProducts = upcomingProduct::all();
+        return view('upcomingProduct',compact('upcomingProducts'));
     }
 
     /**
@@ -76,7 +76,8 @@ class upcomingProductController extends Controller
      */
     public function edit($id)
     {
-        //
+        $upcomingProduct = UpcomingProduct::findorFail($id);
+        return view('upcomingProductEdit',compact('upcomingProduct'));
     }
 
     /**

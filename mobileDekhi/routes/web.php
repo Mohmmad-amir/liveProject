@@ -54,6 +54,7 @@ Route::middleware('auth')->group(function () {
     // add upcoming product start
     Route::get('upcomingProducts/add','UpcomingproductController@create')->name('upcomingProduct.add');
     Route::post('upcomingProducts/add','UpcomingproductController@store')->name('upcomingProduct.store');
+    Route::get('upcomingProducts/{id}/edit','UpcomingproductController@edit')->name('upcomingProduct.edit');
     // add upcoming product start
 
 });
