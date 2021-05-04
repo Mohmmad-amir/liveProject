@@ -10,11 +10,6 @@
             <h2 class="text-center mt-5">
               All Product
             </h2>
-            @if (session('message'))
-                <div class="alert alert-success">
-                    <p>{{ session('message') }}</p>
-                </div>
-            @endif
 
           <table class="table table-striped">
             <thead>
@@ -41,7 +36,7 @@
           </td>
                 <td><a class="btn btn-info" href="{{route("products.edit",['id'=>$product->id])}}"> <i class="fas fa-edit"></i> Edit </a></td>
                 <td>
-                  <form action="" method="POST" >
+                  <form action="{{route('products.destroy',['id'=>$product->id])}}" method="POST" >
                     @csrf
                     @method("DELETE")
                     <button class="btn btn-danger"> <i class="fas fa-trash"></i> Delete </button>

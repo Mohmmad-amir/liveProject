@@ -21,7 +21,7 @@
                             <div class="col-4 col-sm-4 col-md-4">
                                 <div class="form-group">
                                     <label for="image">Image</label>
-                                    <input id="image" name="image" type="file" class="form-control" aria-describedby="textHelp">
+                                    <input id="image" name="image" type="file" value="{{$products->name}}" class="form-control" aria-describedby="textHelp">
                                 </div>
                                 <div class="form-group">
                                     <label for="ProductName"> Name</label>
@@ -30,9 +30,8 @@
                                 <div class="form-group">
                                     <label for="brand">Brand</label>
                                     <select class="form-control" id="brand" name="brand">
-                                        <option value="{{$products->brand}}"></option>
-                                        <option hidden selected>Select Type</option>
-                                        <option value="2G,3G,4G,5G">Samsang</option>
+                                        <option hidden selected>{{$products->brand}}</option>
+                                        <option value="Samsung">Samsang</option>
                                         <option value="Nokia">Nokia</option>
                                         <option value="Xiaomi">Xiaomi</option>
                                         <option value="Huawei">Huawei</option>
@@ -53,8 +52,7 @@
                                 <div class="form-group">
                                     <label for="price_range">Price Range</label>
                                     <select class="form-control" id="price_range" name="price_range">
-                                        <option hidden selected>Select Price Range</option>
-                                        <option value="{{$products->price_range}}"></option>
+                                        <option hidden selected>{{$products->price_range}}</option>
                                         <option value="0-5,000">0-5,000</option>
                                         <option value="5,000-10,000">5,000-10,000</option>
                                         <option value="10,000-15,000">10,000-20,000</option>
@@ -71,8 +69,7 @@
                                 <div class="form-group">
                                     <label for="networkType">Network Type</label>
                                     <select class="form-control" id="networkType" name="networkType">
-                                        <option hidden selected>Select Network</option>
-                                        <option value="{{$products->network_type}}"></option>
+                                        <option hidden selected>{{$products->network_type}}</option>
                                         <option value="2G">2G</option>
                                         <option value="2G,3G">2G,3G</option>
                                         <option value="2G,3G,4G">2G,3G,4G</option>
