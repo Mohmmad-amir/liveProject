@@ -11,11 +11,12 @@
                 <div class="col-md-12 mt-4 mb-4">
                     <h4 class="text-center mt-5">Edit Product</h4>
                 </div>
-        
+
                 <div class="col-md-12">
                     <h4>Mobile Specifications</h4>
-                    <form method="post" action="" enctype="multipart/form-data">
+                    <form method="post" action="{{route('products.update',['id'=>$products->id])}}" enctype="multipart/form-data">
                         @csrf
+                        $@method('PUT');
                         <div class="row">
                             <div class="col-4 col-sm-4 col-md-4">
                                 <div class="form-group">
@@ -36,14 +37,14 @@
                                         <option value="Xiaomi">Xiaomi</option>
                                         <option value="Huawei">Huawei</option>
                                         <option value="Iphone">Iphone</option>
-        
+
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="ProductModel"> Model</label>
                                     <input id="ProductModel" value="{{$products->price}}" name="product_model" type="text" class="form-control" aria-describedby="textHelp">
                                 </div>
-        
+
 
                                 <div class="form-group">
                                     <label for="price"> Price</label>
@@ -62,10 +63,10 @@
                                         <option value="40,000-50,000">40,000-50,000</option>
                                         <option value="50,000-1,00,000">50,000-1,00,000</option>
                                         <option value="1,00,000-1,50,000">1,00,000-1,50,000</option>
-        
+
                                     </select>
                                 </div>
-        
+
                                 <h4 class="mt-4 mb-2">Network</h4>
                                 <div class="form-group">
                                     <label for="networkType">Network Type</label>
@@ -76,16 +77,16 @@
                                         <option value="2G,3G">2G,3G</option>
                                         <option value="2G,3G,4G">2G,3G,4G</option>
                                         <option value="2G,3G,4G,5G">2G,3G,4G,5G</option>
-        
+
                                     </select>
                                 </div>
-        
-        
+
+
                                 <div class="form-group">
                                     <label for="speed">Speed</label>
                                     <input name="speed" value="{{$products->speed}}" type="text" id="speed" class="form-control" aria-describedby="textHelp">
                                 </div>
-        
+
                                 <div class="form-group">
                                     <label for="GPRS">GPRS</label>
                                     <input name="GPRS" value="{{$products->gprs}}" id="GPRS" type="text" class="form-control" aria-describedby="textHelp">
@@ -94,14 +95,14 @@
                                     <label for="edge">EDGE</label>
                                     <input name="edge" value="{{$products->edge}}" id="edge" type="text" class="form-control" aria-describedby="textHelp">
                                 </div>
-        
-        
+
+
                                 <h4 class="mt-4 mb-2">Body</h4>
                                 <div class="form-group">
                                     <label for="bodyDimensions">Body Dimensions</label>
                                     <input name="bodyDimensions" value="{{$products->body_dimensions}}" id="bodyDimensions" type="text" class="form-control" aria-describedby="textHelp">
                                 </div>
-        
+
                                 <div class="form-group">
                                     <label for="bodyWeight">Body Weight</label>
                                     <input name="bodyWeight" value="{{$products->body_weight}}" id="bodyWeight" type="text" class="form-control" aria-describedby="textHelp">
@@ -110,14 +111,14 @@
                                     <label for="build">Build</label>
                                     <input name="build" id="build" value="{{$products->build}}" type="text" class="form-control" aria-describedby="textHelp">
                                 </div>
-        
+
                                 <div class="form-group">
                                     <label for="networkSim">Network Sim</label>
                                     <input name="networkSim" value="{{$products->network_sim}}" id="networkSim" type="text" class="form-control" aria-describedby="textHelp">
                                 </div>
 
                                 <h4 class="mt-4 mb-2">Display</h4>
-                                
+
                                 <div class="form-group">
                                     <label for="displayType">Display Type</label>
                                     <input name="displayType" value="{{$products->display_type}}" id="displayType" type="text" class="form-control" aria-describedby="textHelp">
@@ -127,15 +128,15 @@
                                     <input name="displaySize" value="{{$products->display_size}}" id="displaySize" type="text" class="form-control" aria-describedby="textHelp">
                                 </div>
                             </div>
-    
+
                             <div class="col-4 col-sm-4 col-md-4">
-        
+
                                 <div class="form-group">
                                     <label for="displayResolution">Display Resolution</label>
                                     <input name="displayResolution" value="{{$products->display_resolution}}" id="displayResolution" type="text" class="form-control"
                                         aria-describedby="textHelp">
                                 </div>
-        
+
                                 <div class="form-group">
                                     <label for="displayMultitouch">Display Multitouch</label>
                                     <input name="displayMultitouch" value="{{$products->display_multi_touch}}" id="displayMultitouch" type="text" class="form-control"
@@ -145,7 +146,7 @@
                                     <label for="DisplayDensity">Display Density</label>
                                     <input name="DisplayDensity" value="{{$products->display_density}}" id="DisplayDensity" type="text" class="form-control" aria-describedby="textHelp">
                                 </div>
-        
+
                                 <h4 class="mt-4 mb-2">Platfrom</h4>
 
                                 <div class="form-group">
@@ -164,7 +165,7 @@
                                     <label for="chipSet">Chipset</label>
                                     <input name="chipSet" value="{{$products->chip_set}}" id="chipSet" type="text" class="form-control" aria-describedby="textHelp">
                                 </div>
-        
+
                                 <h4 class="mt-4 mb-2">Memory</h4>
 
                                 <div class="form-group">
@@ -179,7 +180,7 @@
                                     <label for="Ram">Ram</label>
                                     <input name="Ram" id="Ram" value="{{$products->ram}}" type="text" class="form-control" aria-describedby="textHelp">
                                 </div>
-        
+
                                 <h4 class="mt-4 mb-2">Camera</h4>
                                 <div class="form-group">
                                     <label for="PrimaryCamera">Primary Camera</label>
@@ -189,33 +190,33 @@
                                     <label for="SecondaryCamera">Secondary Camera</label>
                                     <input type="text" value="{{$products->secondary_camera}}" name="SecondaryCamera" id="SecondaryCamera" class="form-control" aria-describedby="textHelp">
                                 </div>
-        
-        
+
+
                                 <div class="form-group">
                                     <label for="CameraFeatures">Camera Features</label>
                                     <input type="text" value="{{$products->camera_features}}" name="CameraFeatures" id="CameraFeatures" class="form-control" aria-describedby="textHelp">
                                 </div>
-        
+
                                 <div class="form-group">
                                     <label for="Video">Video</label>
                                     <input type="text" value="{{$products->video}}" name="Video" id="Video" class="form-control" aria-describedby="textHelp">
                                 </div>
-        
-        
-        
+
+
+
                                 <h4 class="mt-4 mb-2">Sound</h4>
                                 <div class="form-group">
                                     <label for="Audio">Audio</label>
                                     <input type="text" value="{{$products->audio}}" name="Audio" id="Audio" class="form-control" aria-describedby="textHelp">
                                 </div>
-        
+
                                 <div class="form-group">
                                     <label for="Loudspeaker">Loudspeaker</label>
                                     <input type="text" value="{{$products->loudspeaker}}" name="Loudspeaker" id="Loudspeaker" class="form-control" aria-describedby="textHelp">
                                 </div>
                             </div>
                             <div class="col-4 col-sm-4 col-md-4">
-        
+
                                 <div class="form-group">
                                     <label for="Jack">3.5mm Jack</label>
                                     <input type="text" value="{{$products->mm_jack}}" name="Jack" id="Jack" class="form-control" aria-describedby="textHelp">
@@ -227,7 +228,7 @@
                                     <label for="WiFi">WiFi</label>
                                     <input type="text" value="{{$products->wifi}}" name="WiFi" id="WiFi" class="form-control" aria-describedby="textHelp">
                                 </div>
-        
+
                                 <div class="form-group">
                                     <label for="Bluetooth">Bluetooth</label>
                                     <input type="text" value="{{$products->bluetooth}}" name="Bluetooth" id="Bluetooth" class="form-control" aria-describedby="textHelp">
@@ -244,12 +245,12 @@
                                     <label for="FmRadio">Fm Radio</label>
                                     <input type="text" name="FmRadio" value="{{$products->fm_radio}}" id="FmRadio" class="form-control" aria-describedby="textHelp">
                                 </div>
-        
+
                                 <div class="form-group">
                                     <label for="GPS">GPS</label>
                                     <input type="text" name="GPS" value="{{$products->gps}}" id="GPS" class="form-control" aria-describedby="textHelp">
                                 </div>
-        
+
                                 <h4 class="mt-4 mb-2">Features</h4>
 
                                 <div class="form-group">
@@ -266,7 +267,7 @@
                                 </div>
 
                                 <h4 class="mt-4 mb-2">Battery</h4>
-                                
+
                                 <div class="form-group">
                                     <label for="BatteryType">Battery Type</label>
                                     <input type="text" value="{{$products->battery_type}}" name="BatteryType" id="BatteryType" class="form-control" aria-describedby="textHelp">
@@ -292,18 +293,18 @@
                                     <label for="MadeBy">Made By</label>
                                     <input type="text" value="{{$products->made_by}}" name="MadeBy" id="MadeBy" class="form-control" aria-describedby="textHelp">
                                 </div>
-        
+
                                 <div class="form-group">
                                     <label for="BodyColor">Body Color</label>
                                     <input type="text" value="{{$products->body_color}}" name="BodyColor" id="BodyColor" class="form-control" aria-describedby="textHelp">
                                 </div>
-        
+
                             </div>
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
                 </div>
-        
+
             </div>
 
     </div>
