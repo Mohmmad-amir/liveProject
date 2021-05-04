@@ -55,6 +55,8 @@ Route::middleware('auth')->group(function () {
     Route::get('upcomingProducts/add','UpcomingproductController@create')->name('upcomingProduct.add');
     Route::post('upcomingProducts/add','UpcomingproductController@store')->name('upcomingProduct.store');
     Route::get('upcomingProducts/{id}/edit','UpcomingproductController@edit')->name('upcomingProduct.edit');
+    Route::put('upcomingProducts/{id}', 'UpcomingproductController@update')->name('upcomingProduct.update');
+    Route::delete('upcomingProducts/{id}', 'UpcomingproductController@destroy')->name('upcomingProduct.destroy');
     // add upcoming product start
 
 });
