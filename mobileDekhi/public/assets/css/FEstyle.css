@@ -1,0 +1,59 @@
+.searchBar {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 50%;
+
+}
+
+body {
+    background-color: #d6d2d2;
+}
+
+.bg--color {
+    background-color: #000000;
+}
+
+.active,
+.nav-header-color,
+.card-btn {
+    color: #fa8231 !important;
+}
+
+.form-check-input {
+    background-color: #fa8231 !important;
+    border-color: #fa8231 !important;
+}
+
+.form-check-input:checked {
+    background-color: #fff !important;
+    border-color: #fa8231 !important;
+}
+
+.card-image {
+    height: 250px;
+}
+
+.card-short-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.search-divider {
+    border-left: rgb(189, 189, 189) 1px solid;
+}
+
+.top-divider {
+    border-top: rgb(189, 189, 189) 2px solid;
+}
+
+.text-width {
+    width: 350px;
+    text-align: justify;
+}
+
+.social-icon {
+    list-style: none;
+}

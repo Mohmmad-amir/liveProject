@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Auth;
 //     return view('auth.login');
 // });
 Route::get('/', function () {
-    return view('welcome');
+    return view('frontEnd/FEhome');
 });
 Auth::routes();
 // Route::get('/addProduct', function () {
