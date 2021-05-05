@@ -22,7 +22,7 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg--color">
+    <nav class="navbar navbar-expand-lg navbar-dark bg--color fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#"><strong class="nav-header-color">M</strong>obile<strong
                     class="nav-header-color">D</strong>ekhi</a>
@@ -53,19 +53,18 @@
 
                 </ul>
                 <button id="searchBtn" class="btn text-white search-divider" type="submit"><i class="fas fa-search"></i>
-            </div>
 
-            <div id="searchBar" class="searchBar">
-                <form class="d-flex " method="" action="">
-                    <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn text-dark searchBarBtn" type="submit"><i class="fas fa-search"></i>
-                    </button>
-                </form>
-            </div>
+                </div>
         </div>
 
     </nav>
-
+    <div id="searchBar" class="searchBar w-100">
+        <form class="d-flex " method="" action="">
+            <input class="form-control my-3 searchInput me-2 " id="searchInput" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn text-white searchBarBtn" type="submit"><i class="fas fa-search"></i>
+            </button>
+        </form>
+    </div>
 
 
 

@@ -3,7 +3,7 @@
 @section('content')
 
 <div>
-    <h1>
+    <h1 class="my-5">
         hellp
     </h1>
 </div>

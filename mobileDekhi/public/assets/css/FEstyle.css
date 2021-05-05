@@ -1,9 +1,14 @@
 .searchBar {
     display: none;
     position: absolute;
-    top: 60px;
-    right: 50%;
+    top: 55px;
+    /* right: 50%; */
 
+}
+
+.searchInput {
+    width: 500px;
+    margin-left: 30%;
 }
 
 body {
