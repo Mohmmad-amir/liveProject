@@ -1,0 +1,58 @@
+/* .searchBar {
+    display: none;
+} */
+
+body {
+    background-color: white;
+}
+
+/* nav start */
+
+.active,
+.nav-header-color,
+.card-btn {
+    color: #fa8231 !important;
+}
+
+/* nav end */
+
+/* upcaming mobile card start */
+.headingText{
+    font-family: Trebuchet MS;
+    font-weight: bold;
+}
+.cardHadingText{
+    background-color: #FF4C00;
+    color: white;
+}
+.umCardBorder{
+    border: 3px solid #FF4C00;
+    border-radius: 10px;
+}
+/* upcaming mobile card end */
+
+
+.form-check-input {
+    background-color: #fa8231 !important;
+    border-color: #fa8231 !important;
+}
+
+.form-check-input:checked {
+    background-color: #fff !important;
+    border-color: #fa8231 !important;
+}
+
+.card-image {
+    height: 300px;
+}
+
+.card-btn {
+    line-height: -40px !important;
+}
+a:link{
+    text-decoration: none;
+}
+
+th {
+width: 150px;
+}

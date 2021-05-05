@@ -15,6 +15,10 @@
         crossorigin="anonymous" />
     <!-- custom css -->
     <link rel="stylesheet" href="{{asset('assets/css/FEstyle.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/FEhome.css')}}">
+    <link rel="stylesheet" href="{{asset('Carousel/dist/assets/owl.carousel.css')}}">
+    <link rel="stylesheet" href="{{asset('Carousel/dist/assets/owl.theme.default.min.css')}}">
+
     <link rel="stylesheet" href="mediumScreen.css">
     <link rel="stylesheet" href="smScreen.css">
     <title>Mobile Dekhi Filter</title>
@@ -128,6 +132,7 @@
             </div>
         </div>
     </div>
+    
 
     <!-- Optional JavaScript; choose one of the two! -->
     <!-- jquery -->
@@ -141,11 +146,38 @@
         integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
         crossorigin="anonymous"></script>
 
+        <script src="{{asset('Carousel/docs/assets/vendors/jquery.min.js')}}" type="text/javascript"></script>
+        <script src="{{asset('Carousel/dist/owl.carousel.js')}}" type="text/javascript"></script>
+
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
     -->
+
+
+    <script>
+        $('.owl-carousel').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:true,
+        responsive:{
+        0:{
+        items:1
+        },
+        600:{
+        items:2
+        },
+        800:{
+        items:3
+        },
+        1000:{
+        items:4
+        }
+        }
+        })
+    </script>
+
 </body>
 
 </html>

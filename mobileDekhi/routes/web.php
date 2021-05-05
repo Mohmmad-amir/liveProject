@@ -20,10 +20,13 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/', function () {
     return view('frontEnd/FEhome');
 });
+Route::get('/','HomeController@mainCarosul')->name('mainCarosul');
+Route::get('/details','HomeController@details')->name('details');
+
 Auth::routes();
-// Route::get('/addProduct', function () {
-//     return view('layouts.addProduct');
-// });
+// // Route::get('/addProduct', function () {
+// //     return view('layouts.addProduct');
+// // });
 
 
 Route::get('/home', 'HomeController@index')->name('home');
