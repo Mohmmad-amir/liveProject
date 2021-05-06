@@ -2,80 +2,57 @@
 
 @section('content')
 
-<div class="container">
+    <div style="margin-top:6%;" class="container">
 
-    <h3 style="font-weight: bold;" class="headingText mt-5 mb-3 text-center headingText">Filer Prize Range</h3>
+        <h3 style="font-weight: bold;" class="headingText mt-5 mb-3 text-center ">Filer Prize Range</h3>
 
-    <form action="" method="post">
-        <div class="d-flex p-2 justify-content-center my-2">
-            <div class="p-2 ">
-                <div class="form-check m-font-size">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                    <label class="form-check-label fw-bold" for="flexRadioDefault1">
-                        Tk 0-5,000 Tk
-                    </label>
+        <form action="" method="post">
+            <div class="row">
+                <div class="col-md-12">
+                    <select class="form-select" aria-label="Default select example">
+                        <option  hidden selected>Select Price Range</option>
+                        <option value="0-5,000">0-5,000</option>
+                        <option value="5,000-10,000">5,000-10,000</option>
+                        <option value="10,000-15,000">10,000-20,000</option>
+                        <option value="20,000-30,000">20,000-30,000</option>
+                        <option value="30,000-40,000">30,000-40,000</option>
+                        <option value="40,000-50,000">40,000-50,000</option>
+                        <option value="50,000-1,00,000">50,000-1,00,000</option>
+                        <option value="1,00,000-1,50,000">1,00,000-1,50,000</option>
+                      </select>
                 </div>
             </div>
-            <div class="p-2 ">
-                <div class="form-check m-font-size">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                    <label class="form-check-label fw-bold" for="flexRadioDefault1">
-                        Tk 5,000-10,000 Tk
-                    </label>
-                </div>
-            </div>
-            <div class="p-2 ">
-                <div class="form-check m-font-size">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                    <label class="form-check-label fw-bold" for="flexRadioDefault1">
-                        Tk 10,000-20,000 Tk
-                    </label>
-                </div>
-            </div>
-            <div class="p-2 ">
-                <div class="form-check m-font-size">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                    <label class="form-check-label fw-bold" for="flexRadioDefault1">
-                        Tk 20,000-30,000 Tk
-                    </label>
-                </div>
-            </div>
-        </div>
-    </form>
+        </form>
+
+    </div>
+
+
+
+
+
+
+
+
     <!-- end price -->
     <!-- card section -->
-    <div class="container">
+    <div class="container ">
         <div class="row">
-            <div class="col-md-3 col-sm-12  my-3">
-                <div class="card w-100">
-                    <img src="Xiaomi-Mi-11-Pro.png" class="card-img-top card-image w-100 img-fluid mt-1" alt="...">
+
+            @foreach ($product as $product)
+
+            <div class="col-md-3 col-sm-4 mt-2" data-aos="fade-up" data-aos-offset="5" data-aos-delay="50" data-aos-duration="100">
+                <div class="card w-100 shadow-sm">
+                    <img src="{{asset('assets/img')}}/{{$product->image}}" class="card-img-top card-image w-100 img-fluid mt-2" alt="...">
                     <div class="card-body text-center">
-                        <h5 class="card-title fw-bold card-short-text">Samsung Galaxy M42 5G </h5>
-                        <p class="card-text ">BDT-12,000</p>
-                        <a href="#" class="btn  card-btn">View Details</a>
+                        <h5 class="card-title fw-bold">{{$product->name}}</h5>
+                        <p class="card-text ">BDT-{{$product->price}}</p>
+                        <a href="{{route('details',['id'=>$product->id])}}" class="btn  card-btn">View Details</a>
+
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-12 my-3">
-                <div class="card w-100">
-                    <img src="Xiaomi-Mi-11-Pro.png" class="card-img-top card-image w-100 img-fluid mt-1" alt="...">
-                    <div class="card-body text-center">
-                        <h5 class="card-title fw-bold card-short-text">Samsung Galaxy M42 5G </h5>
-                        <p class="card-text ">BDT-12,000</p>
-                        <a href="#" class="btn  card-btn">View Details</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-12 my-3">
-                <div class="card w-100">
-                    <img src="Xiaomi-Mi-11-Pro.png" class="card-img-top card-image w-100 img-fluid mt-1" alt="...">
-                    <div class="card-body text-center">
-                        <h5 class="card-title fw-bold card-short-text">Samsung Galaxy M42 5G </h5>
-                        <p class="card-text ">BDT-12,000</p>
-                        <a href="#" class="btn card-btn">View Details</a>
-                    </div>
-                </div>
-            </div>
+
+            @endforeach
         </div>
         <!-- end card -->
         <!-- pagination -->
@@ -95,6 +72,6 @@
         <!-- end pagination -->
     </div>
 
-</div>
+    </div>
 
 @endsection

@@ -52,7 +52,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="phoneFilter.html">Filter</a>
+                        <a class="nav-link" href="{{route('filter.index')}}">Filter</a>
                     </li>
 
                 </ul>
@@ -132,7 +132,7 @@
             </div>
         </div>
     </div>
-    
+
 
     <!-- Optional JavaScript; choose one of the two! -->
     <!-- jquery -->

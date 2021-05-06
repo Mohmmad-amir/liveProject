@@ -20,8 +20,12 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/', function () {
     return view('frontEnd/FEhome');
 });
+
+//Home Controller
 Route::get('/','HomeController@mainCarosul')->name('mainCarosul');
 Route::get('/details/{id}','HomeController@details')->name('details');
+Route::get('/filter','filterController@index')->name('filter.index');
+Route::get('/filter/{id}/details','filterController@show')->name('filterDetails.show');
 
 Auth::routes();
 // // Route::get('/addProduct', function () {
