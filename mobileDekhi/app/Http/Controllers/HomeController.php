@@ -16,7 +16,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        // 
+        //
     }
 
     /**
@@ -31,17 +31,17 @@ class HomeController extends Controller
 
     function mainCarosul() {
         $mainCarousels = mainCarousel::all();
-        
+
         $upcomingProducts = upcomingProduct::all();
 
         $products = Product::all();
-        
+
         return view('frontEnd/FEhome',compact('mainCarousels'),compact('upcomingProducts','products'));
     }
 
     function details(){
         return view('frontEnd/FEdetails');
     }
-    
+
 
 }
