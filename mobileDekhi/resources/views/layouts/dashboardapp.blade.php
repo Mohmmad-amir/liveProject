@@ -31,7 +31,7 @@
             <aside style="position: fixed;" class="main-sidebar sidebar-dark-primary elevation-4">
                 <!-- Brand Logo --> <a style="text-decoration: none;" href="{{route('home')}}" class="brand-link">
                 <img src="{{asset('assets/img/AdminLTELogo.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-                <span class="font-weight-light">MobileDekhi</span>
+                <span  class="font-weight-white"><span style="color: orangered;font-weight:bold" >M</span>obile<span style="color: orangered;font-weight:bold">D</span>ekhi</span>
                 </a>
                 <!-- Sidebar -->
                 <div class="sidebar">
@@ -110,7 +110,7 @@
                 </div>
                 <!-- /.sidebar -->
             </aside>
-        
+
             <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm main-header fixed-top">
                 <div class="container">
                     <ul class="navbar-nav">
@@ -130,21 +130,21 @@
                         <ul class="navbar-nav ml-auto">
                             <!-- Authentication Links -->
                             @guest
-                                <li class="nav-item"> 
+                                <li class="nav-item">
                                     <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                                 </li>
                                 @if (Route::has('register'))
-                                    <li class="nav-item"> 
+                                    <li class="nav-item">
                                         <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                     </li>
-                                @endif 
+                                @endif
                             @else
                             <li class="nav-item dropdown"> <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                             {{ Auth::user()->name }}
                                         </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                        document.getElementById('logout-form').submit();"> 
+                                        document.getElementById('logout-form').submit();">
                                         <i style="margin-right: 5px; margin-left:25px;" class="left fas fa-power-off"></i>{{ __('Logout') }}
                                     </a>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
