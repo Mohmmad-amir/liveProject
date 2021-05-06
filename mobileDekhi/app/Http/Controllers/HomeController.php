@@ -39,8 +39,9 @@ class HomeController extends Controller
         return view('frontEnd/FEhome',compact('mainCarousels'),compact('upcomingProducts','products'));
     }
 
-    function details(){
-        return view('frontEnd/FEdetails');
+    function details($id){
+        $Product=Product::where('id',$id)->firstOrFail();
+        return view('frontEnd/FEdetails')->with('Product',$Product);
     }
 
 

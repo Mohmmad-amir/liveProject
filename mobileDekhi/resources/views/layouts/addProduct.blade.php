@@ -51,6 +51,7 @@
                                             <option value="Xiaomi">Xiaomi</option>
                                             <option value="Huawei">Huawei</option>
                                             <option value="Iphone">Iphone</option>
+                                            <option value="Oneplus">Oneplus</option>
                                         </select>
                                     </div>
                                     <div class="form-group">

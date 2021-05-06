@@ -21,7 +21,7 @@ Route::get('/', function () {
     return view('frontEnd/FEhome');
 });
 Route::get('/','HomeController@mainCarosul')->name('mainCarosul');
-Route::get('/details','HomeController@details')->name('details');
+Route::get('/details/{id}','HomeController@details')->name('details');
 
 Auth::routes();
 // // Route::get('/addProduct', function () {

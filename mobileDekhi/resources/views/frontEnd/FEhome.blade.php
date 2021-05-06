@@ -3,7 +3,7 @@
 @section('content')
 
 <div>
-    
+
     <!-- carosal start -->
     {{$key=0}}
     <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
@@ -22,8 +22,8 @@
             </div>
 
             {{$key++}}
-                
-            @endforeach    
+
+            @endforeach
         </div>
       </div>
 
@@ -35,7 +35,7 @@
         <h3 class="headingText mt-5 mb-5 text-center">Upcoming Mobiles</h3>
         <div class="row">
 
-            @foreach ($upcomingProducts as $upcomingProduct)    
+            @foreach ($upcomingProducts as $upcomingProduct)
             <div class="col-md-4">
                 <a href="details.html">
                     <div class="card umCardBorder mt-2 shadow-lg" style="width: 100%;">
@@ -53,7 +53,7 @@
     <!-- upcaming mobile card end -->
 
     <!-- latest mobile section start-->
-    
+
     <h3 class="headingText mt-5 mb-5 text-center">Latest Mobiles</h3>
     <div class="container">
         <div class="row">
@@ -66,8 +66,8 @@
                     <div class="card-body text-center">
                         <h5 class="card-title fw-bold">{{$product->name}}</h5>
                         <p class="card-text ">BDT-{{$product->price}}</p>
-                        <a href="{{url('details/'.$product->id)}}" class="btn  card-btn">View Details</a>
-                    
+                        <a href="{{route('details',['id'=>$product->id])}}" class="btn  card-btn">View Details</a>
+
                     </div>
                 </div>
             </div>
