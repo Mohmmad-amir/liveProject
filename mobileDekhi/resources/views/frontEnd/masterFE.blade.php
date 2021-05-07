@@ -38,7 +38,7 @@
             <div class="collapse navbar-collapse justify-content-end " id="navbarSupportedContent">
                 <ul class="navbar-nav me-3 mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="{{route('mainCarosul')}}">Home</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -63,8 +63,8 @@
 
     </nav>
     <div id="searchBar" class="searchBar w-100">
-        <form class="d-flex " method="" action="">
-            <input class="form-control my-3 searchInput me-2 " id="searchInput" type="search" placeholder="Search" aria-label="Search">
+        <form class="d-flex " method="" action="{{route('search')}}">
+            <input name="query" class="form-control my-3 searchInput me-2 " id="searchInput" type="search" placeholder="Search" aria-label="Search">
             <button class="btn text-white searchBarBtn" type="submit"><i class="fas fa-search"></i>
             </button>
         </form>
@@ -74,7 +74,7 @@
 
 
 
-<main>
+<main class="mt-5">
 @yield('content')
 </main>
 

@@ -45,6 +45,18 @@ class HomeController extends Controller
     }
 
 
+    function search(Request $request ){
+
+    $search=$_GET['query'];
+
+    $Products =Product::where('name','LIKE','%'.$search.'%')->get();
+
+    return view('frontEnd.FEsearch',compact('Products'));
+
+
+    }
+
+
 
 
 }

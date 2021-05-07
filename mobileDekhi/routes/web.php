@@ -24,6 +24,9 @@ Route::get('/', function () {
 //Home Controller
 Route::get('/','HomeController@mainCarosul')->name('mainCarosul');
 Route::get('/details/{id}','HomeController@details')->name('details');
+Route::get('/search','HomeController@search')->name('search');
+
+//filterController
 Route::get('/filter','filterController@index')->name('filter.index');
 Route::get('/filter/{id}/details','filterController@show')->name('filterDetails.show');
 
