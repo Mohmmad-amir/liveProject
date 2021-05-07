@@ -35,7 +35,7 @@
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-end " id="navbarSupportedContent">
+            <div class="collapse navbar-collapse justify-content-bewten " id="navbarSupportedContent">
                 <ul class="navbar-nav me-3 mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="{{route('mainCarosul')}}">Home</a>
@@ -55,26 +55,30 @@
                         <a class="nav-link" href="{{route('filter.index')}}">Filter</a>
                     </li>
 
+
+
                 </ul>
-                <button id="searchBtn" class="btn text-white search-divider" type="submit"><i class="fas fa-search"></i>
+                {{-- <div id="searchBar" class="searchBar w-100"> --}}
+
+                {{-- </div> --}}
+                {{-- <button id="searchBtn" class="btn text-white search-divider" type="submit"><i class="fas fa-search"></i> --}}
 
                 </div>
+                <form class="d-flex " method="" action="{{route('search')}}">
+                    <input style="width: 400px" name="query" class="form-control " id="" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn text-white searchBarBtn" type="submit"><i class="fas fa-search"></i>
+                    </button>
+                </form>
         </div>
 
     </nav>
-    <div id="searchBar" class="searchBar w-100">
-        <form class="d-flex " method="" action="{{route('search')}}">
-            <input name="query" class="form-control my-3 searchInput me-2 " id="searchInput" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn text-white searchBarBtn" type="submit"><i class="fas fa-search"></i>
-            </button>
-        </form>
-    </div>
 
 
 
 
 
-<main class="mt-5">
+
+<main >
 @yield('content')
 </main>
 
