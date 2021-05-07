@@ -16,9 +16,11 @@
             @foreach($mainCarousels as $mainCarosul)
 
             <div class="carousel-item {{{$key == 0 ? 'active' : '' }}}" data-bs-interval="10000">
-                <a href="#">
-                    <img src="{{asset('assets/img')}}/{{$mainCarosul->image}}" class="d-block w-100" alt="...">
-                </a>
+                {{-- <a href="#">
+                    <img style="height:600px;" src="{{asset('assets/img')}}/{{$mainCarosul->image}}" class="d-block w-100" alt="...">
+                </a> --}}
+                <img style="height:600px;" src="{{asset('assets/img')}}/{{$mainCarosul->image}}" class="d-block w-100" alt="...">
+
             </div>
 
             {{$key++}}
