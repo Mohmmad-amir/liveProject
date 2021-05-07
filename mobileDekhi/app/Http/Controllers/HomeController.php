@@ -44,6 +44,13 @@ class HomeController extends Controller
         return view('frontEnd/FEdetails')->with('Product',$Product);
     }
 
+    function brand(){
+        $Products=Product::all();
+        return view('frontEnd.FEbrand' ,compact('Products'));
+    }
+
+
+
 
     function search(Request $request ){
 
@@ -52,6 +59,7 @@ class HomeController extends Controller
     $Products =Product::where('name','LIKE','%'.$search.'%')->get();
 
     return view('frontEnd.FEsearch',compact('Products'));
+
 
 
     }

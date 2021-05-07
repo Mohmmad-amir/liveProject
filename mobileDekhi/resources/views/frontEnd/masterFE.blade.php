@@ -46,7 +46,7 @@
                             Brand
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="phoneSearch.html">Samsung</a></li>
+                            {{-- <li><a class="dropdown-item" href="{{route('brand.brand',['brand'=>$Product->brand])}}">Samsung</a></li> --}}
                             <li><a class="dropdown-item" href="#">RealMe</a></li>
                             <li><a class="dropdown-item" href="#">Nokia</a></li>
                         </ul>
@@ -65,7 +65,7 @@
 
                 </div>
                 <form class="d-flex " method="" action="{{route('search')}}">
-                    <input style="width: 400px" name="query" class="form-control " id="" type="search" placeholder="Search" aria-label="Search">
+                    <input required style="width: 400px" name="query" class="form-control " id="" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn text-white searchBarBtn" type="submit"><i class="fas fa-search"></i>
                     </button>
                 </form>
