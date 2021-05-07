@@ -19,7 +19,7 @@
                 {{-- <a href="#">
                     <img style="height:600px;" src="{{asset('assets/img')}}/{{$mainCarosul->image}}" class="d-block w-100" alt="...">
                 </a> --}}
-                <img style="height:600px;" src="{{asset('assets/img')}}/{{$mainCarosul->image}}" class="d-block w-100" alt="...">
+                <img style="height:700px;" src="{{asset('assets/img')}}/{{$mainCarosul->image}}" class="d-block w-100" alt="...">
 
             </div>
 
