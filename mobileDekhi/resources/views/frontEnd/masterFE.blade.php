@@ -21,7 +21,7 @@
 
     <link rel="stylesheet" href="mediumScreen.css">
     <link rel="stylesheet" href="smScreen.css">
-    <title>Mobile Dekhi Filter</title>
+    <title>Mobile Dekhi </title>
 </head>
 
 <body>
