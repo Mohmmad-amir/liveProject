@@ -32,9 +32,9 @@ class HomeController extends Controller
     function mainCarosul() {
         $mainCarousels = mainCarousel::all();
 
-        $upcomingProducts = upcomingProduct::all();
+        $upcomingProducts = upcomingProduct::limit(3)->get();
 
-        $products = Product::all();
+        $products = Product::paginate(15);
 
         return view('frontEnd/FEhome',compact('mainCarousels'),compact('upcomingProducts','products'));
     }
