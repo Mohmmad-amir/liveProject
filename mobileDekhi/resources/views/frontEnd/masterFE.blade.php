@@ -60,22 +60,22 @@
 
 
                 </ul>
-                <form class="d-flex  " method="" action="{{route('search')}}">
-                    <input required style="width: 400px" name="query" class="form-control " id="" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn text-white searchBarBtn" type="submit"><i class="fas fa-search"></i>
-                    </button>
-                </form>
-                {{-- <div id="searchBar" class="searchBar w-100"> --}}
 
-                {{-- </div> --}}
-                {{-- <button id="searchBtn" class="btn text-white search-divider" type="submit"><i class="fas fa-search"></i> --}}
+
+                <button id="searchBtn" class="btn text-white search-divider" type="submit"><i class="fas fa-search"></i>
 
                 </div>
 
         </div>
 
     </nav>
-
+    <div id="searchBar" class="searchBar w-100">
+        <form class="d-flex  " method="" action="{{route('search')}}">
+            <input required  name="query" class="form-control searchInput" id="" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn text-white searchBarBtn" type="submit"><i class="fas fa-search"></i>
+            </button>
+        </form>
+    </div>
 
 
 

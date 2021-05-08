@@ -1,14 +1,15 @@
 .searchBar {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 55px;
     /* right: 50%; */
-
+    z-index: 10;
+    padding:10px 0;
 }
 
 .searchInput {
     width: 500px;
-    margin-left: 30%;
+    margin-left: 30% !important;
 }
 
 body {
