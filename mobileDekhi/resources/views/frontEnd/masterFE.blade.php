@@ -28,7 +28,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg--color fixed-top  ">
         <div class="container">
-            <a class="navbar-brand" href="#"><strong class="nav-header-color">M</strong>obile<strong
+            <a class="navbar-brand" href="{{route('mainCarosul')}}"><strong class="nav-header-color">M</strong>obile<strong
                     class="nav-header-color">D</strong>ekhi</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -46,8 +46,10 @@
                             Brand
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="{{route('brand',['key'=>'samsung'])}}">Samsung</a></li>
-                            <li><a class="dropdown-item" href="{{route('brand',['key'=>'nokia'])}}">Nokia</a></li>
+                            <li><a class="dropdown-item" href="{{route('brand','samsung')}}">Samsung</a></li>
+                            <li><a class="dropdown-item" href="{{route('brand','nokia')}}">Nokia</a></li>
+                            <li><a class="dropdown-item" href="{{route('brand','Oneplus')}}">Oneplus</a></li>
+
                             <li><a class="dropdown-item" href="#">xiaomi</a></li>
                         </ul>
                     </li>

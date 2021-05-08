@@ -66,21 +66,6 @@
                                         <input id="price" type="text" name="product_price" class="form-control"
                                             aria-describedby="textHelp">
                                     </div>
-                                    <div class="form-group">
-                                        <label for="price_range">Price Range</label>
-                                        <select class="form-control" id="price_range" name="price_range">
-                                            <option hidden selected>Select Price Range</option>
-                                            <option value="0-5,000">0-5,000</option>
-                                            <option value="5,000-10,000">5,000-10,000</option>
-                                            <option value="10,000-15,000">10,000-20,000</option>
-                                            <option value="20,000-30,000">20,000-30,000</option>
-                                            <option value="30,000-40,000">30,000-40,000</option>
-                                            <option value="40,000-50,000">40,000-50,000</option>
-                                            <option value="50,000-1,00,000">50,000-1,00,000</option>
-                                            <option value="1,00,000-1,50,000">1,00,000-1,50,000</option>
-
-                                        </select>
-                                    </div>
 
                                     <h4 class="mt-4 mb-2">Network</h4>
                                     <div class="form-group">
@@ -138,7 +123,7 @@
                                             aria-describedby="textHelp">
                                     </div>
 
-                                    <h4 class="mt-4 mb-2">Display</h4>
+                                    <h4 class="mt-4 mb-4">Display</h4>
 
                                     <div class="form-group">
                                         <label for="displayType">Display Type</label>
@@ -150,28 +135,31 @@
                                         <input name="displaySize" id="displaySize" type="text" class="form-control"
                                             aria-describedby="textHelp">
                                     </div>
-                                </div>
-
-                                <div class="col-4 col-sm-4 col-md-4">
-
                                     <div class="form-group">
                                         <label for="displayResolution">Display Resolution</label>
                                         <input name="displayResolution" id="displayResolution" type="text"
                                             class="form-control" aria-describedby="textHelp">
                                     </div>
 
+
+                                </div>
+
+                                <div class="col-4 col-sm-4 col-md-4">
+
+
                                     <div class="form-group">
                                         <label for="displayMultitouch">Display Multitouch</label>
                                         <input name="displayMultitouch" id="displayMultitouch" type="text"
                                             class="form-control" aria-describedby="textHelp">
                                     </div>
+
                                     <div class="form-group">
                                         <label for="DisplayDensity">Display Density</label>
                                         <input name="DisplayDensity" id="DisplayDensity" type="text" class="form-control"
                                             aria-describedby="textHelp">
                                     </div>
 
-                                    <h4 class="mt-4 mb-2">Platfrom</h4>
+                                    <h4 class="">Platfrom</h4>
 
                                     <div class="form-group">
                                         <label for="OperatingSystem">Operating System</label>
@@ -194,7 +182,7 @@
                                             aria-describedby="textHelp">
                                     </div>
 
-                                    <h4 class="mt-4 mb-2">Memory</h4>
+                                    <h4 class="">Memory</h4>
 
                                     <div class="form-group">
                                         <label for="MemoryInternal">Memory Internal</label>
@@ -239,7 +227,7 @@
 
 
 
-                                    <h4 class="mt-4 mb-2">Sound</h4>
+                                    <h4 class=" mb-2">Sound</h4>
                                     <div class="form-group">
                                         <label for="Audio">Audio</label>
                                         <input type="text" name="Audio" id="Audio" class="form-control"
@@ -251,14 +239,16 @@
                                         <input type="text" name="Loudspeaker" id="Loudspeaker" class="form-control"
                                             aria-describedby="textHelp">
                                     </div>
-                                </div>
-                                <div class="col-4 col-sm-4 col-md-4">
-
                                     <div class="form-group">
                                         <label for="Jack">3.5mm Jack</label>
                                         <input type="text" name="Jack" id="Jack" class="form-control"
                                             aria-describedby="textHelp">
                                     </div>
+
+                                </div>
+
+                                <div class="col-4 col-sm-4 col-md-4">
+
 
                                     <h4 class="mt-4 mb-2">Connectivity</h4>
 

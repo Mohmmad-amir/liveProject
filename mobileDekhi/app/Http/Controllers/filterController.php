@@ -12,10 +12,23 @@ class filterController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $product=Product::all();
-        return view('frontEnd.FEfilter',compact('product'));
+        return view('frontEnd.FEfilter',[
+            'products' => $this->getProducts($request)
+        ]);
+    }
+
+    protected function getProducts(Request $request){
+
+        if(!$request->has('min_price') && !$request->has('max_price')){
+            return Product::all();
+        }
+
+
+        return Product::where('price','>=',$request->get('min_price'))
+                ->where('price','<=',$request->get('max_price'))
+                ->get();
     }
 
     /**

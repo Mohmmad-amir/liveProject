@@ -8,22 +8,18 @@
 
         <form action="" method="post">
             <div class="row">
-                <div class="col-md-10">
-                    <select class="form-select" aria-label="Default select example">
-                        <option  hidden selected>Select Price Range</option>
-                        <option value="0-5,000">0-5,000</option>
-                        <option value="5,000-10,000">5,000-10,000</option>
-                        <option value="10,000-15,000">10,000-20,000</option>
-                        <option value="20,000-30,000">20,000-30,000</option>
-                        <option value="30,000-40,000">30,000-40,000</option>
-                        <option value="40,000-50,000">40,000-50,000</option>
-                        <option value="50,000-1,00,000">50,000-1,00,000</option>
-                        <option value="1,00,000-1,50,000">1,00,000-1,50,000</option>
+                <div class="col-md-12">
+                    <select onchange="window.location.href=this.value" class="form-select" aria-label="Default select example">
+                        <option value="/filter" hidden selected>Select Price Range</option>
+                        <option value="/filter">Select Price Range</option>
+                        <option value="/filter?min_price=5001&max_price=10000">5001 - 10000</option>
+                        <option value="/filter?min_price=10001&max_price=15000">10001 - 15000</option>
+                        <option value="/filter?min_price=15001&max_price=20000">15001 - 20000</option>
+                        <option value="/filter?min_price=20001&max_price=50000">20001 - 50000</option>
+                        <option value="/filter?min_price=50001&max_price=100000">50001 - 100000</option>
                       </select>
                 </div>
-                <div class="col-md-2">
-                    <button id="btn" class="btn btn-success">Find</button>
-                </div>
+
             </div>
         </form>
 
@@ -41,7 +37,7 @@
     <div class="container ">
         <div class="row">
 
-            @foreach ($product as $product)
+            @foreach ($products as $product)
 
             <div class="col-md-3 col-sm-4 mt-2" data-aos="fade-up" data-aos-offset="5" data-aos-delay="50" data-aos-duration="100">
                 <div class="card w-100 shadow-sm">

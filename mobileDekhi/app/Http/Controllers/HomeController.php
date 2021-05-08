@@ -44,11 +44,6 @@ class HomeController extends Controller
         return view('frontEnd/FEdetails')->with('Product',$Product);
     }
 
-    function brand($key){
-        $Products=Product::where('brand',$key)->firstOrFail();
-        return view('frontEnd/FEbrand',compact('Products'));
-    }
-
 
 
 

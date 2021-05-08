@@ -20,7 +20,6 @@ class CreateProductsTable extends Migration
             $table->string('brand');
             $table->string('model');
             $table->string('price');
-            $table->string('price_range');
             $table->string('network_type');
             $table->string('speed');
             $table->string('edge');
