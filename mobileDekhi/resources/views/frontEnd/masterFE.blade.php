@@ -26,7 +26,7 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg--color fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg--color fixed-top  ">
         <div class="container">
             <a class="navbar-brand" href="#"><strong class="nav-header-color">M</strong>obile<strong
                     class="nav-header-color">D</strong>ekhi</a>
@@ -35,7 +35,7 @@
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-bewten " id="navbarSupportedContent">
+            <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
                 <ul class="navbar-nav me-3 mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="{{route('mainCarosul')}}">Home</a>
@@ -46,9 +46,9 @@
                             Brand
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            {{-- <li><a class="dropdown-item" href="{{route('brand.brand',['brand'=>$Product->brand])}}">Samsung</a></li> --}}
-                            <li><a class="dropdown-item" href="#">RealMe</a></li>
-                            <li><a class="dropdown-item" href="#">Nokia</a></li>
+                            <li><a class="dropdown-item" href="{{route('brand',['key'=>'samsung'])}}">Samsung</a></li>
+                            <li><a class="dropdown-item" href="{{route('brand',['key'=>'nokia'])}}">Nokia</a></li>
+                            <li><a class="dropdown-item" href="#">xiaomi</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -58,17 +58,18 @@
 
 
                 </ul>
+                <form class="d-flex  " method="" action="{{route('search')}}">
+                    <input required style="width: 400px" name="query" class="form-control " id="" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn text-white searchBarBtn" type="submit"><i class="fas fa-search"></i>
+                    </button>
+                </form>
                 {{-- <div id="searchBar" class="searchBar w-100"> --}}
 
                 {{-- </div> --}}
                 {{-- <button id="searchBtn" class="btn text-white search-divider" type="submit"><i class="fas fa-search"></i> --}}
 
                 </div>
-                <form class="d-flex " method="" action="{{route('search')}}">
-                    <input required style="width: 400px" name="query" class="form-control " id="" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn text-white searchBarBtn" type="submit"><i class="fas fa-search"></i>
-                    </button>
-                </form>
+
         </div>
 
     </nav>
@@ -159,28 +160,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
     -->
 
-
-    <script>
-        $('.owl-carousel').owlCarousel({
-        loop:true,
-        margin:10,
-        nav:true,
-        responsive:{
-        0:{
-        items:1
-        },
-        600:{
-        items:2
-        },
-        800:{
-        items:3
-        },
-        1000:{
-        items:4
-        }
-        }
-        })
-    </script>
 
 </body>
 

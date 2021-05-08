@@ -25,22 +25,7 @@ left: 38%;" class="col-md-12 text-center MyText">
 	<div class="row ">
 		<div style="text-align: center;" class="col-md-12 mt-3 mb-3">
 			<img style="width: 250px" src="{{asset('assets/img')}}/{{$Product->image}}">
-			<div class="col-8 col-sm-8 col-md-6">
-				<div class="owl-carousel owl-theme mt-3">
-					<div class="item">
-						<img src="https://mobmart.eu/wp-content/uploads/2020/10/Samsung-A21-Blue.jpg" alt="">
-					</div>
-					<div class="item">
-						<img src="https://mobmart.eu/wp-content/uploads/2020/10/Samsung-A21-Blue.jpg" alt="">
-					</div>
-					<div class="item">
-						<img src="https://mobmart.eu/wp-content/uploads/2020/10/Samsung-A21-Blue.jpg" alt="">
-					</div>
-					<div class="item">
-						<img src="https://mobmart.eu/wp-content/uploads/2020/10/Samsung-A21-Blue.jpg" alt="">
-					</div>
-				</div>
-			</div>
+
 		</div>
 	</div>
 	<div class="row mt-4">
