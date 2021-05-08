@@ -17,16 +17,18 @@ use Illuminate\Support\Facades\Auth;
 // Route::get('/', function () {
 //     return view('auth.login');
 // });
-Route::get('/', function () {
-    return view('frontEnd/FEhome');
-});
+// Route::get('/', function () {
+//     return view('frontEnd/FEhome');
+// });
 
 //Home Controller
 Route::get('/','HomeController@mainCarosul')->name('mainCarosul');
+Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/details/{id}','HomeController@details')->name('details');
 Route::get('/search','HomeController@search')->name('search');
-Route::get('/brand/{brand}','BrandController@show')->name('brand');
 
+//Brand Controller
+Route::get('/brand/{brand}','BrandController@show')->name('brand');
 //filterController
 Route::get('/filter','filterController@index')->name('filter.index');
 Route::get('/filter/{id}/details','filterController@show')->name('filterDetails.show');
@@ -37,7 +39,7 @@ Auth::routes();
 // // });
 
 
-Route::get('/home', 'HomeController@index')->name('home');
+
 Route::middleware('auth')->group(function () {
     // main carousel start
     Route::get('mainCarousel/add', 'MainCarouselController@create')->name('mainCarousel.add');
