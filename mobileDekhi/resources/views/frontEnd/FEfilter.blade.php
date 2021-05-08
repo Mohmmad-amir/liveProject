@@ -8,7 +8,7 @@
 
         <form action="" method="post">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-10">
                     <select class="form-select" aria-label="Default select example">
                         <option  hidden selected>Select Price Range</option>
                         <option value="0-5,000">0-5,000</option>
@@ -20,6 +20,9 @@
                         <option value="50,000-1,00,000">50,000-1,00,000</option>
                         <option value="1,00,000-1,50,000">1,00,000-1,50,000</option>
                       </select>
+                </div>
+                <div class="col-md-2">
+                    <button id="btn" class="btn btn-success">Find</button>
                 </div>
             </div>
         </form>

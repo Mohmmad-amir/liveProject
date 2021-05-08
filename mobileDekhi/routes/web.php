@@ -55,7 +55,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/subCarousel/{id}', 'SubCarouselController@destroy')->name('subCarousel.destroy');
     // sub carousel end
     // add product start
-    Route::get('products/', 'ProductController@index')->name('products.all');
+    Route::get('/products', 'ProductController@index')->name('products.all');
     Route::get('products/add', 'ProductController@create')->name('products.add');
     Route::post('products/add', 'ProductController@store')->name('products.store');
     Route::get('/products/{id}/edit', 'ProductController@edit')->name('products.edit');
