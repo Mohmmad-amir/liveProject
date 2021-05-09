@@ -16,9 +16,10 @@
                         <option value="/filter?min_price=50001&max_price=10000">5,000 TK - 10,000 TK</option>
                         <option value="/filter?min_price=10001&max_price=15000">10,000 TK - 15,000 TK</option>
                         <option value="/filter?min_price=15001&max_price=20000">15,000 TK - 20,000 TK</option>
-                        <option value="/filter?min_price=20,001&max_price=30,000">20,000 TK - 30,000 TK</option>
-                        <option value="/filter?min_price=40,001&max_price=50,000">40,000 TK - 50,000 TK</option>
-                        <option value="/filter?min_price=50,001&max_price=1,00,000">50,000 TK - 1,00,000 TK</option>
+                        <option value="/filter?min_price=20001&max_price=30000">20,000 TK - 30,000 TK</option>
+                        <option value="/filter?min_price=30001&max_price=40000">30,000 TK - 40,000 TK</option
+                        <option value="/filter?min_price=40001&max_price=50000">40,000 TK - 50,000 TK</option>
+                        <option value="/filter?min_price=50001&max_price=100000">50,000 TK - 1,00,000 TK</option>
                         <option value="/filter?min_price=100001&max_price=200000">1,00,000 TK - 2,00,000 TK</option>
                       </select>
                 </div>
