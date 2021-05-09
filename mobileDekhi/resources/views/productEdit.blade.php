@@ -32,8 +32,7 @@
 
                                     <div class="form-group">
                                         <label for="image">Image</label>
-                                        <input id="image" name="image" type="file" value="{{ $products->name }}"
-                                            class="form-control" aria-describedby="textHelp">
+                                        <input id="image" name="image" type="file" class="form-control" aria-describedby="textHelp">
                                     </div>
                                     <div class="form-group">
                                         <label for="ProductName"> Name</label>

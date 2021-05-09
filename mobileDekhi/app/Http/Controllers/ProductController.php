@@ -134,22 +134,15 @@ class ProductController extends Controller
 
     {
 
-        $request->validate([
-            'image' => 'required|image'
-        ]);
         $product= Product::findorFail($id);
 
         if($request->file('image')){
             $image=$request->file('image');
-            @unlink(public_path() . '/assets/img/' . $product->image);
+            @unlink(public_path() .'/assets/img/'.$product->image);
             $imageName="Product_".time().'.'.$image->extension();
             $image->move(public_path('/assets/img/'),$imageName);
             $product->image=$imageName;
            }
-
-
-
-
 
         $product->name = $request->product_name;
         $product->brand = $request->brand;
@@ -197,6 +190,9 @@ class ProductController extends Controller
         $product->launch_date = $request->LaunchDate;
         $product->made_by = $request->MadeBy;
         $product->body_color = $request->BodyColor;
+
+
+
 
         $product->save();
         return redirect()->action([ProductController::class,'index']);

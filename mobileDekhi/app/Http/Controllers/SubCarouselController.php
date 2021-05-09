@@ -42,19 +42,11 @@ class SubCarouselController extends Controller
         ]);
 
 
-
-
-        if ($request->file('image')) {
-            $file = $request->file('image');
-            $extension = $file->getClientOriginalExtension();
-            $image = "subCarousel_" . time() . "." . $extension;
-
-            Image::make($file)->save(public_path() . '/assets/img/' . $image);
-        }
-
+        $image=$request->file('image');
+        $imageName="Subcarousel_".time().'.'.$image->extension();
+        $image->move(public_path('/assets/img/'),$imageName);
         $product = new SubCarousel();
-        $product->image = $image;
-
+        $product->image = $imageName;
         $product->save();
         return redirect()->back()->with("message", "added Successful");
     }
@@ -93,15 +85,13 @@ class SubCarouselController extends Controller
     {
         $product = SubCarousel::findOrFail($id);
 
-        if ($request->file('image')) {
-            @unlink(public_path() . '/assets/img/' . $product->image);
-            $file = $request->file('image');
-            $extension = $file->getClientOriginalExtension();
-            $image = "subCarousel_" . time() . "." . $extension;
-
-            Image::make($file)->save(public_path() . '/assets/img/' . $image);
-            $product->image = $image;
-        }
+        if($request->file('image')){
+            $image=$request->file('image');
+            @unlink(public_path() .'/assets/img/'.$product->image);
+            $imageName="Subcarousel_".time().'.'.$image->extension();
+            $image->move(public_path('/assets/img/'),$imageName);
+            $product->image=$imageName;
+           }
 
 
         $product->save();

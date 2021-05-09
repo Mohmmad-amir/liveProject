@@ -87,16 +87,13 @@ class upcomingProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $request->validate([
-            'image' => 'required|image'
-        ]);
 
         $upcomingProduct = UpcomingProduct::findorFail($id);
 
 
         if($request->file('image')){
             $image=$request->file('image');
-            @unlink(public_path() . '/assets/img/' . $product->image);
+            @unlink(public_path() . '/assets/img/' . $upcomingProduct->image);
             $imageName="Product_".time().'.'.$image->extension();
             $image->move(public_path('/assets/img/'),$imageName);
             $upcomingProduct->image=$imageName;

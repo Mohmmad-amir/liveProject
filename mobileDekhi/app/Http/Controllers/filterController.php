@@ -22,13 +22,12 @@ class filterController extends Controller
     protected function getProducts(Request $request){
 
         if(!$request->has('min_price') && !$request->has('max_price')){
-            return Product::all();
+            return Product::paginate(1);
         }
 
 
         return Product::where('price','>=',$request->get('min_price'))
-                ->where('price','<=',$request->get('max_price'))
-                ->get();
+                ->where('price','<=',$request->get('max_price'))->get();
     }
 
     /**
