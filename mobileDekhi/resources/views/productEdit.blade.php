@@ -56,7 +56,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="ProductModel"> Model</label>
-                                        <input id="ProductModel" value="{{ $products->price }}" name="product_model"
+                                        <input id="ProductModel" value="{{ $products->model }}" name="product_model"
                                             type="text" class="form-control" aria-describedby="textHelp">
                                     </div>
 
