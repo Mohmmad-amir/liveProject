@@ -46,19 +46,11 @@
                             Brand
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="{{route('brand','Samsung')}}">Samsung</a></li>
-                            <li><a class="dropdown-item" href="{{route('brand','Nokia')}}">Nokia</a></li>
+                            <li><a class="dropdown-item" href="{{route('brand','samsung')}}">Samsung</a></li>
+                            <li><a class="dropdown-item" href="{{route('brand','nokia')}}">Nokia</a></li>
                             <li><a class="dropdown-item" href="{{route('brand','Oneplus')}}">Oneplus</a></li>
-<<<<<<< Updated upstream
-                            <li><a class="dropdown-item" href="{{route('brand','Xiaomi')}}">xiaomi</a></li>
-=======
-                            <li><a class="dropdown-item" href="{{route('brand','Apple')}}">Apple</a></li>
 
-                            <li><a class="dropdown-item" href="{{route('brand','xiaomi')}}">xiaomi</a></li>
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
->>>>>>> 8f8afa3e0ca8dc20e5b165bde21e89fb54bf104c
+                            <li><a class="dropdown-item" href="{{route('brand','Oneplus')}}">Oneplus</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
