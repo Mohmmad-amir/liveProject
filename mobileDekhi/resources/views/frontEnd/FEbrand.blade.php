@@ -22,8 +22,8 @@
 <div class="container ">
     <div class="row">
 
-        @foreach ($Products as $product)
 
+        @forelse ($Products as $product)
         <div class="col-md-3 col-sm-4 mt-2" data-aos="fade-up" data-aos-offset="5" data-aos-delay="50" data-aos-duration="100">
             <div class="card w-100 shadow-sm">
                 <img src="{{asset('assets/img')}}/{{$product->image}}" class="card-img-top card-image w-100 img-fluid mt-2" alt="...">
@@ -35,7 +35,11 @@
             </div>
         </div>
 
-        @endforeach
+        @empty
+            <h1>There Is No Product</h1>
+        @endforelse
+
+
     </div>
     <!-- end card -->
     <!-- pagination -->
