@@ -12,11 +12,12 @@
                     <select onchange="window.location.href=this.value" class="form-select" aria-label="Default select example">
                         <option value="/filter" hidden selected>Select Price Range</option>
                         <option value="/filter">Select Price Range</option>
-                        <option value="/filter?min_price=0&max_price=5,000">0 TK - 5,000 TK</option>
+                        <option value="/filter?min_price=0&max_price=5000">0 TK - 5,000 TK</option>
                         <option value="/filter?min_price=50001&max_price=10000">5,000 TK - 10,000 TK</option>
                         <option value="/filter?min_price=10001&max_price=15000">10,000 TK - 15,000 TK</option>
                         <option value="/filter?min_price=15001&max_price=20000">15,000 TK - 20,000 TK</option>
                         <option value="/filter?min_price=20001&max_price=30000">20,000 TK - 30,000 TK</option>
+                        <option value="/filter?min_price=30001&max_price=40000">30,000 TK - 40,000 TK</option>
                         <option value="/filter?min_price=30001&max_price=40000">30,000 TK - 40,000 TK</option>
                         <option value="/filter?min_price=40001&max_price=50000">40,000 TK - 50,000 TK</option>
                         <option value="/filter?min_price=50001&max_price=100000">50,000 TK - 1,00,000 TK</option>
