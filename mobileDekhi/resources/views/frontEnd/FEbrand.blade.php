@@ -31,7 +31,6 @@
                     <h5 class="card-title fw-bold">{{$product->name}}</h5>
                     <p class="card-text ">BDT-{{$product->price}}</p>
                     <a href="{{route('details',['id'=>$product->id])}}" class="btn  card-btn">View Details</a>
-
                 </div>
             </div>
         </div>
@@ -44,7 +43,7 @@
         <div class="col-md-12 col-sm-12 ">
             <nav aria-label="Page navigation example">
                 <ul class="pagination justify-content-center">
-                    {{-- {{ $Products->links() }} --}}
+                    {{ $Products->links() }}
                 </ul>
             </nav>
         </div>
