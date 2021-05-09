@@ -12,12 +12,14 @@
                     <select onchange="window.location.href=this.value" class="form-select" aria-label="Default select example">
                         <option value="/filter" hidden selected>Select Price Range</option>
                         <option value="/filter">Select Price Range</option>
-                        <option value="/filter?min_price=5001&max_price=10000">5001 - 10000</option>
-                        <option value="/filter?min_price=10001&max_price=15000">10001 - 15000</option>
-                        <option value="/filter?min_price=15001&max_price=20000">15001 - 20000</option>
-                        <option value="/filter?min_price=20001&max_price=50000">20001 - 50000</option>
-                        <option value="/filter?min_price=50001&max_price=100000">50001 - 100000</option>
-                        <option value="/filter?min_price=100001&max_price=200000">50001 - 100000</option>
+                        <option value="/filter?min_price=0&max_price=5000">0 TK - 5,000 TK</option>
+                        <option value="/filter?min_price=5001&max_price=10000">5,000 TK - 10,000 TK</option>
+                        <option value="/filter?min_price=10001&max_price=15000">10,000 TK - 15,000 TK</option>
+                        <option value="/filter?min_price=15,001&max_price=20,000">15,000 TK - 20,000 TK</option>
+                        <option value="/filter?min_price=20,001&max_price=30,000">20,000 TK - 30,000 TK</option>
+                        <option value="/filter?min_price=40,001&max_price=50,000">40,000 TK - 50,000 TK</option>
+                        <option value="/filter?min_price=50,001&max_price=1,00,000">50,000 TK - 1,00,000 TK</option>
+                        <option value="/filter?min_price=100001&max_price=200000">1,00,000 TK - 2,00,000 TK</option>
                       </select>
                 </div>
 
@@ -45,7 +47,7 @@
                     <img src="{{asset('assets/img')}}/{{$product->image}}" class="card-img-top card-image w-100 img-fluid mt-2" alt="...">
                     <div class="card-body text-center">
                         <h5 class="card-title fw-bold">{{$product->name}}</h5>
-                        <p class="card-text ">BDT-{{$product->price}}</p>
+                        <p class="card-text ">BDT- {{$product->price}}</p>
                         <a href="{{route('details',['id'=>$product->id])}}" class="btn  card-btn">View Details</a>
 
                     </div>
