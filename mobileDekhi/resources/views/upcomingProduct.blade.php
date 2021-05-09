@@ -17,7 +17,7 @@
                         @endif
                         <button class="btn btn-success float-right my-2 " id="addMainCarousel">Add <i class="fas fa-plus"></i></button>
                         <div id="showMainCarousel" style="display: none">
-                            <form action="{{route('upcomingProduct.add')}}" method="POST" enctype="multipart/form-data">
+                            <form action="{{route('upcomingProduct.store')}}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <div class="row mt-4">
                                     <div class="col-md-6 mb-3">
@@ -59,13 +59,13 @@
                                 </td>
                               </tr>
                               @endforeach
-                
+
                             </tbody>
                           </table>
                     </div>
                 </div>
-            </div>  
-        </div>   
+            </div>
+        </div>
     </div>
 </div>
 

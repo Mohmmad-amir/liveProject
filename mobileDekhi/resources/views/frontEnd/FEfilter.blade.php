@@ -12,12 +12,21 @@
                     <select onchange="window.location.href=this.value" class="form-select" aria-label="Default select example">
                         <option value="/filter" hidden selected>Select Price Range</option>
                         <option value="/filter">Select Price Range</option>
+<<<<<<< Updated upstream
                         <option value="/filter?min_price=2000&max_price=10000">2000 - 10,000</option>
                         <option value="/filter?min_price=10,001&max_price=15,000">10000 - 15000</option>
                         <option value="/filter?min_price=15,001&max_price=20,000">15000 - 20000</option>
                         <option value="/filter?min_price=20,001&max_price=50,000">20000 - 50000</option>
                         <option value="/filter?min_price=50,001&max_price=1,00,000">50000 - 100000</option>
                         <option value="/filter?min_price=1,00,001&max_price=2,00,000">100000 - 200000</option>
+=======
+                        <option value="/filter?min_price=5,001&max_price=10,000">5001 - 10000</option>
+                        <option value="/filter?min_price=10,001&max_price=15,000">10001 - 15000</option>
+                        <option value="/filter?min_price=15,001&max_price=20,000">15001 - 20000</option>
+                        <option value="/filter?min_price=20,001&max_price=50,000">20001 - 50000</option>
+                        <option value="/filter?min_price=50,001&max_price=1,00,000">50001 - 100000</option>
+                        <option value="/filter?min_price=1,00,001&max_price=2,00,000">50001 - 100000</option>
+>>>>>>> Stashed changes
                       </select>
                 </div>
 

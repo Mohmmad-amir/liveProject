@@ -44,7 +44,7 @@
                         <div class="card-body cardHadingText">
                             <h4 class="card-title text-center headingText">{{$upcomingProduct->name}}</h4>
                           </div>
-                        <img style="border-radius: 20px;" src="{{asset('assets/img')}}/{{$upcomingProduct->image}}" class="card-img-top" alt="...">
+                        <img style="border-radius:20px" src="{{asset('assets/img')}}/{{$upcomingProduct->image}}" class="card-img-top" alt="...">
                     </div>
                 </a>
             </div>
@@ -78,6 +78,7 @@
 
         </div>
         <!-- pagination -->
+<<<<<<< Updated upstream
         <div class="row">
             <div class="col-md-12 col-sm-12 ">
                 <nav aria-label="Page navigation example">
@@ -87,6 +88,11 @@
                 </nav>
             </div>
         </div>
+=======
+      <div class="mt-4">
+        {{ $products->links() }}
+      </div>
+>>>>>>> Stashed changes
         <!-- end pagination -->
     </div>
     <!-- latest mobile section end -->

@@ -49,7 +49,13 @@
                             <li><a class="dropdown-item" href="{{route('brand','Samsung')}}">Samsung</a></li>
                             <li><a class="dropdown-item" href="{{route('brand','Nokia')}}">Nokia</a></li>
                             <li><a class="dropdown-item" href="{{route('brand','Oneplus')}}">Oneplus</a></li>
+<<<<<<< Updated upstream
                             <li><a class="dropdown-item" href="{{route('brand','Xiaomi')}}">xiaomi</a></li>
+=======
+                            <li><a class="dropdown-item" href="{{route('brand','Apple')}}">Apple</a></li>
+
+                            <li><a class="dropdown-item" href="{{route('brand','xiaomi')}}">xiaomi</a></li>
+>>>>>>> Stashed changes
                         </ul>
                     </li>
                     <li class="nav-item">
