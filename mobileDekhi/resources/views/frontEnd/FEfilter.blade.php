@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div style="margin-top:6%;" class="container">
+    <div style="margin-top:6%;" class="container mb-4">
 
         <h3 style="font-weight: bold;" class="headingText mt-5 mb-3 text-center ">Filer Prize Range</h3>
 
@@ -12,12 +12,12 @@
                     <select onchange="window.location.href=this.value" class="form-select" aria-label="Default select example">
                         <option value="/filter" hidden selected>Select Price Range</option>
                         <option value="/filter">Select Price Range</option>
-                        <option value="/filter?min_price=5001&max_price=10000">5001 - 10000</option>
-                        <option value="/filter?min_price=10001&max_price=15000">10001 - 15000</option>
-                        <option value="/filter?min_price=15001&max_price=20000">15001 - 20000</option>
-                        <option value="/filter?min_price=20001&max_price=50000">20001 - 50000</option>
-                        <option value="/filter?min_price=50001&max_price=100000">50001 - 100000</option>
-                        <option value="/filter?min_price=100001&max_price=200000">50001 - 100000</option>
+                        <option value="/filter?min_price=2000&max_price=10000">2000 - 10,000</option>
+                        <option value="/filter?min_price=10,001&max_price=15,000">10000 - 15000</option>
+                        <option value="/filter?min_price=15,001&max_price=20,000">15000 - 20000</option>
+                        <option value="/filter?min_price=20,001&max_price=50,000">20000 - 50000</option>
+                        <option value="/filter?min_price=50,001&max_price=1,00,000">50000 - 100000</option>
+                        <option value="/filter?min_price=1,00,001&max_price=2,00,000">100000 - 200000</option>
                       </select>
                 </div>
 
@@ -44,7 +44,7 @@
                 <div class="card w-100 shadow-sm">
                     <img src="{{asset('assets/img')}}/{{$product->image}}" class="card-img-top card-image w-100 img-fluid mt-2" alt="...">
                     <div class="card-body text-center">
-                        <h5 class="card-title fw-bold">{{$product->name}}</h5>
+                        <h6 class="card-title fw-bold">{{$product->name}}</h6>
                         <p class="card-text ">BDT-{{$product->price}}</p>
                         <a href="{{route('details',['id'=>$product->id])}}" class="btn  card-btn">View Details</a>
 
@@ -59,12 +59,8 @@
         <div class="row">
             <div class="col-md-12 col-sm-12 ">
                 <nav aria-label="Page navigation example">
-                    <ul class="pagination justify-content-center">
-                        <li class="page-item "><a class="page-link text-dark" href="#">Previous</a></li>
-                        <li class="page-item "><a class="page-link text-dark" href="#">1</a></li>
-                        <li class="page-item "><a class="page-link text-dark" href="#">2</a></li>
-                        <li class="page-item "><a class="page-link text-dark" href="#">3</a></li>
-                        <li class="page-item "><a class="page-link text-dark" href="#">Next</a></li>
+                    <ul class="pagination justify-content-center mt-4">
+                       {{-- {{$products->links()}} --}}
                     </ul>
                 </nav>
             </div>

@@ -46,11 +46,10 @@
                             Brand
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="{{route('brand','samsung')}}">Samsung</a></li>
-                            <li><a class="dropdown-item" href="{{route('brand','nokia')}}">Nokia</a></li>
+                            <li><a class="dropdown-item" href="{{route('brand','Samsung')}}">Samsung</a></li>
+                            <li><a class="dropdown-item" href="{{route('brand','Nokia')}}">Nokia</a></li>
                             <li><a class="dropdown-item" href="{{route('brand','Oneplus')}}">Oneplus</a></li>
-
-                            <li><a class="dropdown-item" href="#">xiaomi</a></li>
+                            <li><a class="dropdown-item" href="{{route('brand','Xiaomi')}}">xiaomi</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">

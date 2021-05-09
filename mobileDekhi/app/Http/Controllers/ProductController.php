@@ -44,7 +44,7 @@ class ProductController extends Controller
 
         $image=$request->file('image');
         $imageName="Product_".time().'.'.$image->extension();
-        $image->move(public_path('assets/img/'),$imageName);
+        $image->move(public_path('/assets/img/'),$imageName);
 
 
         $product = new Product();
