@@ -19,7 +19,7 @@ class CreateProductsTable extends Migration
             $table->string('name');
             $table->string('brand');
             $table->string('model');
-            $table->unsignedBigInteger('price');
+            $table->string('price');
             $table->string('network_type');
             $table->string('speed');
             $table->string('edge');
