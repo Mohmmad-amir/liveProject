@@ -17,6 +17,7 @@
                         <option value="/filter?min_price=15001&max_price=20000">15001 - 20000</option>
                         <option value="/filter?min_price=20001&max_price=50000">20001 - 50000</option>
                         <option value="/filter?min_price=50001&max_price=100000">50001 - 100000</option>
+                        <option value="/filter?min_price=100001&max_price=200000">50001 - 100000</option>
                       </select>
                 </div>
 

@@ -42,20 +42,17 @@ class ProductController extends Controller
             'image' => 'required|image'
         ]);
 
-        $file = $request->file('image');
-        $extension = $file->getClientOriginalExtension();
-        $image = "products_" . time() . "." . $extension;
-        Image::make($file)->save(public_path() . '/assets/img/' . $image);
-
+        $image=$request->file('image');
+        $imageName="Product_".time().'.'.$image->extension();
+        $image->move(public_path('assets/img/'),$imageName);
 
 
         $product = new Product();
-        $product->image = $image;
+        $product->image = $imageName;
         $product->name = $request->product_name;
         $product->brand = $request->brand;
         $product->model = $request->product_model;
         $product->price = $request->product_price;
-        $product->price_range = $request->price_range;
         $product->network_type = $request->networkType;
         $product->speed = $request->speed;
         $product->edge = $request->edge;
@@ -142,14 +139,15 @@ class ProductController extends Controller
         ]);
         $product= Product::findorFail($id);
 
-        if ($request->file('image')) {
+        if($request->file('image')){
+            $image=$request->file('image');
             @unlink(public_path() . '/assets/img/' . $product->image);
-            $file = $request->file('image');
-            $extension = $file->getClientOriginalExtension();
-            $image = "products_" . time() . "." . $extension;
-            Image::make($file)->save(public_path() . '/assets/img/' . $image);
-            $product->image = $image;
-        }
+            $imageName="Product_".time().'.'.$image->extension();
+            $image->move(public_path('/assets/img/'),$imageName);
+            $product->image=$imageName;
+           }
+
+
 
 
 
@@ -157,7 +155,6 @@ class ProductController extends Controller
         $product->brand = $request->brand;
         $product->model = $request->product_model;
         $product->price = $request->product_price;
-        $product->price_range = $request->price_range;
         $product->network_type = $request->networkType;
         $product->speed = $request->speed;
         $product->edge = $request->edge;

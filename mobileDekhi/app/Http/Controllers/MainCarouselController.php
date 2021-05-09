@@ -40,18 +40,11 @@ class MainCarouselController extends Controller
         $request->validate([
             'image' => 'required|image'
         ]);
-
-        if ($request->file('image')) {
-            $file = $request->file('image');
-            $extension = $file->getClientOriginalExtension();
-            $image = "mainCarousel_" . time() . "." . $extension;
-
-            Image::make($file)->save(public_path() . '/assets/img/' . $image);
-        }
-
         $product = new mainCarousel();
-        $product->image = $image;
-
+        $image=$request->file('image');
+        $imageName="mainCarousel_".time().'.'.$image->extension();
+        $image->move(public_path('assets/img/'),$imageName);
+        $product->image=$imageName;
         $product->save();
         return redirect()->back()->with("message", "added Successful");
     }
@@ -90,15 +83,15 @@ class MainCarouselController extends Controller
     {
         $product = mainCarousel::findOrFail($id);
 
-        if ($request->file('image')) {
-            @unlink(public_path() . '/assets/img/' . $product->image);
-            $file = $request->file('image');
-            $extension = $file->getClientOriginalExtension();
-            $image = "mainCarousel_" . time() . "." . $extension;
 
-            Image::make($file)->save(public_path() . '/assets/img/' . $image);
-            $product->image = $image;
-        }
+        if($request->file('image')){
+            $image=$request->file('image');
+            @unlink(public_path() . '/assets/img/' . $product->image);
+            $imageName="mainCarousel_".time().'.'.$image->extension();
+            $image->move(public_path('/assets/img/'),$imageName);
+            $product->image=$imageName;
+           }
+
 
 
         $product->save();

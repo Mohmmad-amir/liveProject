@@ -52,6 +52,7 @@
                                             <option value="Huawei">Huawei</option>
                                             <option value="Iphone">Iphone</option>
                                             <option value="Oneplus">Oneplus</option>
+                                            <option value="Apple">Apple</option>
                                         </select>
                                     </div>
                                     <div class="form-group">
