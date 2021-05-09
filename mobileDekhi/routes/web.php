@@ -71,5 +71,6 @@ Route::middleware('auth')->group(function () {
     Route::put('upcomingProducts/{id}', 'UpcomingproductController@update')->name('upcomingProduct.update');
     Route::delete('upcomingProducts/{id}', 'UpcomingproductController@destroy')->name('upcomingProduct.destroy');
     // add upcoming product start
+    //
 
 });
