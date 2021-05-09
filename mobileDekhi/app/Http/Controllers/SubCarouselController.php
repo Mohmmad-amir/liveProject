@@ -41,6 +41,9 @@ class SubCarouselController extends Controller
             'image' => 'required|image'
         ]);
 
+
+
+
         if ($request->file('image')) {
             $file = $request->file('image');
             $extension = $file->getClientOriginalExtension();

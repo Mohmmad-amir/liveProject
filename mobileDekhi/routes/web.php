@@ -29,6 +29,7 @@ Route::get('/search','HomeController@search')->name('search');
 
 //Brand Controller
 Route::get('/brand/{brand}','BrandController@show')->name('brand');
+
 //filterController
 Route::get('/filter','filterController@index')->name('filter.index');
 Route::get('/filter/{id}/details','filterController@show')->name('filterDetails.show');

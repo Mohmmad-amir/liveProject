@@ -42,16 +42,13 @@ class upcomingProductController extends Controller
             'image' => 'required|image'
         ]);
 
-        if ($request->file('image')) {
-            $file = $request->file('image');
-            $extension = $file->getClientOriginalExtension();
-            $image = "upcomingProduct_" . time() . "." . $extension;
+        $image=$request->file('image');
+        $imageName="Product_".time().'.'.$image->extension();
+        $image->move(public_path('assets/img/'),$imageName);
 
-            Image::make($file)->save(public_path() . '/assets/img/' . $image);
-        }
 
         $product = new upcomingProduct();
-        $product->image = $image;
+        $product->image = $imageName;
         $product->name = $request->name;
 
         $product->save();
@@ -90,24 +87,24 @@ class upcomingProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $upcomingProduct = UpcomingProduct::findorFail($id);
         $request->validate([
             'image' => 'required|image'
         ]);
 
-        if ($request->file('image')) {
-            $file = $request->file('image');
-            $extension = $file->getClientOriginalExtension();
-            $image = "upcomingProduct_" . time() . "." . $extension;
+        $upcomingProduct = UpcomingProduct::findorFail($id);
 
-            Image::make($file)->save(public_path() . '/assets/img/' . $image);
-        }
 
-        $upcomingProduct->image = $image;
+        if($request->file('image')){
+            $image=$request->file('image');
+            @unlink(public_path() . '/assets/img/' . $product->image);
+            $imageName="Product_".time().'.'.$image->extension();
+            $image->move(public_path('/assets/img/'),$imageName);
+            $upcomingProduct->image=$imageName;
+           }
+
         $upcomingProduct->name = $request->name;
-
         $upcomingProduct->save();
-        return redirect("upcomingProducts/add")->with("message", "updated Successful"); 
+        return redirect("upcomingProducts/add")->with("message", "updated Successful");
     }
 
     /**
