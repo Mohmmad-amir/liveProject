@@ -4,7 +4,7 @@
 
 <div style="margin-top:6%;" class="container">
 
-    <h3 style="font-weight: bold;" class="headingText mt-5 mb-3 text-center ">Brand</h3>
+    <h3 style="font-weight: bold;" class="headingText mt-5 mb-3 text-center ">Searching Brand</h3>
 
 
 </div>

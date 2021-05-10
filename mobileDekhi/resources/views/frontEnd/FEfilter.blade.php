@@ -8,7 +8,7 @@
 
         <form action="" method="post">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 mb-4">
                     <select onchange="window.location.href=this.value" class="form-select" aria-label="Default select example">
                         <option value="/filter" hidden selected>Select Price Range</option>
                         <option value="/filter">Select Price Range</option>

@@ -78,7 +78,16 @@
 
         </div>
         <!-- pagination -->
-        {{ $products->links() }}
+
+        <div class="row">
+            <div class="col-md-12 col-sm-12 mt-4 ">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                        {{ $products->links() }}
+                    </ul>
+                </nav>
+            </div>
+        </div>
         <!-- end pagination -->
     </div>
     <!-- latest mobile section end -->

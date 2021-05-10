@@ -30,7 +30,7 @@ left: 38%;" class="col-md-12 text-center MyText">
 	</div>
 	<div class="row mt-4">
 		<div class="col-md-12">
-			<h4 class="mb-2">{{$Product->name}} {{$Product->model}} Full Specifications</h4>
+			<h4 class="mb-2">{{$Product->name}}  Full Specifications</h4>
 			<table class="table table-striped mt-3 table-bordered">
 				<thead>
 					<tr>
@@ -41,7 +41,7 @@ left: 38%;" class="col-md-12 text-center MyText">
 				<tbody>
 					<tr>
 						<th scope="row">Model</th>
-						<td>{{$Product->name}} {{$Product->model}}</td>
+						<td> {{$Product->model}}</td>
 					</tr>
 					<tr>
 						<th scope="row">Price</th>
