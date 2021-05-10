@@ -38,8 +38,8 @@
         <div class="row">
 
             @foreach ($upcomingProducts as $upcomingProduct)
-            <div class="col-md-4">
-                <a href="details.html">
+            <div class="col-4 col-sm-4 col-md-4">
+                <a href="">
                     <div class="card umCardBorder mt-2 shadow-lg" style="width: 100%;">
                         <div class="card-body cardHadingText">
                             <h4 class="card-title text-center headingText">{{$upcomingProduct->name}}</h4>
@@ -62,11 +62,11 @@
 
             @foreach ($products as $product)
 
-            <div class="col-md-3 col-sm-4 mt-2" data-aos="fade-up" data-aos-offset="5" data-aos-delay="50" data-aos-duration="100">
+            <div class="col-4 col-sm-4 col-md-3  mt-2" data-aos="fade-up" data-aos-offset="5" data-aos-delay="50" data-aos-duration="100">
                 <div class="card w-100 shadow-sm">
                     <img src="{{asset('assets/img')}}/{{$product->image}}" class="card-img-top card-image w-100 img-fluid mt-2" alt="...">
                     <div class="card-body text-center">
-                        <h5 class="card-title fw-bold">{{$product->name}}</h5>
+                        <h6 class="card-title fw-bold">{{$product->name}}</h6>
                         <p class="card-text ">BDT-{{$product->price}}</p>
                         <a href="{{route('details',['id'=>$product->id])}}" class="btn  card-btn">View Details</a>
 

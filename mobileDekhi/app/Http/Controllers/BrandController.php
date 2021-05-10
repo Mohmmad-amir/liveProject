@@ -8,7 +8,7 @@ class BrandController extends Controller
 {
 
     function show(string $brand){
-        $Products=Product::where('brand',$brand)->paginate(1);
+        $Products=Product::where('brand',$brand)->paginate(4);
         return view('frontEnd/FEbrand',compact('Products'));
     }
 
