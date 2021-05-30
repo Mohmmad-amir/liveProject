@@ -63,7 +63,7 @@
                 </ul>
                 <form class="d-flex  " method="" action="{{ route('search') }}">
                     <input required name="query" class="form-control searchInput" id="" type="search"
-                        placeholder="Search" aria-label="Search">
+                        placeholder="Search your mobile..." aria-label="Search">
                     <button class="btn text-white searchBarBtn" type="submit"><i class="fas fa-search"></i>
                     </button>
                 </form>
