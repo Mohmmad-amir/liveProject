@@ -6,14 +6,7 @@
 
     <h3 style="font-weight: bold;" class="headingText mt-5 mb-3 text-center ">Searching Brand</h3>
 
-
 </div>
-
-
-
-
-
-
 
 
 <!-- end price -->
