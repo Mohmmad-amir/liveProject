@@ -32,17 +32,17 @@ body {
 .active,
 .nav-header-color,
 .card-btn {
-    color: #fa8231 !important;
+    color: orangered !important;
 }
 
 .form-check-input {
-    background-color: #fa8231 !important;
-    border-color: #fa8231 !important;
+    background-color: orangered !important;
+    border-color: orangered !important;
 }
 
 .form-check-input:checked {
     background-color: #fff !important;
-    border-color: #fa8231 !important;
+    border-color: orangered !important;
 }
 
 .card-image {
