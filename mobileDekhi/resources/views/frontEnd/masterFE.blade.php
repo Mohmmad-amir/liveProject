@@ -136,6 +136,10 @@
         </div>
     </div>
 
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+        </div>
+
 
     <!-- Optional JavaScript; choose one of the two! -->
     <!-- jquery -->
@@ -162,7 +166,7 @@
     <script type="text/javascript">
 
     $(window).on("load",function(){
-        $(".loader-wrapper").fadwOut("slow");
+        $(".loader-wrapper").fadeOut("slow");
     });
 
 		$('.owl-carousel').owlCarousel({

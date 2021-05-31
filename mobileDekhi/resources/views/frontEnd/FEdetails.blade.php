@@ -5,26 +5,12 @@
 <div class="container mt-4">
 	<div class="row">
 		<div class="col-12 col-sm-8 col-md-12 text-center">
-			<h3 class="mt-5 ">{{$Product->name}} {{$Product->model}} </h3>
-			<h3 class="mt-5">{{$Product->name}}  </h3>
+			<h3 class="mt-5 ">{{$Product->name}} </h3>
 			<h6>Price in Bangladesh</h6>
 			<p>BDT-{{$Product->price}}</p>
 		</div>
 	</div>
 	<div class="row">
-		<div style="position: relative;
-left: 38%;" class="col-md-12 text-center MyText">
-			{{-- <table class="table-bordered mt-2">
-				<tbody>
-					<tr>
-						<td style="padding: 10px;">Official ✭</td>
-						<td style="padding: 10px;">৳17,990 ৳18,990</td>
-					</tr>
-				</tbody>
-			</table> --}}
-		</div>
-	</div>
-	<div class="row ">
 		<div style="text-align: center;" class="col-md-12 mt-3 mb-3">
 			<img style="width: 300px" src="{{asset('assets/img')}}/{{$Product->image}}">
 		</div>
@@ -39,7 +25,7 @@ left: 38%;" class="col-md-12 text-center MyText">
 	</div>
 	<div class="row mt-4">
 		<div class="col-md-12">
-			<h4 class="mb-2">{{$Product->name}}  Full Specifications</h4>
+			<h4 class="mb-2">{{$Product->name}} Full Specifications</h4>
 			<table class="table table-striped mt-3 table-bordered">
 				<thead>
 					<tr>

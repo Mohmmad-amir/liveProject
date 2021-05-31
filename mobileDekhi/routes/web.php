@@ -23,7 +23,7 @@ use Illuminate\Support\Facades\Auth;
 
 //Home Controller
 Route::get('/','HomeController@mainCarosul')->name('mainCarosul');
-Route::get('/home', 'HomeController@index')->name('home');
+
 Route::get('/details/{id}','HomeController@details')->name('details');
 Route::get('/search','HomeController@search')->name('search');
 
@@ -42,6 +42,8 @@ Auth::routes();
 
 
 Route::middleware('auth')->group(function () {
+
+    Route::get('/home', 'HomeController@index')->name('home');
     // main carousel start
     Route::get('mainCarousel/add', 'MainCarouselController@create')->name('mainCarousel.add');
     Route::post('mainCarousel/add', 'MainCarouselController@store')->name('mainCarousel.store');
@@ -66,6 +68,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/products/{id}', 'ProductController@destroy')->name('products.destroy');
     // add product end
     // add upcoming product start
+    Route::get('showupcomingProducts','UpcomingproductController@index')->name('upcomingProduct');
+
     Route::get('upcomingProducts/add','UpcomingproductController@create')->name('upcomingProduct.add');
     Route::post('upcomingProducts/add','UpcomingproductController@store')->name('upcomingProduct.store');
     Route::get('upcomingProducts/{id}/edit','UpcomingproductController@edit')->name('upcomingProduct.edit');
