@@ -66,7 +66,9 @@
             <div class="col-md-12 col-sm-12 ">
                 <nav aria-label="Page navigation example">
                     <ul class="pagination justify-content-center">
-                        {{-- {{$products->links()}} --}}
+                       @if ()
+
+                       @endif
                     </ul>
                 </nav>
             </div>
