@@ -26,7 +26,18 @@ left: 38%;" class="col-md-12 text-center MyText">
 		<div style="text-align: center;" class="col-md-12 mt-3 mb-3">
 			<img style="width: 250px" src="{{asset('assets/img')}}/{{$Product->image}}">
 
+
+
+
 		</div>
+        <div class="col-md-6 offset-md-3">
+            <div class="owl-carousel owl-theme">
+                <div class="item"><img src="{{asset('assets/img')}}/{{$Product->image}}" alt="ffds"></div>
+                <div class="item"><img src="{{asset('assets/img')}}/{{$Product->image}}" alt=""></div>
+                <div class="item"><img src="{{asset('assets/img')}}/{{$Product->image}}" alt=""></div>
+            </div>
+        </div>
+
 	</div>
 	<div class="row mt-4">
 		<div class="col-md-12">
