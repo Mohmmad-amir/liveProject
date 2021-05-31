@@ -177,7 +177,7 @@
                                               aria-describedby="textHelp">
                                       </div>
 
-                                      <h4 class="">Platfrom</h4>
+                                      <h4 class="mt-5">Platfrom</h4>
 
                                       <div class="form-group">
                                           <label for="OperatingSystem">Operating System</label>
@@ -218,7 +218,7 @@
                                               aria-describedby="textHelp">
                                       </div>
 
-                                      <h4 class="">Camera</h4>
+                                      <h4 class="mt-4">Camera</h4>
                                       <div class="form-group">
                                           <label for="PrimaryCamera">Primary Camera</label>
                                           <input type="text" id="PrimaryCamera" name="PrimaryCamera" class="form-control"
@@ -245,7 +245,7 @@
 
 
 
-                                      <h4 class="">Sound</h4>
+                                      <h4 class="mt-4">Sound</h4>
                                       <div class="form-group">
                                           <label for="Audio">Audio</label>
                                           <input type="text" name="Audio" id="Audio" class="form-control"
@@ -268,7 +268,7 @@
                                             aria-describedby="textHelp">
                                     </div>
 
-                                      <h4 class="">Connectivity</h4>
+                                      <h4 class="mt-5">Connectivity</h4>
 
                                       <div class="form-group">
                                           <label for="WiFi">WiFi</label>
@@ -303,7 +303,7 @@
                                               aria-describedby="textHelp">
                                       </div>
 
-                                      <h4 class="">Features</h4>
+                                      <h4 class="mt-5">Features</h4>
 
                                       <div class="form-group">
                                           <label for="Sensors">Sensors</label>
@@ -321,7 +321,7 @@
                                               aria-describedby="textHelp">
                                       </div>
 
-                                      <h4 class="">Battery</h4>
+                                      <h4 class="mt-3">Battery</h4>
 
                                       <div class="form-group">
                                           <label for="BatteryType">Battery Type</label>
@@ -339,14 +339,14 @@
                                               aria-describedby="textHelp">
                                       </div>
 
-                                      <h4 class="">Launch</h4>
+                                      <h4 class="mt-3">Launch</h4>
                                       <div class="form-group">
                                           <label for="LaunchDate">Launch Date</label>
                                           <input type="text" name="LaunchDate" id="LaunchDate" class="form-control"
                                               aria-describedby="textHelp">
                                       </div>
 
-                                      <h4 class="">More</h4>
+                                      <h4 class="mt-5">More</h4>
 
                                       <div class="form-group">
                                           <label class="" for="MadeBy">Made By</label>
