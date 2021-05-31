@@ -2,9 +2,11 @@
 
 @section('content')
 
-<div>
+<div class="">
 
     <!-- carosal start -->
+
+  
     {{$key=0}}
     <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
@@ -111,6 +113,10 @@
 
     <!-- latest mobile review end -->
 
+</div>
+
+<div class="loader-wrapper">
+    <span class="loader"><span class="loader-inner"></span></span>
 </div>
 
 @endsection

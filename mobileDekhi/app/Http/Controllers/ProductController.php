@@ -45,10 +45,25 @@ class ProductController extends Controller
         $image=$request->file('image');
         $imageName="Product_".time().'.'.$image->extension();
         $image->move(public_path('/assets/img/'),$imageName);
+        
+        $imagetwo=$request->file('imagetwo');
+        $imageNametwo="Product_two_".time().'.'.$imagetwo->extension();
+        $imagetwo->move(public_path('/assets/img/'),$imageNametwo);
+
+        $imagethree=$request->file('imagethree');
+        $imageNamethree="Product_three_".time().'.'.$imagethree->extension();
+        $imagethree->move(public_path('/assets/img/'),$imageNamethree);
+
+        $imagefour=$request->file('imagefour');
+        $imageNamefour="Product_four_".time().'.'.$imagefour->extension();
+        $imagefour->move(public_path('/assets/img/'),$imageNamefour);
 
 
         $product = new Product();
         $product->image = $imageName;
+        $product->imagetwo=$imageNametwo;
+        $product->imagethree=$imageNamethree;
+        $product->imagefour=$imageNamefour;
         $product->name = $request->product_name;
         $product->brand = $request->brand;
         $product->model = $request->product_model;
@@ -142,6 +157,35 @@ class ProductController extends Controller
             $imageName="Product_".time().'.'.$image->extension();
             $image->move(public_path('/assets/img/'),$imageName);
             $product->image=$imageName;
+          
+           }
+
+           if($request->file('imagetwo')){
+            $imagetwo=$request->file('imagetwo');
+            @unlink(public_path() .'/assets/img/'.$product->imagetwo);
+            $imageNametwo="Product_two".time().'.'.$imagetwo->extension();
+            $imagetwo->move(public_path('/assets/img/'),$imageNametwo);
+            $product->imagetwo=$imageNametwo;
+          
+           }
+
+
+           if($request->file('imagethree')){
+            $imagethree=$request->file('imagethree');
+            @unlink(public_path() .'/assets/img/'.$product->imagethree);
+            $imageNamethree="Product_three".time().'.'.$imagethree->extension();
+            $imagethree->move(public_path('/assets/img/'),$imageNamethree);
+            $product->imagethree=$imageNamethree;
+          
+           }
+
+           if($request->file('imagefour')){
+            $imagefour=$request->file('imagefour');
+            @unlink(public_path() .'/assets/img/'.$product->imagefour);
+            $imageNamefour="Product_four".time().'.'.$imagefour->extension();
+            $imagefour->move(public_path('/assets/img/'),$imageNamefour);
+            $product->imagefour=$imageNamefour;
+          
            }
 
         $product->name = $request->product_name;

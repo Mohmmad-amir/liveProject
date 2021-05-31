@@ -37,6 +37,22 @@
                                         <input id="image" name="image" type="file" class="form-control"
                                             aria-describedby="textHelp">
                                     </div>
+
+                                    <div class="form-group">
+                                        <label for="image">Image Two</label>
+                                        <input id="image" name="imagetwo" type="file" class="form-control" aria-describedby="textHelp">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="image">Image Three</label>
+                                        <input id="image" name="imagethree" type="file" class="form-control" aria-describedby="textHelp">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="image">Image Four</label>
+                                        <input id="image" name="imagefour" type="file" class="form-control" aria-describedby="textHelp">
+                                    </div>
+
                                     <div class="form-group">
                                         <label for="ProductName"> Name</label>
                                         <input name="product_name" type="text" id="ProductName" class="form-control"

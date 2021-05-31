@@ -5,8 +5,9 @@
 <div class="container mt-4">
 	<div class="row">
 		<div class="col-12 col-sm-8 col-md-12 text-center">
-			<h3 class="mt-5">{{$Product->name}} {{$Product->model}} </h3>
+			<h3 class="mt-5 ">{{$Product->name}} {{$Product->model}} </h3>
 			<h6>Price in Bangladesh</h6>
+			<p>BDT-{{$Product->price}}</p>
 		</div>
 	</div>
 	<div class="row">
@@ -24,17 +25,13 @@ left: 38%;" class="col-md-12 text-center MyText">
 	</div>
 	<div class="row ">
 		<div style="text-align: center;" class="col-md-12 mt-3 mb-3">
-			<img style="width: 250px" src="{{asset('assets/img')}}/{{$Product->image}}">
-
-
-
-
+			<img style="width: 300px" src="{{asset('assets/img')}}/{{$Product->image}}">
 		</div>
         <div class="col-md-6 offset-md-3">
             <div class="owl-carousel owl-theme">
-                <div class="item"><img src="{{asset('assets/img')}}/{{$Product->image}}" alt="ffds"></div>
-                <div class="item"><img src="{{asset('assets/img')}}/{{$Product->image}}" alt=""></div>
-                <div class="item"><img src="{{asset('assets/img')}}/{{$Product->image}}" alt=""></div>
+                <div class="item"><img src="{{asset('assets/img')}}/{{$Product->imagetwo}}" alt=""></div>
+                <div class="item"><img src="{{asset('assets/img')}}/{{$Product->imagethree}}" alt=""></div>
+                <div class="item"><img src="{{asset('assets/img')}}/{{$Product->imagefour}}" alt=""></div>
             </div>
         </div>
 
