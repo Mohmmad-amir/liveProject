@@ -2,19 +2,13 @@
 
 @section('content')
 
-<div style="margin-top:6%;" class="container">
-
-    <h3 style="font-weight: bold;" class="headingText mt-5 mb-3 text-center ">Searching Brand</h3>
-
-</div>
 
 
-<!-- end price -->
 <!-- card section -->
-<div class="container ">
+<div class="container mt-5">
     <div class="row">
 
-
+        <h3 style="font-weight: bold;" class="text-center mt-4">Searching Brand</h3>
         @forelse ($Products as $product)
         <div class=" col-4 col-sm-4 col-md-3 mt-2" data-aos="fade-up" data-aos-offset="5" data-aos-delay="50" data-aos-duration="100">
             <div class="card w-100 shadow-sm">
@@ -28,7 +22,9 @@
         </div>
 
         @empty
-            <h1>There Is No Product</h1>
+          <div class="col-md-12 text-center" >
+              <img width="80%" src="{{asset('assets/img/no-product.png')}}" alt="">
+          </div>
         @endforelse
 
 

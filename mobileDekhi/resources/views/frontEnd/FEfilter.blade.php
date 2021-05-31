@@ -2,12 +2,13 @@
 
 @section('content')
 
-    <div style="margin-top:6%;" class="container">
+    <div  class="container mt-5">
 
-        <h3 style="font-weight: bold;" class="headingText mt-5 mb-3 text-center ">Filer Prize Range</h3>
+
 
         <form action="" method="post">
             <div class="row">
+                <h3 style="font-weight: bold;" class="text-center mt-4 mb-4">Filer Prize Range</h3>
                 <div class="col-md-12 mb-4">
                     <select onchange="window.location.href=this.value" class="form-select" aria-label="Default select example">
                         <option value="/filter" hidden selected>Select Price Range</option>

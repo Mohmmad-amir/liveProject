@@ -2,6 +2,39 @@
 
 @section('content')
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <div class="warapper">
         <div class="content-wrapper">
 
@@ -12,9 +45,9 @@
                         <h4 class="text-center mt-5">Add Product</h4>
                     </div>
                     @if (session('message'))
-                    <div class="alert alert-success">
+                    <section class="colorfulForm">
                         <p>{{ session('message') }}</p>
-                    </div>
+                    </section>
                 @endif
 
                     <div class="col-md-12">
@@ -39,17 +72,17 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="image">Image Two</label>
+                                        <label for="image">Side Image</label>
                                         <input id="image" name="imagetwo" type="file" class="form-control" aria-describedby="textHelp">
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="image">Image Three</label>
+                                        <label for="image">Front Image</label>
                                         <input id="image" name="imagethree" type="file" class="form-control" aria-describedby="textHelp">
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="image">Image Four</label>
+                                        <label for="image">Back Image</label>
                                         <input id="image" name="imagefour" type="file" class="form-control" aria-describedby="textHelp">
                                     </div>
 

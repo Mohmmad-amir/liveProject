@@ -26,7 +26,7 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg--color fixed-top  ">
+    <nav class="navbar navbar-expand-lg navbar-dark bg--color fixed-top">
         <div class="container">
             <a class="navbar-brand" href="{{ route('mainCarosul') }}"><strong
                     class="nav-header-color">M</strong>obile<strong class="nav-header-color">D</strong>ekhi</a>
@@ -86,7 +86,7 @@
 
 
 
-    <div class="bg--color">
+    <div class="bg--color ">
         <div class="container pt-4">
             <div class="row">
                 <div class="col-md-4 text-white ">
