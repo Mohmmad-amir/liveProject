@@ -35,22 +35,22 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="image">Image Two</label>
+                        <label for="image">Side Image</label>
                         <input id="image" name="imagetwo" type="file" class="form-control" aria-describedby="textHelp">
                     </div>
 
                     <div class="form-group">
-                        <label for="image">Image Three</label>
+                        <label for="image">Front Three</label>
                         <input id="image" name="imagethree" type="file" class="form-control" aria-describedby="textHelp">
                     </div>
 
                     <div class="form-group">
-                        <label for="image">Image Four</label>
+                        <label for="image">Back Four</label>
                         <input id="image" name="imagefour" type="file" class="form-control" aria-describedby="textHelp">
                     </div>
 
                     <div class="form-group">
-                        <label for="ProductName"> Name</label>
+                        <label for="ProductName">Name</label>
                         <input name="product_name" value="{{ $products->name }}" type="text"
                             id="ProductName" class="form-control" aria-describedby="textHelp">
                     </div>
