@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -23,7 +24,7 @@ use Illuminate\Support\Facades\Auth;
 
 //Home Controller
 Route::get('/','HomeController@mainCarosul')->name('mainCarosul');
-
+Route::get('/upcomingDetails/{id}','HomeController@upcomingDetails')->name('upcomingDetails');
 Route::get('/details/{id}','HomeController@details')->name('details');
 Route::get('/search','HomeController@search')->name('search');
 
@@ -69,7 +70,6 @@ Route::middleware('auth')->group(function () {
     // add product end
     // add upcoming product start
     Route::get('showupcomingProducts','UpcomingproductController@index')->name('upcomingProduct');
-
     Route::get('upcomingProducts/add','UpcomingproductController@create')->name('upcomingProduct.add');
     Route::post('upcomingProducts/add','UpcomingproductController@store')->name('upcomingProduct.store');
     Route::get('upcomingProducts/{id}/edit','UpcomingproductController@edit')->name('upcomingProduct.edit');

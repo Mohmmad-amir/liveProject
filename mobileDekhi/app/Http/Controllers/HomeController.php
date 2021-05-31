@@ -59,6 +59,12 @@ class HomeController extends Controller
     }
 
 
+    public function upcomingDetails($id){
+        $upcomingProduct=upcomingProduct::where('id',$id)->firstOrFail();
+        return view('frontEnd/upcomingDetails',compact('upcomingProduct'));
+    }
+
+
 
 
 }

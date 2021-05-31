@@ -6,7 +6,7 @@
 
     <!-- carosal start -->
 
-  
+
     {{$key=0}}
     <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
@@ -41,7 +41,7 @@
 
             @foreach ($upcomingProducts as $upcomingProduct)
             <div class="col-md-4">
-                <a href="">
+                <a href="{{route('upcomingDetails',['id'=>$upcomingProduct->id])}}">
                     <div class="card umCardBorder mt-2 shadow-lg" style="width: 100%;">
                         <div class="card-body cardHadingText">
                             <h4 class="card-title text-center headingText">{{$upcomingProduct->name}}</h4>

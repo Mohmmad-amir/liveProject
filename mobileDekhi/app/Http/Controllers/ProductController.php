@@ -45,7 +45,7 @@ class ProductController extends Controller
         $image=$request->file('image');
         $imageName="Product_".time().'.'.$image->extension();
         $image->move(public_path('/assets/img/'),$imageName);
-        
+
         $imagetwo=$request->file('imagetwo');
         $imageNametwo="Product_two_".time().'.'.$imagetwo->extension();
         $imagetwo->move(public_path('/assets/img/'),$imageNametwo);
@@ -157,7 +157,7 @@ class ProductController extends Controller
             $imageName="Product_".time().'.'.$image->extension();
             $image->move(public_path('/assets/img/'),$imageName);
             $product->image=$imageName;
-          
+
            }
 
            if($request->file('imagetwo')){
@@ -166,7 +166,7 @@ class ProductController extends Controller
             $imageNametwo="Product_two".time().'.'.$imagetwo->extension();
             $imagetwo->move(public_path('/assets/img/'),$imageNametwo);
             $product->imagetwo=$imageNametwo;
-          
+
            }
 
 
@@ -176,7 +176,7 @@ class ProductController extends Controller
             $imageNamethree="Product_three".time().'.'.$imagethree->extension();
             $imagethree->move(public_path('/assets/img/'),$imageNamethree);
             $product->imagethree=$imageNamethree;
-          
+
            }
 
            if($request->file('imagefour')){
@@ -185,7 +185,7 @@ class ProductController extends Controller
             $imageNamefour="Product_four".time().'.'.$imagefour->extension();
             $imagefour->move(public_path('/assets/img/'),$imageNamefour);
             $product->imagefour=$imageNamefour;
-          
+
            }
 
         $product->name = $request->product_name;
@@ -253,6 +253,9 @@ class ProductController extends Controller
     {
         $product= Product::findorFail($id);
         @unlink(public_path() . '/assets/img/' . $product->image);
+        @unlink(public_path() . '/assets/img/' . $product->imagetwo);
+        @unlink(public_path() . '/assets/img/' . $product->imagethree);
+        @unlink(public_path() . '/assets/img/' . $product->imagefour);
         $product->delete();
         return redirect()->action([ProductController::class,'index']);
 
