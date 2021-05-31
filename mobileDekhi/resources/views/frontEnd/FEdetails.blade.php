@@ -6,6 +6,7 @@
 	<div class="row">
 		<div class="col-12 col-sm-8 col-md-12 text-center">
 			<h3 class="mt-5 ">{{$Product->name}} {{$Product->model}} </h3>
+			<h3 class="mt-5">{{$Product->name}}  </h3>
 			<h6>Price in Bangladesh</h6>
 			<p>BDT-{{$Product->price}}</p>
 		</div>
