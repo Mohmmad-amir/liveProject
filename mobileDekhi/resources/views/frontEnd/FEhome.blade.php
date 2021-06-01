@@ -46,7 +46,7 @@
                         <div class="card-body cardHadingText">
                             <h4 class="card-title text-center headingText">{{$upcomingProduct->name}}</h4>
                           </div>
-                        <img style="border-radius: 20px;" src="{{asset('assets/img')}}/{{$upcomingProduct->image}}" class="card-img-top" alt="...">
+                        <img style="border-radius: 20px;" src="{{asset('assets/img')}}/{{$upcomingProduct->imageupcoming}}" class="card-img-top" alt="...">
                     </div>
                 </a>
             </div>
@@ -66,7 +66,7 @@
 
             <div class="col-md-3  mt-2" data-aos="fade-up" data-aos-offset="5" data-aos-delay="50" data-aos-duration="100">
                 <div class="card w-100 shadow-sm">
-                    <img style="height: 250px; width: 30px; padding-top: 20px; padding-left: 20px; padding-right: 20px; padding-buttom: 10px;" src="{{asset('assets/img')}}/{{$product->image}}" class="card-img-top card-image w-100 img-fluid mt-2" alt="...">
+                    <img style="height: 270px; width: 30px; padding-top: 20px; padding-left: 20px; padding-right: 20px; padding-buttom: 10px;" src="{{asset('assets/img')}}/{{$product->image}}" class="card-img-top card-image w-100 img-fluid mt-2" alt="...">
                     <div class="card-body text-center">
                         <h6 class="card-title fw-bold">{{$product->name}}</h6>
                         <p class="card-text ">BDT-{{$product->price}}</p>
