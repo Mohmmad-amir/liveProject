@@ -85,7 +85,7 @@
             <div class="col-md-12 col-sm-12 mt-4 ">
                 <nav aria-label="Page navigation example">
                     <ul class="pagination justify-content-center">
-                        {{ $products->links() }}
+                      <a href="{{route('Allproduct')}}"> <button style="background-color:orangered;color:white" class="btn">More</button></a>
                     </ul>
                 </nav>
             </div>
