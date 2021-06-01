@@ -20,7 +20,7 @@
 
         @empty
           <div class="col-md-12 text-center" >
-              <img width="80%" src="{{asset('assets/img/no-product.png')}}" alt="">
+              <img width="80%" src="{{asset('assets/img/no-product-found.png')}}" alt="">
           </div>
         @endforelse
     </div>
