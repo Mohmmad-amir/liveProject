@@ -62,7 +62,6 @@
                             <option value="Nokia">Nokia</option>
                             <option value="Xiaomi">Xiaomi</option>
                             <option value="Huawei">Huawei</option>
-                            <option value="Iphone">Iphone</option>
                             <option value="Oneplus">Oneplus</option>
                             <option value="Apple">Apple</option>
                             <option value="sony">Sony</option>
