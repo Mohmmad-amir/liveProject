@@ -11,13 +11,8 @@
                         <h2 class="text-center mt-5 mb-4">
                             Add Products
                         </h2>
-                        @if (session('message'))
-                            <div class="alert alert-success">
-                                <p>{{ session('message') }}</p>
-                            </div>
-                        @endif
 
-                            <form action="{{route('upcomingProduct.store')}}" method="POST" enctype="multipart/form-data">
+                            <form action="{{route('products.store')}}" method="POST" enctype="multipart/form-data">
                                 @csrf
 
                                 <div class="row">
@@ -360,7 +355,7 @@
                                   </div>
                               </div>
 
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button onclick="sweetalert()" type="submit" class="btn btn-primary">Submit</button>
                             </form>
 
 

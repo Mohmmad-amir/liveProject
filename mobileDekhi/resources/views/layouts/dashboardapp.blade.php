@@ -177,6 +177,9 @@
 <script src="{{asset('assets/js/jquery.overlayScrollbars.min.js')}}"></script>
 <!-- AdminLTE App -->
 <script src="{{asset('assets/js/adminlte.js')}}"></script>
+<!--custom js -->
+<script src="{{asset('assets/js/style.js')}}"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 
 <script>
