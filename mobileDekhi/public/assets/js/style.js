@@ -3,7 +3,7 @@ function sweetalert(){
         title: "Product Add Successfully!",
         text: "",
         icon: "success",
-        button:false
+
       });
 }
 

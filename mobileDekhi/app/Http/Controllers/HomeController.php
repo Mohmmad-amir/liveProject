@@ -34,7 +34,7 @@ class HomeController extends Controller
 
         $upcomingProducts = upcomingProduct::limit(3)->get();
 
-        $products = Product::paginate(8);
+        $products = Product::limit(8)->get();
 
         return view('frontEnd/FEhome',compact('mainCarousels'),compact('upcomingProducts','products'));
     }
@@ -62,6 +62,11 @@ class HomeController extends Controller
     public function upcomingDetails($id){
         $upcomingProduct=upcomingProduct::where('id',$id)->firstOrFail();
         return view('frontEnd/upcomingDetails',compact('upcomingProduct'));
+    }
+
+    public function Allproduct(){
+        $products=Product::paginate(8);
+        return view('frontEnd/Allproduct',compact('products'));
     }
 
 
