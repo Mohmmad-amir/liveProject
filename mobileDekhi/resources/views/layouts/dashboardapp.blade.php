@@ -30,7 +30,7 @@
             <!-- Main Sidebar Container -->
             <aside style="position: fixed;" class="main-sidebar sidebar-dark-primary elevation-4">
                 <!-- Brand Logo --> <a style="text-decoration: none;" href="{{route('home')}}" class="brand-link">
-                <img src="{{asset('assets/img/AdminLTELogo.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+                <img src="{{asset('assets/img/Group.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
                 <span  class="font-weight-white"><span style="color: orangered;font-weight:bold" >M</span>obile<span style="color: orangered;font-weight:bold">D</span>ekhi</span>
                 </a>
                 <!-- Sidebar -->
@@ -48,7 +48,7 @@
                         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                             <!-- Add icons to the links using the .nav-icon class
                              with font-awesome or any other icon font library -->
-                            <li class="nav-item">
+                            {{-- <li class="nav-item">
                                 <a href="#" class="nav-link"> <i class="nav-icon fas fa-tachometer-alt"></i>
                                     <p>Dashboard <i class="right fas fa-angle-left"></i>
                                     </p>
@@ -60,7 +60,7 @@
                                         </a>
                                     </li>
                                 </ul>
-                            </li>
+                            </li> --}}
                             <li class="nav-item">
                                 <a href="#" class="nav-link"> <i class="nav-icon fas fa-image"></i>
                                     <p>Carousel <i class="right fas fa-angle-left"></i>
@@ -73,13 +73,13 @@
                                         </a>
                                     </li>
                                 </ul>
-                                <ul class="nav nav-treeview">
+                                {{-- <ul class="nav nav-treeview">
                                     <li class="nav-item">
                                         <a href="{{route('subCarousel.add')}}" class="nav-link"> <i class="far fa-circle nav-icon"></i>
                                             <p>Sub Carousel</p>
                                         </a>
                                     </li>
-                                </ul>
+                                </ul> --}}
                             </li>
                             <li class="nav-item">
                                 <a href="#" class="nav-link"> <i class="nav-icon fas fa-pager"></i>
@@ -121,10 +121,10 @@
                     <ul class="navbar-nav">
                         <li class="nav-item"> <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                         </li>
-                        <li class="nav-item d-none d-sm-inline-block"> <a href="{{route('home')}}" class="nav-link">Home</a>
+                        {{-- <li class="nav-item d-none d-sm-inline-block"> <a href="{{route('home')}}" class="nav-link">Home</a>
                         </li>
                         <li class="nav-item d-none d-sm-inline-block"> <a href="#" class="nav-link">Contact</a>
-                        </li>
+                        </li> --}}
                     </ul>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}"> <span class="navbar-toggler-icon"></span>
                     </button>

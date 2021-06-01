@@ -21,7 +21,11 @@
 
     <link rel="stylesheet" href="mediumScreen.css">
     <link rel="stylesheet" href="smScreen.css">
-    <title>Mobile Dekhi </title>
+
+   
+
+
+    <title>MobileDekhi</title>
 </head>
 
 <body>

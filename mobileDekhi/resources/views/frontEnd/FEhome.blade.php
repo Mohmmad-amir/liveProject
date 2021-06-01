@@ -69,7 +69,7 @@
                     <img style="height: 270px; width: 30px; padding-top: 20px; padding-left: 20px; padding-right: 20px; padding-buttom: 10px;" src="{{asset('assets/img')}}/{{$product->image}}" class="card-img-top card-image w-100 img-fluid mt-2" alt="...">
                     <div class="card-body text-center">
                         <h6 class="card-title fw-bold">{{$product->name}}</h6>
-                        <p class="card-text ">BDT-{{$product->price}}</p>
+                        <p class="card-text ">BDT-{{$product->price}} (Expected)</p>
                         <a href="{{route('details',['id'=>$product->id])}}" class="btn  card-btn">View Details</a>
 
                     </div>
@@ -85,7 +85,7 @@
             <div class="col-md-12 col-sm-12 mt-4 ">
                 <nav aria-label="Page navigation example">
                     <ul class="pagination justify-content-center">
-                      <a href="{{route('Allproduct')}}"> <button style="background-color:orangered;color:white" class="btn">More</button></a>
+                      <a href="{{route('Allproduct')}}"> <button style="background-color:orangered;color:white" class="btn">Show More</button></a>
                     </ul>
                 </nav>
             </div>
