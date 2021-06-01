@@ -34,7 +34,7 @@ class HomeController extends Controller
 
         $upcomingProducts = upcomingProduct::limit(3)->get();
 
-        $products = Product::paginate(12);
+        $products = Product::paginate(8);
 
         return view('frontEnd/FEhome',compact('mainCarousels'),compact('upcomingProducts','products'));
     }

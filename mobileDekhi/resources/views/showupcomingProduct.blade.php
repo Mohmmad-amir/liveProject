@@ -9,7 +9,7 @@
                     <div class="container  py-5">
                         <h2 class="text-center mt-5">
                             Upcoming Products
-                        </h2>            
+                        </h2>
                         <table class="table table-striped">
                             <thead>
                               <tr>
@@ -32,7 +32,7 @@
                                   <form action="{{route('upcomingProduct.destroy',['id'=>$upcomingProduct->id])}}" method="POST" >
                                     @csrf
                                     @method("DELETE")
-                                    <button class="btn btn-danger"> <i class="fas fa-trash"></i> Delete </button>
+                                    <button onclick="DeleteUpcoming()" class="btn btn-danger"> <i class="fas fa-trash"></i> Delete </button>
                                   </form>
                                 </td>
                               </tr>
