@@ -66,6 +66,7 @@
                         placeholder="Search your mobile..." aria-label="Search">
                     <button class="btn text-white searchBarBtn" type="submit"><i class="fas fa-search"></i>
                     </button>
+
                 </form>
 
             </div>
