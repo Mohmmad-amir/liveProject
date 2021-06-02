@@ -49,7 +49,7 @@
                                             @if ($product->postStatus == 1)
                                                 <td><a class="btn-sm btn-danger"
                                                         href="{{ route('products.unpublish', ['id' => $product->id]) }}">
-                                                        <i class="fas fa-sort-up"></i>
+                                                        <i class="fas fa-sort-down"></i>
                                                     </a></td>
                                             @else
                                                 <td><a class="btn-sm btn-success"
