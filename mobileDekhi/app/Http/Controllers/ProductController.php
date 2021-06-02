@@ -42,28 +42,28 @@ class ProductController extends Controller
             'image' => 'required|image'
         ]);
 
-        $image=$request->file('image');
-        $imageName="Product_".time().'.'.$image->extension();
-        $image->move(public_path('/assets/img/'),$imageName);
+        $image = $request->file('image');
+        $imageName = "Product_" . time() . '.' . $image->extension();
+        $image->move(public_path('/assets/img/'), $imageName);
 
-        $imagetwo=$request->file('imagetwo');
-        $imageNametwo="Product_two_".time().'.'.$imagetwo->extension();
-        $imagetwo->move(public_path('/assets/img/'),$imageNametwo);
+        $imagetwo = $request->file('imagetwo');
+        $imageNametwo = "Product_two_" . time() . '.' . $imagetwo->extension();
+        $imagetwo->move(public_path('/assets/img/'), $imageNametwo);
 
-        $imagethree=$request->file('imagethree');
-        $imageNamethree="Product_three_".time().'.'.$imagethree->extension();
-        $imagethree->move(public_path('/assets/img/'),$imageNamethree);
+        $imagethree = $request->file('imagethree');
+        $imageNamethree = "Product_three_" . time() . '.' . $imagethree->extension();
+        $imagethree->move(public_path('/assets/img/'), $imageNamethree);
 
-        $imagefour=$request->file('imagefour');
-        $imageNamefour="Product_four_".time().'.'.$imagefour->extension();
-        $imagefour->move(public_path('/assets/img/'),$imageNamefour);
+        $imagefour = $request->file('imagefour');
+        $imageNamefour = "Product_four_" . time() . '.' . $imagefour->extension();
+        $imagefour->move(public_path('/assets/img/'), $imageNamefour);
 
 
         $product = new Product();
         $product->image = $imageName;
-        $product->imagetwo=$imageNametwo;
-        $product->imagethree=$imageNamethree;
-        $product->imagefour=$imageNamefour;
+        $product->imagetwo = $imageNametwo;
+        $product->imagethree = $imageNamethree;
+        $product->imagefour = $imageNamefour;
         $product->name = $request->product_name;
         $product->brand = $request->brand;
         $product->model = $request->product_model;
@@ -110,6 +110,7 @@ class ProductController extends Controller
         $product->launch_date = $request->LaunchDate;
         $product->made_by = $request->MadeBy;
         $product->body_color = $request->BodyColor;
+        $product->postStatus = $request->postStatus;
 
         $product->save();
         return redirect()->back()->with("message", "added Successful");
@@ -145,48 +146,44 @@ class ProductController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request,$id)
+    public function update(Request $request, $id)
 
     {
 
-        $product= Product::findorFail($id);
+        $product = Product::findorFail($id);
 
-        if($request->file('image')){
-            $image=$request->file('image');
-            @unlink(public_path() .'/assets/img/'.$product->image);
-            $imageName="Product_".time().'.'.$image->extension();
-            $image->move(public_path('/assets/img/'),$imageName);
-            $product->image=$imageName;
+        if ($request->file('image')) {
+            $image = $request->file('image');
+            @unlink(public_path() . '/assets/img/' . $product->image);
+            $imageName = "Product_" . time() . '.' . $image->extension();
+            $image->move(public_path('/assets/img/'), $imageName);
+            $product->image = $imageName;
+        }
 
-           }
-
-           if($request->file('imagetwo')){
-            $imagetwo=$request->file('imagetwo');
-            @unlink(public_path() .'/assets/img/'.$product->imagetwo);
-            $imageNametwo="Product_two".time().'.'.$imagetwo->extension();
-            $imagetwo->move(public_path('/assets/img/'),$imageNametwo);
-            $product->imagetwo=$imageNametwo;
-
-           }
+        if ($request->file('imagetwo')) {
+            $imagetwo = $request->file('imagetwo');
+            @unlink(public_path() . '/assets/img/' . $product->imagetwo);
+            $imageNametwo = "Product_two" . time() . '.' . $imagetwo->extension();
+            $imagetwo->move(public_path('/assets/img/'), $imageNametwo);
+            $product->imagetwo = $imageNametwo;
+        }
 
 
-           if($request->file('imagethree')){
-            $imagethree=$request->file('imagethree');
-            @unlink(public_path() .'/assets/img/'.$product->imagethree);
-            $imageNamethree="Product_three".time().'.'.$imagethree->extension();
-            $imagethree->move(public_path('/assets/img/'),$imageNamethree);
-            $product->imagethree=$imageNamethree;
+        if ($request->file('imagethree')) {
+            $imagethree = $request->file('imagethree');
+            @unlink(public_path() . '/assets/img/' . $product->imagethree);
+            $imageNamethree = "Product_three" . time() . '.' . $imagethree->extension();
+            $imagethree->move(public_path('/assets/img/'), $imageNamethree);
+            $product->imagethree = $imageNamethree;
+        }
 
-           }
-
-           if($request->file('imagefour')){
-            $imagefour=$request->file('imagefour');
-            @unlink(public_path() .'/assets/img/'.$product->imagefour);
-            $imageNamefour="Product_four".time().'.'.$imagefour->extension();
-            $imagefour->move(public_path('/assets/img/'),$imageNamefour);
-            $product->imagefour=$imageNamefour;
-
-           }
+        if ($request->file('imagefour')) {
+            $imagefour = $request->file('imagefour');
+            @unlink(public_path() . '/assets/img/' . $product->imagefour);
+            $imageNamefour = "Product_four" . time() . '.' . $imagefour->extension();
+            $imagefour->move(public_path('/assets/img/'), $imageNamefour);
+            $product->imagefour = $imageNamefour;
+        }
 
         $product->name = $request->product_name;
         $product->brand = $request->brand;
@@ -239,8 +236,7 @@ class ProductController extends Controller
 
 
         $product->save();
-        return redirect()->action([ProductController::class,'index']);
-
+        return redirect()->action([ProductController::class, 'index']);
     }
 
     /**
@@ -249,15 +245,28 @@ class ProductController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $product,$id)
+    public function destroy(Product $product, $id)
     {
-        $product= Product::findorFail($id);
+        $product = Product::findorFail($id);
         @unlink(public_path() . '/assets/img/' . $product->image);
         @unlink(public_path() . '/assets/img/' . $product->imagetwo);
         @unlink(public_path() . '/assets/img/' . $product->imagethree);
         @unlink(public_path() . '/assets/img/' . $product->imagefour);
         $product->delete();
-        return redirect()->action([ProductController::class,'index']);
-
+        return redirect()->action([ProductController::class, 'index']);
+    }
+    public function publish(Request $request, $id)
+    {
+        $product = Product::findOrFail($id);
+        $product->postStatus = "1";
+        $product->save();
+        return redirect()->action('ProductController@index')->with('message', 'Post Published');
+    }
+    public function unpublish(Request $request, $id)
+    {
+        $product = Product::findOrFail($id);
+        $product->postStatus = "0";
+        $product->save();
+        return redirect()->action('ProductController@index')->with('message', 'Post Unpublished');
     }
 }

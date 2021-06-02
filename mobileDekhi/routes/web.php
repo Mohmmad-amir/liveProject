@@ -23,18 +23,18 @@ use Illuminate\Support\Facades\Auth;
 // });
 
 //Home Controller
-Route::get('/','HomeController@mainCarosul')->name('mainCarosul');
-Route::get('/Allproduct','HomeController@Allproduct')->name('Allproduct');
-Route::get('/upcomingDetails/{id}','HomeController@upcomingDetails')->name('upcomingDetails');
-Route::get('/details/{id}','HomeController@details')->name('details');
-Route::get('/search','HomeController@search')->name('search');
+Route::get('/', 'HomeController@mainCarosul')->name('mainCarosul');
+Route::get('/Allproduct', 'HomeController@Allproduct')->name('Allproduct');
+Route::get('/upcomingDetails/{id}', 'HomeController@upcomingDetails')->name('upcomingDetails');
+Route::get('/details/{id}', 'HomeController@details')->name('details');
+Route::get('/search', 'HomeController@search')->name('search');
 
 //Brand Controller
-Route::get('/brand/{brand}','BrandController@show')->name('brand');
+Route::get('/brand/{brand}', 'BrandController@show')->name('brand');
 
 //filterController
-Route::get('/filter','filterController@index')->name('filter.index');
-Route::get('/filter/{id}/details','filterController@show')->name('filterDetails.show');
+Route::get('/filter', 'filterController@index')->name('filter.index');
+Route::get('/filter/{id}/details', 'filterController@show')->name('filterDetails.show');
 
 Auth::routes();
 // // Route::get('/addProduct', function () {
@@ -68,12 +68,15 @@ Route::middleware('auth')->group(function () {
     Route::get('/products/{id}/edit', 'ProductController@edit')->name('products.edit');
     Route::put('/products/{id}', 'ProductController@update')->name('products.update');
     Route::delete('/products/{id}', 'ProductController@destroy')->name('products.destroy');
+    Route::get('/products/{id}/publish', 'ProductController@publish')->name('products.publish');
+    Route::get('/products/{id}/unpublish', 'ProductController@unpublish')->name('products.unpublish');
+
     // add product end
     // add upcoming product start
-    Route::get('showupcomingProducts','UpcomingproductController@index')->name('upcomingProduct');
-    Route::get('upcomingProducts/add','UpcomingproductController@create')->name('upcomingProduct.add');
-    Route::post('upcomingProducts/add','UpcomingproductController@store')->name('upcomingProduct.store');
-    Route::get('upcomingProducts/{id}/edit','UpcomingproductController@edit')->name('upcomingProduct.edit');
+    Route::get('showupcomingProducts', 'UpcomingproductController@index')->name('upcomingProduct');
+    Route::get('upcomingProducts/add', 'UpcomingproductController@create')->name('upcomingProduct.add');
+    Route::post('upcomingProducts/add', 'UpcomingproductController@store')->name('upcomingProduct.store');
+    Route::get('upcomingProducts/{id}/edit', 'UpcomingproductController@edit')->name('upcomingProduct.edit');
     Route::put('upcomingProducts/{id}', 'UpcomingproductController@update')->name('upcomingProduct.update');
     Route::delete('upcomingProducts/{id}', 'UpcomingproductController@destroy')->name('upcomingProduct.destroy');
     // add upcoming product start

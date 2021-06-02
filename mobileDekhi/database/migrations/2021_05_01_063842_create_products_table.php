@@ -65,6 +65,7 @@ class CreateProductsTable extends Migration
             $table->string('launch_date');
             $table->string('made_by');
             $table->string('body_color');
+            $table->string('postStatus');
             $table->timestamps();
         });
     }

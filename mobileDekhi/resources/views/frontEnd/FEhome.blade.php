@@ -39,17 +39,21 @@
         <h3 class="headingText mt-5 mb-5 text-center">Upcoming Mobiles</h3>
         <div class="row">
 
-            @foreach ($upcomingProducts as $upcomingProduct)
+            @foreach ($products as $product)
+            @if ($product->postStatus == 0)
+
             <div class="col-md-4">
-                <a href="{{route('upcomingDetails',['id'=>$upcomingProduct->id])}}">
+                <a href="{{route('upcomingDetails',['id'=>$product->id])}}">
                     <div class="card umCardBorder mt-2 shadow-lg" style="width: 100%;">
                         <div class="card-body cardHadingText">
-                            <h4 class="card-title text-center headingText">{{$upcomingProduct->name}}</h4>
+                            <h4 class="card-title text-center headingText">{{$product->name}}</h4>
                           </div>
-                        <img style="border-radius: 20px;" src="{{asset('assets/img')}}/{{$upcomingProduct->imageupcoming}}" class="card-img-top" alt="...">
+                        <img style="border-radius: 20px;" src="{{asset('assets/img')}}/{{$product->image}}" class="card-img-top" alt="...">
                     </div>
                 </a>
             </div>
+            @endif
+
             @endforeach
         </div>
     </div>
@@ -63,6 +67,7 @@
         <div class="row">
 
             @foreach ($products as $product)
+            @if ($product->postStatus == 1)
 
             <div class="col-md-3  mt-2" data-aos="fade-up" data-aos-offset="5" data-aos-delay="50" data-aos-duration="100">
                 <div class="card w-100 shadow-sm">
@@ -75,6 +80,7 @@
                     </div>
                 </div>
             </div>
+            @endif
 
             @endforeach
 
