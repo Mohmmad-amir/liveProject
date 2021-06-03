@@ -28,26 +28,26 @@
                                         @endif
                                         <div class="form-group">
                                             <label for="image">Image</label>
-                                            <input id="image" name="image" type="file" class="form-control"
+                                            <input id="image" name="image" type="file" accept="image/*" class="form-control"
                                                 aria-describedby="textHelp">
                                         </div>
 
                                         <div class="form-group">
                                             <label for="image">Side Image</label>
-                                            <input id="image" name="imagetwo" type="file" class="form-control"
-                                                aria-describedby="textHelp">
+                                            <input id="image" name="imagetwo" type="file" accept="image/*"
+                                                class="form-control" aria-describedby="textHelp">
                                         </div>
 
                                         <div class="form-group">
                                             <label for="image">Front Image</label>
-                                            <input id="image" name="imagethree" type="file" class="form-control"
-                                                aria-describedby="textHelp">
+                                            <input id="image" name="imagethree" type="file" accept="image/*"
+                                                class="form-control" aria-describedby="textHelp">
                                         </div>
 
                                         <div class="form-group">
                                             <label for="image">Back Image</label>
-                                            <input id="image" name="imagefour" type="file" class="form-control"
-                                                aria-describedby="textHelp">
+                                            <input id="image" name="imagefour" type="file" accept="image/*"
+                                                class="form-control" aria-describedby="textHelp">
                                         </div>
 
                                         <div class="form-group">
@@ -66,6 +66,8 @@
                                                 <option value="Oneplus">Oneplus</option>
                                                 <option value="Apple">Apple</option>
                                                 <option value="sony">Sony</option>
+                                                <option value="realme">Realme</option>
+
                                             </select>
                                         </div>
                                         <div class="form-group">
