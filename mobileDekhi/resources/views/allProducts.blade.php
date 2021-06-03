@@ -34,7 +34,7 @@
                                             <td>{{ $product->model }}</td>
                                             <td>{{ $product->price }}</td>
                                             </td>
-                                            <td><a class="btn btn-info"
+                                            <td><a class="btn-sm btn btn-info"
                                                     href="{{ route('products.edit', ['id' => $product->id]) }}"> <i
                                                         class="fas fa-edit"></i> Edit </a></td>
                                             <td>
@@ -42,17 +42,18 @@
                                                     method="POST">
                                                     @csrf
                                                     @method("DELETE")
-                                                    <button class="btn btn-danger"> <i class="fas fa-trash"></i> Delete
+                                                    <button class="btn-sm btn btn-danger"> <i class="fas fa-trash"></i>
+                                                        Delete
                                                     </button>
                                                 </form>
                                             </td>
                                             @if ($product->postStatus == 1)
-                                                <td><a class="btn-sm btn-danger"
+                                                <td><a style="padding: 0px 10px" class="btn-sm btn btn-danger"
                                                         href="{{ route('products.unpublish', ['id' => $product->id]) }}">
                                                         <i class="fas fa-sort-down"></i>
                                                     </a></td>
                                             @else
-                                                <td><a class="btn-sm btn-success"
+                                                <td><a class="btn-sm btn btn-success"
                                                         href="{{ route('products.publish', ['id' => $product->id]) }}">
                                                         <i class="fas fa-sort-up"></i>
                                                     </a></td>
