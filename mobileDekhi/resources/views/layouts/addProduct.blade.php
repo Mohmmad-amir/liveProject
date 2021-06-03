@@ -67,6 +67,8 @@
                                                 <option value="Apple">Apple</option>
                                                 <option value="sony">Sony</option>
                                                 <option value="realme">Realme</option>
+                                                <option value="oppo">Oppo</option>
+
 
                                             </select>
                                         </div>

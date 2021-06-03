@@ -43,7 +43,7 @@
             @if ($product->postStatus == 0)
 
             <div class="col-md-4">
-                <a href="{{route('upcomingDetails',['id'=>$product->id])}}">
+                <a href="{{route('details',['id'=>$product->id])}}">
                     <div class="card umCardBorder mt-2 shadow-lg" style="width: 100%;">
                         <div class="card-body cardHadingText">
                             <h4 class="card-title text-center headingText">{{$product->name}}</h4>
