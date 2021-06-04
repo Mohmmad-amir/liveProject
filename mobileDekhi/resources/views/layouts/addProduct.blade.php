@@ -257,7 +257,7 @@
                                     </div>
                                     <div class="col-4 col-sm-4 col-md-4">
                                         <div class="form-group">
-                                            <label for="cpu">GPU</label>
+                                            <label for="cpu">CPU</label>
                                             <input name="cpu" id="cpu" type="text" class="form-control"
                                                 aria-describedby="textHelp">
                                         </div>
@@ -360,108 +360,136 @@
 
 
 
-
-
-                                    <h4 class="mt-5">Connectivity</h4>
-
-                                    <div class="form-group">
-                                        <label for="WiFi">WiFi</label>
-                                        <input type="text" name="WiFi" id="WiFi" class="form-control"
-                                            aria-describedby="textHelp">
+                                    <div class="col-12 col-sm-12 col-md-12">
+                                        <h4 class="mt-2">Connectivity</h4>
                                     </div>
 
-                                    <div class="form-group">
-                                        <label for="Bluetooth">Bluetooth</label>
-                                        <input type="text" name="Bluetooth" id="Bluetooth" class="form-control"
-                                            aria-describedby="textHelp">
+                                    <div class="col-4 col-sm-4 col-md-4">
+                                        <div class="form-group">
+                                            <label for="WiFi">WiFi</label>
+                                            <input type="text" name="WiFi" id="WiFi" class="form-control"
+                                                aria-describedby="textHelp">
+                                        </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="NFC">NFC</label>
-                                        <input type="text" name="NFC" id="NFC" class="form-control"
-                                            aria-describedby="textHelp">
+                                    <div class="col-4 col-sm-4 col-md-4">
+                                        <div class="form-group">
+                                            <label for="Bluetooth">Bluetooth</label>
+                                            <input type="text" name="Bluetooth" id="Bluetooth" class="form-control"
+                                                aria-describedby="textHelp">
+                                        </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="usb">USB</label>
-                                        <input type="text" name="usb" id="usb" class="form-control"
-                                            aria-describedby="textHelp">
+                                    <div class="col-4 col-sm-4 col-md-4">
+                                        <div class="form-group">
+                                            <label for="NFC">NFC</label>
+                                            <input type="text" name="NFC" id="NFC" class="form-control"
+                                                aria-describedby="textHelp">
+                                        </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="FmRadio">Fm Radio</label>
-                                        <input type="text" name="FmRadio" id="FmRadio" class="form-control"
-                                            aria-describedby="textHelp">
+                                    <div class="col-4 col-sm-4 col-md-4">
+                                        <div class="form-group">
+                                            <label for="usb">USB</label>
+                                            <input type="text" name="usb" id="usb" class="form-control"
+                                                aria-describedby="textHelp">
+                                        </div>
                                     </div>
-
-                                    <div class="form-group">
-                                        <label for="GPS">GPS</label>
-                                        <input type="text" name="GPS" id="GPS" class="form-control"
-                                            aria-describedby="textHelp">
+                                    <div class="col-4 col-sm-4 col-md-4">
+                                        <div class="form-group">
+                                            <label for="FmRadio">Fm Radio</label>
+                                            <input type="text" name="FmRadio" id="FmRadio" class="form-control"
+                                                aria-describedby="textHelp">
+                                        </div>
                                     </div>
-
-                                    <h4 class="mt-5">Features</h4>
-
-                                    <div class="form-group">
-                                        <label for="Sensors">Sensors</label>
-                                        <input type="text" name="Sensors" id="Sensors" class="form-control"
-                                            aria-describedby="textHelp">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="Browser">Browser</label>
-                                        <input type="text" name="Browser" id="Browser" class="form-control"
-                                            aria-describedby="textHelp">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="Java">Java</label>
-                                        <input type="text" name="Java" id="Java" class="form-control"
-                                            aria-describedby="textHelp">
+                                    <div class="col-4 col-sm-4 col-md-4">
+                                        <div class="form-group">
+                                            <label for="GPS">GPS</label>
+                                            <input type="text" name="GPS" id="GPS" class="form-control"
+                                                aria-describedby="textHelp">
+                                        </div>
                                     </div>
 
-                                    <h4 class="mt-4">Battery</h4>
-
-                                    <div class="form-group">
-                                        <label for="BatteryType">Battery Type</label>
-                                        <input type="text" name="BatteryType" id="BatteryType" class="form-control"
-                                            aria-describedby="textHelp">
+                                    <div class="col-12 col-sm-12 col-md-12">
+                                        <h4 class="mt-2">Features</h4>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="BatteryCapacity">Battery Capacity</label>
-                                        <input type="text" name="BatteryCapacity" id="BatteryCapacity" class="form-control"
-                                            aria-describedby="textHelp">
+                                    <div class="col-4 col-sm-4 col-md-4">
+                                        <div class="form-group">
+                                            <label for="Sensors">Sensors</label>
+                                            <input type="text" name="Sensors" id="Sensors" class="form-control"
+                                                aria-describedby="textHelp">
+                                        </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="Charging">Charging</label>
-                                        <input type="text" name="Charging" id="Charging" class="form-control"
-                                            aria-describedby="textHelp">
+                                    <div class="col-4 col-sm-4 col-md-4">
+                                        <div class="form-group">
+                                            <label for="Browser">Browser</label>
+                                            <input type="text" name="Browser" id="Browser" class="form-control"
+                                                aria-describedby="textHelp">
+                                        </div>
                                     </div>
-
-                                    <h4 class="mt-5">More</h4>
-
-                                    <div class="form-group">
-                                        <label class="" for="MadeBy">Made By</label>
-                                        <input type="text" name="MadeBy" id="MadeBy" class="form-control"
-                                            aria-describedby="textHelp">
+                                    <div class="col-4 col-sm-4 col-md-4">
+                                        <div class="form-group">
+                                            <label for="Java">Java</label>
+                                            <input type="text" name="Java" id="Java" class="form-control"
+                                                aria-describedby="textHelp">
+                                        </div>
                                     </div>
 
 
-
-                                    <label class="form-label px-1">Post Status </label>
-                                    <br>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" name="postStatus" type="radio" name="exampleRadios"
-                                            id="publish" value="1">
-                                        <label class="form-check-label" for="publish">
-                                            publish
-                                        </label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" name="postStatus" type="radio" name="exampleRadios"
-                                            id="unpublish" value="0">
-                                        <label class="form-check-label" for="unpublish">
-                                            Unpublish
-                                        </label>
+                                    <div class="col-12 col-sm-12 col-md-12">
+                                        <h4 class="mt-2">Battery</h4>
                                     </div>
 
 
-                                    {{-- finished column --}}
+                                    <div class="col-4 col-sm-4 col-md-4">
+                                        <div class="form-group">
+                                            <label for="BatteryType">Battery Type</label>
+                                            <input type="text" name="BatteryType" id="BatteryType" class="form-control"
+                                                aria-describedby="textHelp">
+                                        </div>
+                                    </div>
+                                    <div class="col-4 col-sm-4 col-md-4">
+                                        <div class="form-group">
+                                            <label for="BatteryCapacity">Battery Capacity</label>
+                                            <input type="text" name="BatteryCapacity" id="BatteryCapacity"
+                                                class="form-control" aria-describedby="textHelp">
+                                        </div>
+                                    </div>
+                                    <div class="col-4 col-sm-4 col-md-4">
+                                        <div class="form-group">
+                                            <label for="Charging">Charging</label>
+                                            <input type="text" name="Charging" id="Charging" class="form-control"
+                                                aria-describedby="textHelp">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-sm-12 col-md-12">
+                                        <h4 class="mt-2">More</h4>
+                                    </div>
+
+                                    <div class="col-4 col-sm-4 col-md-4">
+                                        <div class="form-group">
+                                            <label class="" for="MadeBy">Made By</label>
+                                            <input type="text" name="MadeBy" id="MadeBy" class="form-control"
+                                                aria-describedby="textHelp">
+                                        </div>
+                                    </div>
+                                    <div class="col-4 col-sm-4 col-md-4">
+                                        <label class="form-label px-1">Post Status </label>
+                                        <br>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" name="postStatus" type="radio"
+                                                name="exampleRadios" id="publish" value="1">
+                                            <label class="form-check-label" for="publish">
+                                                publish
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" name="postStatus" type="radio"
+                                                name="exampleRadios" id="unpublish" value="0">
+                                            <label class="form-check-label" for="unpublish">
+                                                Unpublish
+                                            </label>
+                                        </div>
+                                    </div>
+
                                 </div>
 
                                 <button onclick="sweetalert()" type="submit" class="btn btn-primary">Submit</button>
