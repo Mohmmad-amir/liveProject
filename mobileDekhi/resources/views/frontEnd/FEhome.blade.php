@@ -7,6 +7,7 @@
     <!-- carosal start -->
 
 
+
     {{$key=0}}
     <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
@@ -39,7 +40,7 @@
         <h3 class="headingText mt-5 mb-5 text-center">Upcoming Mobiles</h3>
         <div class="row">
 
-            @foreach ($products as $product)
+            @foreach ($upcomingProducts as $product)
             @if ($product->postStatus == 0)
 
             <div class="col-md-4">
@@ -104,7 +105,7 @@
 
     <h3 class="headingText mt-5 mb-5 text-center">Latest Mobiles Review</h3>
     <div class="container">
-        {{-- <div class="row">
+        <div class="row">
             <div class="col-md-4 mb-3">
                 <iframe width="100%" height="200" src="https://www.youtube.com/embed/1C07F3BgI_k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
@@ -114,7 +115,7 @@
             <div class="col-md-4 mb-5">
                 <iframe width="100%" height="200" src="https://www.youtube.com/embed/VwaNOw2mHYI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
-        </div> --}}
+        </div>
     </div>
 
     <!-- latest mobile review end -->

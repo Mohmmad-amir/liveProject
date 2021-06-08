@@ -25,7 +25,7 @@ use Illuminate\Support\Facades\Auth;
 //Home Controller
 Route::get('/', 'HomeController@mainCarosul')->name('mainCarosul');
 Route::get('/Allproduct', 'HomeController@Allproduct')->name('Allproduct');
-Route::get('/upcomingDetails/{id}', 'HomeController@upcomingDetails')->name('upcomingDetails');
+// Route::get('/upcomingDetails/{id}', 'HomeController@upcomingDetails')->name('upcomingDetails');
 Route::get('/details/{id}', 'HomeController@details')->name('details');
 Route::get('/search', 'HomeController@search')->name('search');
 
