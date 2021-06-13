@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="mediumScreen.css">
     <link rel="stylesheet" href="smScreen.css">
 
-   
+
 
 
     <title>MobileDekhi</title>
@@ -58,10 +58,15 @@
                             <li><a class="dropdown-item" href="{{ route('brand', 'Oneplus') }}">Oneplus</a></li>
                             <li><a class="dropdown-item" href="{{ route('brand', 'Apple') }}">Apple</a></li>
                             <li><a class="dropdown-item" href="{{ route('brand', 'Xiaomi') }}">Xiaomi</a></li>
+                            <li><a class="dropdown-item" href="{{ route('brand', 'Vivo') }}">Vivo</a></li>
+                            <li><a class="dropdown-item" href="{{ route('brand', 'realme') }}">Realme</a></li>
+
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ Request()->Route()->named('filter.index') ? 'active': '' }}"
+                        <a class="nav-link {{ Request()->Route()->named('filter.index')
+    ? 'active'
+    : '' }}"
                             href="{{ route('filter.index') }}">Filter</a>
                     </li>
                 </ul>
@@ -143,7 +148,7 @@
 
     <div class="loader-wrapper">
         <span class="loader"><span class="loader-inner"></span></span>
-        </div>
+    </div>
 
 
     <!-- Optional JavaScript; choose one of the two! -->
@@ -169,28 +174,28 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
     -->
     <script type="text/javascript">
+        $(window).on("load", function() {
+            $(".loader-wrapper").fadeOut("slow");
+        });
 
-    $(window).on("load",function(){
-        $(".loader-wrapper").fadeOut("slow");
-    });
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        });
 
-		$('.owl-carousel').owlCarousel({
-    loop:true,
-    margin:10,
-    nav:true,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:2
-        },
-        1000:{
-            items:3
-        }
-    }
-});
-	</script>
+    </script>
 
 </body>
 
