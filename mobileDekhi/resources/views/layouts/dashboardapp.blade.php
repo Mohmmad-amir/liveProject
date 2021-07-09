@@ -27,6 +27,11 @@
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" />
 
+    <script>
+        window.homeURL = 'http://127.0.0.1:8000'
+
+    </script>
+
 </head>
 
 <body lass="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
@@ -78,7 +83,7 @@
                                 </a>
                                 <ul class="nav nav-treeview">
                                     <li class="nav-item">
-                                        <a href="{{ route('mainCarousel.add') }}" class="nav-link"> <i
+                                        <a href="/api/mainCarousel" class="nav-link"> <i
                                                 class="far fa-circle nav-icon"></i>
                                             <p>Main Carousel</p>
                                         </a>
@@ -167,8 +172,9 @@
                                         {{ Auth::user()->name }}
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                            document.getElementById('logout-form').submit();">
+                                        <a class="dropdown-item" href="{{ route('logout') }}"
+                                            onclick="event.preventDefault();
+                                                                                document.getElementById('logout-form').submit();">
                                             <i style="margin-right: 5px; margin-left:25px;"
                                                 class="left fas fa-power-off"></i>{{ __('Logout') }}
                                         </a>
@@ -192,6 +198,9 @@
 
 
     <script src="{{ asset('assets/js/jquery-3.5.1.min.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+        integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- Bootstrap -->
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
     <!-- overlayScrollbars -->

@@ -4,6 +4,7 @@ use App\Http\Controllers\HomeController;
 use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\ApiControllers\MainCarouselController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -46,14 +47,16 @@ Auth::routes();
 Route::middleware('auth')->group(function () {
 
     Route::get('/home', 'HomeController@index')->name('home');
-    // main carousel start
+    // // main carousel start
+
+
     Route::get('mainCarousel/add', 'MainCarouselController@create')->name('mainCarousel.add');
     Route::post('mainCarousel/add', 'MainCarouselController@store')->name('mainCarousel.store');
     Route::get('/mainCarousel/{id}/edit', 'MainCarouselController@edit')->name('mainCarousel.edit');
     Route::put('/mainCarousel/{id}', 'MainCarouselController@update')->name('mainCarousel.update');
     Route::delete('/mainCarousel/{id}', 'MainCarouselController@destroy')->name('mainCarousel.destroy');
     // main carousel end
-    //
+
     // sub carousel start
     Route::get('subCarousel/add', 'SubCarouselController@create')->name('subCarousel.add');
     Route::post('subCarousel/add', 'SubCarouselController@store')->name('subCarousel.store');
