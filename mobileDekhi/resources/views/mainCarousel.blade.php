@@ -19,7 +19,9 @@
                             <button class="btn btn-success float-right my-2" id="addMainCarousel">Add <i
                                     class="fas fa-plus"></i></button>
                             <div id="showMainCarousel" style="display: none">
-                                <form id="">
+                                <form method="POST" action="{{ route('mainCarousel.store') }}"
+                                    enctype="multipart/form-data\" id="">
+                                    @csrf
                                     <div class="mb-3">
                                         <label for="image" class="form-label">Carousel Image</label>
                                         <input name="image" type="file" class="form-control" id="image"
